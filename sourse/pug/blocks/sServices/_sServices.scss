@@ -1,6 +1,8 @@
 // start .sServices
 .sServices {
-	
+	@include media-breakpoint-up(sm) {
+		padding-bottom: calc(var(--sPB) - 30px);
+	}
 
 	.row {
 		@include media-breakpoint-up(xl) {

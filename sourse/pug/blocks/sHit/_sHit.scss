@@ -1,6 +1,6 @@
 // start .sHit
 .sHit {
-	
+	padding-bottom: calc(var(--sPB) + 22px);
 	.swiper-slide {
 		width: 264px;
 		height: auto;
@@ -43,6 +43,7 @@
 		@extend .btn;
 		@extend .btn-primary;
 		border-radius: 2px 0 0 2px;
+		min-width: 134px;
 	}
 
 	&__buttons {
@@ -55,12 +56,13 @@
 		margin-top: auto;
 		font-weight: 600;
 		font-size: 20px;
-		margin-bottom: 20px;
+		margin-bottom: 18px;
 	}
 
 	&__title {
 		margin-top: 20px;
 		margin-bottom: 18px;
+		line-height: 1.4;
 		color: $body-color;
 	}
 
@@ -90,8 +92,8 @@
 		border: solid 1px #dcdcdc;
 		background-color: transparent;
 		border-radius: 0 2px 2px 0;
-		padding-left: 9px;
-		padding-right: 9px;
+		padding-left: 5px;
+		padding-right: 5px;
 		height: 100%;
 		display: flex;
 		align-items: center;
@@ -117,7 +119,7 @@
 			display: inline-flex;
 		}
 		align-items: center;
-		margin-bottom: 30px;
+		margin-bottom: 28px;
 		padding: 10px;
 
 		.icon {
