@@ -1,0 +1,30 @@
+mixin servicesItem(i,t)
+	+b.servicesItem(href="#")
+		+pic(`services-${i}.png`,'','lazy','')
+		+e.body
+			+e.title= t
+
+mixin sServices()
+	// start sServices
+	+b.SECTION.sServices.section#sServices&attributes(attributes)
+		.container-sm.container--xl-sm
+			+b.section-title.text-center
+				h2 Наши услуги
+			.row
+				.col-sm-6.col-lg-4
+					+servicesItem('1','Лазерная резка')
+				.col-sm-6.col-lg-4
+					+servicesItem('2','Координатно—высечной раскрой')
+				.col-sm-6.col-lg-4
+					+servicesItem('3','Плазменная резка')
+				.col-sm-6.col-lg-4
+					+servicesItem('4','Вертикальная гибка')
+				.col-sm-6.col-lg-4
+					+servicesItem('5','Аргонодуговая сварка')
+				.col-sm-6.col-lg-4
+					+servicesItem('6','Упаковка в плёнку')
+				.col-sm-6.col-lg-4
+					+servicesItem('7','Нанесение огнезащиты')
+				.col-sm-6.col-lg-4
+					+servicesItem('8','Порошковая окраска')
+	// end sServices

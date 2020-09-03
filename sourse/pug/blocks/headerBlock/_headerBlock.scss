@@ -1,18 +1,58 @@
 // start .headerBlock
 .headerBlock {
+
 	margin-bottom: 1px;
-	min-height: 100vh;
-	min-height: calc(var(--vh, 1vh) * 100);
-	// background-image: url(../img);
-	// background-color: #000000;
+	// min-height: 100vh;
+	// min-height: calc(var(--vh, 1vh) * 100);
 
-	h1 {
-		margin-bottom: 1px;
+	&__headerSlider {
+		position: relative;
 	}
 
-	h2 {
-		margin-bottom: 1px;
+	.headerSlider-next, .headerSlider-prev {
+		position: absolute;
+		@include a-cent(y);
+		z-index: 5;
+		outline: none;
 	}
+
+	.headerSlider-next {
+		@include media-breakpoint-up(xl) {
+		right: 8.2vw;
+		}
+		right: rem(15);
+	}
+
+	.headerSlider-prev {
+		@include media-breakpoint-up(xl) {
+		left: 8.2vw;
+		}
+		left: rem(15);
+	}
+
+	.swiper-slide picture {
+		img {
+			width: 100%;
+		}
+	}
+
+	.swiper-pagination-bullet {
+		border: 2px solid $gray-400;
+		width: 12px;
+		height: 12px;
+		background-color: transparent;
+		&-active {
+			background-color: $gray-400;
+		}
+	}
+
+	.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+		bottom: 20px;
+		@include media-breakpoint-up(sm) {
+			bottom: 2px;
+		}
+	}
+
 
 	@include media-breakpoint-up(xl) {}
 

@@ -1,0 +1,28 @@
+mixin catalogItem(i,t)
+	.col-6.col-md-4.col-lg-3.col-xl-auto
+		+b.catalogItem.text-center(href="#")
+			+pic(`${i}.png`,'','lazy','')
+			+e.title= t
+
+mixin sCatalog()
+	// start sCatalog
+	+b.SECTION.sCatalog.section#sCatalog&attributes(attributes)
+		.container.container--xl-sm
+			+b.section-title.text-center
+				h2 Каталог нашей продукции
+				
+			.row
+				+catalogItem('catalog-1','Воздуховоды и системы вентиляции')
+				+catalogItem('catalog-2','Фасонные изделия')
+				+catalogItem('catalog-3','Детали систем вентиляции')
+				+catalogItem('catalog-4','Воздухораспре- делители')
+				+catalogItem('catalog-5','Вентиляционные решетки')
+				+catalogItem('catalog-6','Диффузоры')
+				+catalogItem('catalog-7','Вентиляторы')
+				+catalogItem('catalog-8','Фильтры')
+				+catalogItem('catalog-9','Канальные нагреватели')
+				+catalogItem('catalog-10','Вентиляционные установки')
+				+catalogItem('catalog-11','Устройства для измерения и регулирования расхода воздуха')
+				+catalogItem('catalog-12','Монтажные принадлежности')
+				+catalogItem('catalog-13','Вентиляционное оборудование для чистых помещений')
+	// end sCatalog

@@ -15,7 +15,7 @@ $white: #fff !default;
 $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
 $gray-300: #dee2e6 !default;
-$gray-400: #ced4da !default;
+$gray-400: #dfdfdf !default;
 $gray-500: #adb5bd !default;
 $gray-600: #6c757d !default;
 $gray-700: #495057 !default;
@@ -70,7 +70,7 @@ $info: $cyan !default;
 $warning: $yellow !default;
 $danger: $red !default;
 $light: #f9f9f9 !default;
-$dark: $gray-800 !default;
+$dark: #444444 !default;
 
 // scss-docs-start theme-colors-map
 $theme-colors: ("primary": $primary,
@@ -285,8 +285,9 @@ $grid-breakpoints: (xs: 0,
   sm: 576px,
   md: 768px,
   lg: 992px,
-  xl: 1200px,
-  xxl: 1400px) !default;
+  xl: 1170px,
+  // xxl: 1400px
+  ) !default;
 // scss-docs-end grid-breakpoints
 
 // @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
@@ -301,8 +302,9 @@ $grid-breakpoints: (xs: 0,
 $container-max-widths: (sm: 540px,
   md: 720px,
   lg: 960px,
-  xl: 1140px,
-  xxl: 1320px) !default;
+  xl: 1126px,
+  // xxl: 1320px
+  ) !default;
 // scss-docs-end container-max-widths
 
 // @include _assert-ascending($container-max-widths, "$container-max-widths");
@@ -531,7 +533,7 @@ $table-variants: ("primary": color-level($primary, $table-bg-level),
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
 
 $input-btn-padding-y: .375rem !default;
-$input-btn-padding-x: .75rem !default;
+$input-btn-padding-x: 1rem !default;
 $input-btn-font-family: null !default;
 $input-btn-font-size: $font-size-base !default;
 $input-btn-line-height: $line-height-base !default;

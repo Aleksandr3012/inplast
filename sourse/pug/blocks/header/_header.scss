@@ -1,7 +1,5 @@
-
-	// start .header
-	.header {
-		 
+// start .header
+.header {
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
@@ -23,7 +21,7 @@
 	@include media-breakpoint-down(xl) {}
 	@include media-breakpoint-down(lg) {}
 	@include media-breakpoint-down(md) {}
-	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(sm) {padding-top: 40px;padding-bottom: 10px;}
 	@include media-breakpoint-down(xs) {} 
 
 } // end.header

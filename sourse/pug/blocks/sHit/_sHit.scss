@@ -1,0 +1,142 @@
+// start .sHit
+.sHit {
+	
+	.swiper-slide {
+		width: 264px;
+		height: auto;
+	}
+
+	.swiper-container {
+		overflow: visible;
+	}
+
+	&__img {
+		display: block;
+	}
+
+	&__sliderWrap {
+		padding: 20px;
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.09);
+
+		picture {
+			height: 147px;
+			position: relative;
+			// @include block(224,147);
+			img {
+				max-height: 100%;
+				// width: 100%;
+				@include a-cent;
+				// object-fit: contain;
+				// object-fit: cover;
+			}
+		}
+	}
+
+	&__slider {
+		margin-bottom: 29px;
+	}
+
+	&__btn {
+		@extend .btn;
+		@extend .btn-primary;
+		border-radius: 2px 0 0 2px;
+	}
+
+	&__buttons {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__price {
+		margin-top: auto;
+		font-weight: 600;
+		font-size: 20px;
+		margin-bottom: 20px;
+	}
+
+	&__title {
+		margin-top: 20px;
+		margin-bottom: 18px;
+		color: $body-color;
+	}
+
+	&__view {
+		border: solid 1px #dcdcdc;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding-left: 6px;
+		padding-right: 6px;
+		margin-right: -1px;
+		.icon {
+			color: #A6A6A6;
+			@include mt;
+			font-size: rem(12);
+		}
+
+		&:hover {
+			.icon {
+				color: $primary;
+			}
+		}
+	}
+
+	&__compare {
+		border: solid 1px #dcdcdc;
+		background-color: transparent;
+		border-radius: 0 2px 2px 0;
+		padding-left: 9px;
+		padding-right: 9px;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		.icon {
+			color: #A6A6A6;
+			@include mt;
+			font-size: rem(22);
+		}
+
+		&:hover {
+			.icon {
+				color: $primary;
+			}
+		}
+	}
+
+	&__pricesItem {
+		border-radius: 2px;
+		border: 2px solid $primary;
+		display: flex;
+		@include media-breakpoint-up(md) {
+			display: inline-flex;
+		}
+		align-items: center;
+		margin-bottom: 30px;
+		padding: 10px;
+
+		.icon {
+			margin-right: 6px;
+			font-size: rem(25);
+		}
+	}
+
+	&__prices {
+		.row {
+			@include media-breakpoint-up(xl) {
+				@include roww(40px);
+			}
+		}
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-between(md, xl) { }
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(sm) {}
+
+} // end.sHit

@@ -21,15 +21,15 @@ mixin mob-mnu()
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav.block-with-lazy
-		.row
+		.row.align-items-center
 			.col.d-none.d-lg-block
 				+mnu()
-			+e.col.col-auto
+			+e.col.col-lg-auto
 				+b.comparison(href="#")
 					+icon('comp')
 					+e.quantity 1
 				+b.basket(href="#")
 					+icon('basket')
 					+e.quantity 1
-			+mob-mnu
+				+mob-mnu
 	// end top-nav

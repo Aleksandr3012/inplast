@@ -3,23 +3,33 @@ extends layout/main.pug
 
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
+include ../blocks/sAdvantages/_sAdvantages.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sServices/_sServices.pug
+include ../blocks/sHit/_sHit.pug
+include ../blocks/sProject/_sProject.pug
 
 block variables
 	- let  mainPage= null
 block title
-	- let  title= 'title'
+	- let  title= 'ИНПЛАСТ'
 	title= title
 block pagecontent
 	//- +mob-mnu()
 	+header()
 		.container
-			.row
-				.col-auto.col-lg-12
+			.row.align-items-center
+				.col.col-lg-12
 					+topLine()
 				.col-auto.col-lg-12
 					+top-nav()
 	+headerBlock()
+	+sAdvantages()
+	+sCatalog()
+	+sServices()
+	+sHit()
 	+sForm()
+	+sProject()
 	+sContact()
 	+footer()
 

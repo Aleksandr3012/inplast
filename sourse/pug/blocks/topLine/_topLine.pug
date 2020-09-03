@@ -2,15 +2,18 @@ mixin topLine()
 	// start topLine
 	+b.topLine#topLine&attributes(attributes)
 		.row.align-items-center
-			.col-auto
+			.col.col-sm-auto
 				+e.logo(href="/")
-					img(src="img/@2x/logo.png", alt="")
-					+e.logoTitle.d-none.d-md-block Доставка по Москве и регионам России
-			.col.d-none.d-md-block
+					img.res-i(src="img/@2x/logo.png", alt="")
+					+e.logoTitle.d-none.d-lg-block Доставка по Москве и регионам России
+			+e.searchCol.col-auto.col-sm
 				+form-wrap
 					+input('Поиск','search')
 					+e.btn(type='button')
 						+icon('search')
+				+e.btnOpen.d-lg-none
+					+icon('search')
+
 			+e.col.col-auto.d-none.d-md-block.text-right
 				+e.tel(href="tel:74956639601") +7 (495) 663-96-01
 				+e.call.link-modal(href="#modal-call") Перезвоните мне

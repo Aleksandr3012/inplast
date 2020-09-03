@@ -6,7 +6,7 @@ $file-format: woff2 woff;
 
 @include font-face ($default-font, $addr + "OpenSans-Regular/OpenSans-Regular", $file-formats: $file-format);
 @include font-face ($default-font, $addr + "OpenSans-SemiBold/OpenSans-SemiBold", 600, $file-formats: $file-format);
-@include font-face ($default-font, $addr + "OpenSans-Bold/Roboto-Bold", 700, $file-formats: $file-format);
+@include font-face ($default-font, $addr + "OpenSans-Bold/OpenSans-Bold", 700, $file-formats: $file-format);
 @include font-face ($default-font, $addr + "OpenSans-ExtraBold/OpenSans-ExtraBold", 800, $file-formats: $file-format);
 @include font-face ($mono, $addr + "TrebuchetMS/TrebuchetMS",  $file-formats: $file-format);
 @include font-face ($mono, $addr + "TrebuchetMS-bold/TrebuchetMS-bold", 700, $file-formats: $file-format);

@@ -1,7 +1,9 @@
 // start .topLine
 .topLine {
-	padding-top: rem(10px);
-	padding-bottom: rem(10px);
+	@include media-breakpoint-up(sm) {
+		padding-bottom: rem(9px);
+		padding-top: rem(9px);
+	}
 
 	&__logoTitle {
 		padding-top: 6px;
@@ -9,13 +11,21 @@
 		font-size: rem(12px);
 	}
 
+	&__logo {
+		@include media-breakpoint-up(xl) {
+			margin-right: rem(10);
+		}
+		display: block;
+	}
+
 	.form-wrap {
+		max-width: 369px;
 		position: relative;
 
 		&__btn {
 			position: absolute;
-			right: rem(5);
-			@include a-cent(y);
+			right: rem(9);
+			top: rem(2);
 			border: none;
 			outline: none;
 			background-color: transparent;
@@ -25,19 +35,41 @@
 			font-size: rem(19);
 			color: $body-color;
 		}
+		@include media-breakpoint-down(lg) {
+			display: none;
+		}
+	}
+
+	&__btnOpen {
+		.icon {
+			font-size: rem(19);
+			color: $body-color;
+		}
 	}
 
 	&__tel {
-		font-size: rem(20px);
+		// font-size: ;
+		@include media-breakpoint-up(lg) {
+			font-size: rem(20px);
+		}
 		color: $body-color;
 		display: block;
 		font-weight: bold;
+		@extend .mono;
+	}
 
+	&__searchCol {
+		@include media-breakpoint-down(sm) {
+			padding-right: 0;
+			padding-left: 0;
+			text-align: right;
+		}
 	}
 
 	&__call {
 		color: $primary;
 		border-bottom: solid 1px $primary;
+		font-size: 14px;
 
 		&:hover {
 			border-color: transparent;
@@ -52,10 +84,14 @@
 			margin-right: 10px;
 			color: $body-color;
 		}
+
+		span {
+			font-size: 14px;
+		}
 	}
 
 	&__mail, &__hours {
-		margin-bottom: 10px;
+		margin-bottom: 8px;
 	}
 
 	&__mail {
@@ -74,16 +110,24 @@
 
 	&__col {
 		position: relative;
-		&::after {
-			content: '';
-			width: 2px;
-			height: 170%;
-			@include a-cent(y);
-			right: 0;
-			border-radius: 30px;
-			background-color: rgba($color: $body-color, $alpha: 0.04);
-			position: absolute;
+		@include media-breakpoint-up(xl) {
+			padding-right: 27px;
+		}
+		@include media-breakpoint-up(lg) {
+			&::after {
+				content: '';
+				width: 2px;
+				height: 170%;
+				@include a-cent(y);
+				@include media-breakpoint-up(xl) {
+					right: rem(5);
+				}
+				right: 0;
+				border-radius: 30px;
+				background-color: rgba($color: $body-color, $alpha: 0.04);
+				position: absolute;
 
+			}
 		}
 	}
 

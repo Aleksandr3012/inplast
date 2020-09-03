@@ -1,9 +1,27 @@
 mixin sForm()
 	// start sForm
 	+b.SECTION.sForm.section#sForm&attributes(attributes)
+		+pic('form-bg.png','','lazy','')(class='picture-bg')
 		.container
-			+b.section-title.text-center
-				h2 sForm
-				
 			.row
+				.col-lg-7
+					+b.section-title
+						h2 Узнайте стоимость своей системы уже сейчас
+						.h6 Наш оператор свяжется с Вами в течении 15 минут
+					+e.contacts
+						+e.tel(href="tel:74956639601") 
+							+icon('phone')
+							span +7 (495) 663-96-01
+						+e.mail(href="mailto:")
+							+icon('mail')
+							span sales@inplast.ru
+				+e.col.col
+					+form-wrap
+						+e.title.text-center Получить расчет
+						+input('Ваше имя *')
+						+input('Ваш e-mail *','email')
+						+input('Ваш телефон *','tel')
+						+input('Ваше сообщение','textarea')
+						+e.btn(type='submit') Отправить
+				
 	// end sForm

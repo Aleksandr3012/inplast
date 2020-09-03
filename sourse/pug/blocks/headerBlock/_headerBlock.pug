@@ -1,10 +1,24 @@
 mixin headerBlock()
 	// start headerBlock
-	+b.headerBlock.section#headerBlock&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
-
-			.row
-						
+	+b.headerBlock#headerBlock&attributes(attributes)
+		+e.headerSlider
+			.swiper-container.headerSlider-js
+				.swiper-wrapper
+					mixin slide(img)
+						.swiper-slide
+							a(href="#")
+								picture
+									source.swiper-lazy(srcset=`img/@2x/webp/banner-${img}.webp` type="image/webp" media="(min-width:576px)")
+									source.swiper-lazy(srcset=`img/@2x/webp/banner-mob-${img}.webp` type="image/webp")
+									source.swiper-lazy(srcset=`img/@2x/banner-${img}.jpg" type="image/jpg` media="(min-width:576px)")
+									//- <source srcset="img/@2x/banner-mob.jpg" type="image/jpg">
+									img.swiper-lazy(src=`img/@2x/banner-mob-${img}.jpg` alt="")
+					+slide('1')
+					+slide('2')
+					+slide('1')
+				.swiper-pagination
+				.headerSlider-next.d-none.d-md-flex
+					img(src="img/chevron-right.svg", alt="")
+				.headerSlider-prev.d-none.d-md-flex
+					img(src="img/chevron-left.svg", alt="")
 	// end headerBlock

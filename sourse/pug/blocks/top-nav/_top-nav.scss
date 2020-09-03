@@ -1,5 +1,7 @@
 .top-nav {
 	@include media-breakpoint-up(lg) {
+		padding-top: 10px;
+		padding-bottom: 10px;
 		position: relative;
 		z-index: 5;
 
@@ -19,7 +21,6 @@
 	// @include clearfix;
 	z-index: 20;
 	@include mt;
-	padding-bottom: 10px;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -34,16 +35,60 @@
 	&__nav {
 		text-align: center;
 		list-style-type: none;
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 0;
 	}
 
 	&__item {
-		display: inline-block;
 		list-style-type: none;
+		position: relative;
+		display: flex;
+		align-items: center;
+	}
+
+	&__link {
+		color: #fff !important;
+		font-size: 18px;
+
+		&::before {
+			content: '';
+			position: absolute;
+			bottom: rem(-11);
+			width: 100%;
+			height: 4px;
+			background-color: $primary;
+			@include mt;
+			transform: scale(0, 1);
+			transform-origin: left center;
+		}
+
+		&:hover {
+			&::before {
+				transform: scale(1);
+			}
+		}
 	}
 
 	&__col {
 		display: flex;
 		align-items: center;
+		justify-content: flex-end;
+	}
+
+	.dropdown {
+		cursor: pointer;
+		&::after {
+			content: '';
+			width: 12px;
+			height: 6px;
+			margin-left: 6px;
+			display: inline-block;
+			background-image: url('../img/dropdown.svg');
+			background-size: 100%;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
 	}
 
 	// 
@@ -89,5 +134,27 @@
 		min-width: 17px;
 		height: 17px;
 
+	}
+}
+
+.basket {
+	margin-left: 7px;
+	@include media-breakpoint-up(sm) {
+		margin-left: 13px;
+	}
+	.icon {
+		font-size: rem(30px);
+		@include media-breakpoint-down(lg) {
+			color: $body-color;
+		}
+	}
+}
+
+.comparison {
+	.icon {
+		font-size: rem(27);
+		@include media-breakpoint-down(lg) {
+			color: $body-color;
+		}
 	}
 }

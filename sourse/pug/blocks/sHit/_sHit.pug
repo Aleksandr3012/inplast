@@ -1,0 +1,51 @@
+mixin sHit()
+	// start sHit
+	+b.SECTION.sHit.section#sHit&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Хит продаж
+				
+			+e.slider
+				.swiper-container.hitSlider-js
+					.swiper-wrapper
+						mixin slide(img,t)
+							.swiper-slide
+								+e.sliderWrap
+									+e.img(href="#")
+										picture
+											source.swiper-lazy(srcset="#" data-srcset=`img/@2x/webp/hit-${img}.webp` type="image/webp")
+											img.swiper-lazy(src="#" data-src=`img/@2x/hit-${img}.jpg`, alt="")
+									if t
+										+e.title(href="#") Гигиенический воздухораспределитель NAF
+										+e.price 66 666 ₽
+									else
+										+e.title(href="#") Название товара расчитано в высоту ну на три строчки максимум
+										+e.price Цена ₽
+									+e.buttons
+										+e.btn.link-modal(href="#") Купить
+										+e.view(href="#")
+											+icon('view')
+										+e.compare(type="button")
+											+icon('comp')
+						+slide('1','t')
+						+slide('2')
+						+slide('2')
+						+slide('2')
+						+slide('2')
+						+slide('2')
+			+e.prices
+				mixin item(t,i)
+					+e.col.col-md-auto
+						+e.pricesItem(href="#")
+							if i
+								+icon('certificate')
+							else
+								+icon('catalog')
+							span= t
+				.row.justify-content-center
+					+item('Прайс-лист. Алюминиевые решетки')
+					+item('Прайс-лист. Решетки дымоудаления')
+					+item('Прайс-лист. Наружные решетки')
+					+item('Прайс-лист. Расходные материалы')
+					+item('Сертификаты','i')
+	// end sHit

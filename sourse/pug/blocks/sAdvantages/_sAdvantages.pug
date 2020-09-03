@@ -1,0 +1,24 @@
+mixin sAdvantages()
+	// start sAdvantages
+	+b.sAdvantages#sAdvantages&attributes(attributes)
+		.container
+			.row
+				mixin item(i,title,text)
+					.col-sm-6.col-md-4.col-lg-2
+						+e.item
+							+pic(`advantages-${i}`,'','lazy','')
+							+e.text
+								+e.title= title
+								if block
+									block
+								else
+									p= text
+				+item('1','Свыше 1500','крупнейших объектов по России и странам СНГ')
+				+item('2','Сертифицированное')
+					p производство более 90% комплектующих #[span.text-primary SMAY]
+				+item('3','10 полностью','автоматизированных линий по производству')
+				+item('4','Более 250 единиц','сетевого оборудования в ассортименте')
+				+item('5','Более 120 видов','решеток, диффузоров, регуляторов и т.д.')
+				+item('6','Система логистики','с использованием стратегии FRP')
+
+	// end sAdvantages

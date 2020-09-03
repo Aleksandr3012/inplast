@@ -232,6 +232,7 @@ function eventHandler() {
 	var x = window.location.host;
 	let screenName;
 	screenName = 'main.jpg';
+	// screenName = 'm_main.png';
 	if (screenName && x === "localhost:3000") {
 		$(".main-wrapper").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
@@ -278,6 +279,38 @@ function eventHandler() {
 			// }
 		},
 	}
+
+	const headerSlider = new Swiper('.headerSlider-js', {
+		// slidesPerView: 5,
+		...defaultSl,
+		slidesPerView: 1,
+		// autoplay: {
+		// 	delay: 6000,
+		// },
+		navigation: {
+			nextEl: '.headerSlider-js .headerSlider-next',
+			prevEl: '.headerSlider-js .headerSlider-prev',
+		},
+		pagination: {
+			el: '.headerSlider-js .swiper-pagination',
+			// type: 'bullets',
+			clickable: true,
+		},
+	});
+
+	const hitSlider = new Swiper('.hitSlider-js', {
+		// slidesPerView: 5,
+		...defaultSl,
+		slidesPerView: 'auto',
+		spaceBetween: 20,
+		loop: false,
+
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 6,
+		},
+
+	});
 
 	const swiper4 = new Swiper('.sBanners__slider--js', {
 		// slidesPerView: 5,
