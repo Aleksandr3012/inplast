@@ -324,8 +324,51 @@ function eventHandler() {
 
 	});
 	// modal window
-	
 
+	//luckyoneJs
+
+	//02 prod card
+	let prodCardThumb = new Swiper('.prod-card-thumb-js', {
+		slidesPerView: 'auto',
+		spaceBetween: 10,
+		slideToClickedSlide: true,
+		//breakpoints
+		breakpoints: {
+			10: {
+				direction: 'horizontal',
+			},
+			576: {
+				direction: 'vertical',
+			},
+		},
+
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 10,
+		},
+	});
+
+	//
+	/*$('.prod-card-thumb-js .swiper-slide').click(function (){
+		$('.prod-card-thumb-js .swiper-slide').removeClass('active');
+		$(this).addClass('active');
+	});*/
+
+	let prodCardSlider = new Swiper('.prod-card-slider-js', {
+		slidesPerView: 1,
+		spaceBetween: 20,
+		loop: true,
+
+		thumbs: {
+			swiper: prodCardThumb,
+		},
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 2,
+		},
+	});
+
+	//end luckyoneJs
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

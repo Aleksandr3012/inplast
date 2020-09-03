@@ -1,0 +1,39 @@
+mixin sProdPage()
+	// start sProdPage
+	+b.SECTION.sProdPage.section#sProdPage&attributes(attributes)
+		.container
+			block
+			+b.section-title.text-center.d-none
+				h1 Гигиенический воздухораспределитель NAF
+				+e.id
+					span ID товара:
+					span 0000
+			+e.wraper
+				+e.sliders
+					+e.thumb
+						.swiper-container.prod-card-thumb-js
+							.swiper-wrapper
+								+prodCardThumb(1)
+								+prodCardThumb(2)
+								+prodCardThumb(3)
+								+prodCardThumb(4)
+					+e.slider
+						.swiper-container.prod-card-slider-js
+							.swiper-wrapper
+								+prodCardSlide(1)
+								+prodCardSlide(2)
+								+prodCardSlide(3)
+								+prodCardSlide(4)
+				+e.data
+				+e.buy
+	// end sProdPage
+
+mixin prodCardThumb(imgNum)
+	.swiper-slide
+		img.swiper-lazy(src="#" data-src=`img/@2x/prod-card-${imgNum}.jpg` alt="")
+
+
+mixin prodCardSlide(imgNum)
+	.swiper-slide
+		+e.A.slide-img(href=`img/@2x/prod-card-${imgNum}.jpg` data-fancybox='slideImgs')
+			img.swiper-lazy(src="#" data-src=`img/@2x/prod-card-${imgNum}.jpg` alt="")
