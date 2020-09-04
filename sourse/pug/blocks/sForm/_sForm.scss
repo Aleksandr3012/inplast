@@ -15,7 +15,8 @@
 	}
 
 	//prod-page
-	&.prod-page-form{
+	//static-form
+	&.static-form{
 		.sForm__textCol{
 			padding-bottom: rem(40);
 			@include media-breakpoint-up(xl){

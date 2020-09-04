@@ -14,7 +14,7 @@ include ../blocks/sProdPage/_sProdPage.pug
 block variables
 	- let  mainPage= null
 block title
-	- let  title= '02-prod-page'
+	- let  title= '03-contacts'
 	title= title
 block pagecontent
 	//- +mob-mnu()
@@ -25,9 +25,7 @@ block pagecontent
 					+topLine()
 				.col-auto.col-lg-12
 					+top-nav()
-	+sProdPage()
-		+breadcrumb('Главная', 'Каталог', 'Вентиляционное оборудование для чистых помещений', 'Гигиенический воздухораспределитель NAF')
-	+sHit('Сопутствующие товары', false, true)(class='prod-page-form')
+	+sContact()
 	+sForm()(class="static-form")
 	+footer()
 
