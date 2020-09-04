@@ -2058,7 +2058,7 @@
 	--fgp-gap_percentage-to-pixels_column: calc(-105px * var(--fgp-gap_percentage-decimal_row)) !important;
 	--fgp-gap_percentage-to-pixels_row: calc(-105px * var(--fgp-gap_percentage-decimal_row)) !important;
 	--fgp-height: calc(105px - var(--fgp-gap_container_row, 0%)) !important}.catalogItem__title{font-size:18px}.sHit{padding-bottom:calc(var(--sPB) + 22px)}.sHit__pricesItem > *{
-	--fgp-has-polyfil_gap-item: initial}.sHit__pricesItem{display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex;padding:10px;margin-bottom:28px;--fgp-has-polyfil_gap-container: initial}.sHit__pricesItem .icon{margin-right:6px;font-size:1.5625rem}.sNews{padding-bottom:calc(var(--sPB)*1.65)}.newsItem{margin-bottom:29px}.sProdPage__wraper > *{
+	--fgp-has-polyfil_gap-item: initial}.sHit__pricesItem{display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex;padding:10px 9px;margin-bottom:28px;--fgp-has-polyfil_gap-container: initial}.sHit__pricesItem .icon{margin-right:6px;font-size:1.5625rem}.sNews{padding-bottom:calc(var(--sPB)*1.65)}.newsItem{margin-bottom:29px}.sProdPage__wraper > *{
 	--fgp-has-polyfil_gap-item: initial}.sProdPage__wraper{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;margin-bottom:2.5rem;--fgp-has-polyfil_gap-container: initial}.sProdPage__sliders{margin-right:1.875rem;margin-bottom:0}.sProdPage__slider > *{
 	--fgp-gap_percentage-to-pixels_column: initial;
 	--fgp-gap_percentage-to-pixels_row: initial}.sProdPage__slider > *{
