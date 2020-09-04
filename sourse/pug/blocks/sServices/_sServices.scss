@@ -1,8 +1,6 @@
 // start .sServices
 .sServices {
-	@include media-breakpoint-up(sm) {
-		padding-bottom: calc(var(--sPB) - 30px);
-	}
+	padding-bottom: calc(var(--sPB) - 30px);
 
 	.row {
 		@include media-breakpoint-up(xl) {
@@ -38,8 +36,10 @@
 .servicesItem {
 	display: flex;
 	flex-direction: column;
-	min-height: 208px;
+	min-height: 202px;
+	
 	@include media-breakpoint-up(sm) {
+		min-height: 208px;
 		height: calc(100% - 30px);
 		margin-bottom: 30px;
 		box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.09);
@@ -47,7 +47,10 @@
 	text-align: center;
 
 	&__body {
-		padding: 10px 52px;
+		padding: 10px 83px;
+		@include media-breakpoint-up(sm) {
+			padding: 10px 52px;
+		}
 	}
 
 	picture {
@@ -83,8 +86,8 @@
 		line-height: 1.25;
 		@extend .mono;
 		color: $body-color !important;
+		font-size: 18px;
 		@include media-breakpoint-up(sm) {
-			font-size: 18px;
 		}
 	}
 

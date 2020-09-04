@@ -1,4 +1,49 @@
 mixin footer()
 	+b.FOOTER.footer.block-with-lazy
 		.container
-			h2 footer
+			.row
+				.col.order-lg-last
+					+e.row.row
+						.col-6.col-md-3
+							+e.mnuTitle Компания
+							ul
+								li: a(href="#") Главная
+								li: a(href="#") О компании
+								li: a(href="#") Проекты
+								li: a(href="#") Вакансии
+						.col-6.col-md-3
+							+e.mnuTitle Покупателям
+							ul
+								li: a(href="#") Каталоги
+								li: a(href="#") Прайс-лист
+								li: a(href="#") Акции
+						.col-6.col-md-3.order-md-2
+							+e.mnuTitle Информация
+							ul
+								li: a(href="#") Новости
+								li: a(href="#") Статьи
+						.col-6.col-md-3
+							+e.mnuTitle Документы
+							ul
+								li: a(href="#") Сертификаты
+								li: a(href="#") Реквизиты
+				+e.col.col-lg-auto.col-xl
+					+e.contacts.d-lg-none
+						+e.tel(href="tel:74956639601") 
+							+icon('phone')
+							span +7 (495) 663-96-01
+						+e.mail(href="mailto:")
+							+icon('mail')
+							span sales@inplast.ru
+					+e.logo.d-none.d-lg-block(href="#")
+						+pic('logo-white')
+						//- img.res-i(src="img/@2x/logo-white.png", alt="alt" loading='lazy')
+					+e.copyright.d-none.d-lg-block © 2005 — #[span.currentYear] Торговый дом «ИНПЛАСТ»
+					+e.location 
+						.d-lg-none
+							+icon('location')
+						span г. Москва, Лихачёвский пр., 4, стр. 1, Долгопрудный
+					+e.instagram(href='https://www.instagram.com/tdinplast/' target="_blank")
+						+icon('inst')
+						span Мы в Instagram
+

@@ -1,13 +1,13 @@
 mixin sForm()
 	// start sForm
 	+b.SECTION.sForm.section#sForm&attributes(attributes)
-		+pic('form-bg.png','','lazy','')(class='picture-bg')
+		+pic('form-bg.png','','')(class='picture-bg')
 		.container
 			.row
 				+e.textCol.col-lg-8.col-xl-auto
 					+b.section-title
 						h2 Узнайте стоимость своей системы уже сейчас
-						.h6 Наш оператор свяжется с Вами в течении 15 минут
+						.h6 Наш оператор свяжется с&nbsp;Вами в течении 15&nbsp;минут
 					+e.contacts
 						+e.tel(href="tel:74956639601") 
 							+icon('phone')

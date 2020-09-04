@@ -35,20 +35,21 @@ mixin sHit(title='Хит продаж', hasPrices=true, prodPage=false)
 						+slide('2')
 						+slide('2')
 						+slide('2')
-			if hasPrices
-				+e.prices
-					mixin item(t,i)
-						+e.col.col-md-auto
-							+e.pricesItem(href="#")
-								if i
-									+icon('certificate')
-								else
-									+icon('catalog')
-								span= t
-					.row.justify-content-center
-						+item('Прайс-лист. Алюминиевые решетки')
-						+item('Прайс-лист. Решетки дымоудаления')
-						+item('Прайс-лист. Наружные решетки')
-						+item('Прайс-лист. Расходные материалы')
-						+item('Сертификаты','i')
+			+e.prices
+				mixin item(t,i)
+					+e.col.col-md-auto
+						+e.pricesItem(href="#")
+							if i
+								+icon('certificate')
+								+e.list= t
+							else
+								+icon('catalog')
+								+e.list Прайс-лист. 
+									span= t
+				.row.justify-content-center
+					+item('Алюминиевые решетки')
+					+item('Решетки дымоудаления')
+					+item('Наружные решетки')
+					+item('Расходные материалы')
+					+item('Сертификаты','i')
 	// end sHit

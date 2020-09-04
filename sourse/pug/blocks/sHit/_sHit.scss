@@ -1,6 +1,9 @@
 // start .sHit
 .sHit {
-	padding-bottom: calc(var(--sPB) + 22px);
+	padding-bottom: calc(var(--sPB) + 15px);
+	@include media-breakpoint-up(md) {
+		padding-bottom: calc(var(--sPB) + 22px);
+	}
 	.swiper-slide {
 		width: 264px;
 		height: auto;
@@ -149,16 +152,36 @@
 		border-radius: 2px;
 		border: 2px solid $primary;
 		display: flex;
+		padding: 8px 20px;
+		margin-bottom: 15px;
 		@include media-breakpoint-up(md) {
 			display: inline-flex;
+			padding: 10px;
+			margin-bottom: 28px;
 		}
 		align-items: center;
-		margin-bottom: 28px;
-		padding: 10px;
 
 		.icon {
-			margin-right: 6px;
-			font-size: rem(25);
+			flex-shrink: 0;
+			font-size: rem(42);
+			margin-right: 17px;
+			@include media-breakpoint-up(md) {
+				margin-right: 6px;
+				font-size: rem(25);
+			}
+		}
+
+		span {
+			line-height: 1.4;
+			font-weight: 600;
+		}
+	}
+
+	&__list {
+		span {
+			@include media-breakpoint-down(md) {
+				display: block;
+			}
 		}
 	}
 

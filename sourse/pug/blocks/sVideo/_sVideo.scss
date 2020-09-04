@@ -1,0 +1,86 @@
+// start .sVideo
+.sVideo {
+	@include media-breakpoint-down(md) {
+		padding-bottom: calc(var(--sPB) - 25px);
+	}
+	&__video {
+		position: relative;
+		display: block;
+		height: 209px;
+
+		@include media-breakpoint-up(md) {
+			height: 258px;
+		}
+		@include media-breakpoint-down(md) {
+			margin-bottom: 25px;
+		}
+
+		&:hover .sVideo__play{
+			transform: scale(1.1);
+		}
+	}
+
+	&__play {
+		@include mt;
+		position: absolute;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		margin: auto;
+		width: 70px;
+		height: 70px;
+		background-color: $dark;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		.icon {
+			margin-left: 6px;
+			color: #fff;
+			font-size: rem(33);
+		}
+	}
+
+	.row {
+		@include media-breakpoint-up(xl) {
+			@include roww(60px);
+		}
+	}
+
+	&__col {
+		@include media-breakpoint-up(xl) {
+			max-width: 522px !important;
+		}
+	}
+
+
+	&__title {
+		font-weight: bold;
+		font-size: 25px;
+		@extend .mono;
+		margin-bottom: 15px;
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+
+} // end.sVideo

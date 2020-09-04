@@ -1,0 +1,21 @@
+mixin sVideo()
+	// start sVideo
+	+b.SECTION.sVideo.section#sVideo&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Вентиляционное оборудование от ТД "Инпласт"
+				
+			.row
+				+e.col.col-md-6
+					+e.title Компания “Инпласт”
+					+e.video(href="https://www.youtube.com/watch?v=tAGnKpE4NCI" data-fancybox="video")
+						+pic('video-1','bg','')(class="picture-bg")
+						+e.play
+							+icon('play')
+				+e.col.col-md-6
+					+e.title Компания “SMAY”
+					+e.video(href="https://www.youtube.com/watch?v=tAGnKpE4NCI" data-fancybox="video")
+						+pic('video-2','bg','')(class="picture-bg")
+						+e.play
+							+icon('play')
+	// end sVideo
