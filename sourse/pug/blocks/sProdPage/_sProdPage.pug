@@ -3,7 +3,7 @@ mixin sProdPage()
 	+b.SECTION.sProdPage.section#sProdPage&attributes(attributes)
 		.container
 			block
-			+b.section-title.text-center.d-none
+			+b.section-title.text-center.d-sm-none
 				h1 Гигиенический воздухораспределитель NAF
 				+e.id
 					span ID товара:
@@ -13,7 +13,7 @@ mixin sProdPage()
 					+e.thumb
 						.swiper-container.prod-card-thumb-js
 							.swiper-wrapper
-								+prodCardThumb(1)
+								+prodCardThumb(1, 'active')
 								+prodCardThumb(2)
 								+prodCardThumb(3)
 								+prodCardThumb(4)
@@ -25,11 +25,167 @@ mixin sProdPage()
 								+prodCardSlide(3)
 								+prodCardSlide(4)
 				+e.data
+					+b.section-title.d-none.d-sm-block
+						h1 Гигиенический воздухораспределитель NAF
+						+e.id
+							span ID товара:
+							span 0000
+					+e.chars-list
+						+charItem('Производитель:')
+						+charItem('Материал:')
+						+charItem('Название характеристики:')
+						+charItem('Название характеристики:')
+						+e.char-item-select
+							+e.char-head--select Диаметр:
+							+e.select-cont
+								select.default-select-js(name='diameter')
+									option(value='100') 100
+									option(value='200') 200
+									option(value='300') 300
+						+e.char-item-color
+							+e.char-head--color Цвет:
+							+e.color-items
+								+e.A.color-item.active(href="#" style='background: linear-gradient(185.53deg, #FFFFFF 33.57%, #D8D8D8 95.59%);')
+								+e.A.color-item(href="#" style='background: linear-gradient(185.53deg, #A9A9A9 33.57%, #565656 100%);')
+					+e.chars-icons
+						+charIcon(1)
+							| Диффузер
+						+charIcon(2)
+							| Гигиеническое
+							br
+							| исполнение VDI 6022
+						+charIcon(3)
+							| Система
+							br
+							| распределения воздуха
+						+charIcon(4)
+							| Чистые помещения
 				+e.buy
+					+e.price-and-status
+						+e.price 66 666 ₽
+						+e.status.status-sucsess В наличии
+					//status-danger
+					+e.amount
+						+e.inputs
+							+e.minus-btn.muted
+							input.form-control(type="number" min='1' max='5' value="1")
+							+e.plus-btn
+						+e.amount-txt шт.
+						+e.BUTTON.to-cart-btn(type='submit') В корзину
+					+e.click-and-compare
+						+e.A.one-click(href="#") Купить в 1 клик
+						+e.A.compare-btn(href='#')
+							+icon('comp')
+							span Добавить к сравнению
+			+b.tabs
+				.swiper-container.prod-tabs-slider-js
+					+e.caption.swiper-wrapper
+						+tabSlide('Описание')(class="active")
+						//.swiper-slide
+							+e.btn.active Описание
+						+tabSlide('Характеристики')
+						+tabSlide('Оплата')
+						+tabSlide('Доставка')
+						+tabSlide('Сертификаты')
+				+e.wrap
+					//-1
+					+e.content.active
+						+e.prod-descr
+							p Воздухораспределители NAF предназначены для использования в&nbsp;вентиляционных системах низкого и&nbsp;среднего давления с&nbsp;высокими гигиеническими требованиями. Воздухораспределители оснащены фильтрами высокой степени очистки класса H13. Стандартно воздухораспределители NAF изготавливаются из&nbsp;стали окрашенной, но&nbsp;возможно изготовление из&nbsp;нержавеющей стали.
+					//-2
+					+e.content
+						+e.chars
+							+e.chars-item
+								b Материал и&nbsp;отделка:
+								p
+									| Камера статического давления:
+									br
+									| SL&nbsp;&mdash; сталь окрашенная
+									br
+									| SN&nbsp;&mdash; сталь нержавеющая
+								p
+									| Кассета с&nbsp;фильтром:
+									br
+									| Класс фильтра Н13, корпус фильтра выполнен из&nbsp;МДФ&nbsp;&mdash; плит, температура рабочей среды до&nbsp;80&nbsp;С&deg;.
+								p
+									| Воздухораздающие устройства:
+									br
+									| Согласно каталогу на&nbsp;выбранный тип устройства.
+							+e.chars-item
+								b Монтаж:
+								p
+									| Воздухораздающие устройства:
+									br
+									| Крепятся на&nbsp;саморезы согласно указаниям по&nbsp;монтажу для выбранного типа устройства из&nbsp;каталога.
+								p
+									| Кассета с&nbsp;фильтром:
+									br
+									| Устанавливается в&nbsp;корпус в&nbsp;специальные пазы, после чего фиксируется на&nbsp;винты.
+								p
+									| Воздухораспределитель NAF:
+									br
+									| К&nbsp;корпусу прикреплены четыре крепежа для монтажа на&nbsp;шпильку.
+					//-3
+					+e.content
+						+e.no-cash
+							+e.no-cash-img
+								img(loading="lazy" src="img/svg/document.svg" alt="")
+							+e.no-cash-txt
+								p
+									b Безналичный расчет.
+									|
+									| Оплата покупки осуществляется по заранее выставленному счету.
+									|
+									br
+									| Счета на безналичный расчет выставляются в случае, если сумма заказа превышает 1000 рублей.
+								+e.A.detail-link(href="#")
+									span Подробнее
+									+icon('arrow-right')
+					//-4
+					+e.content
+						+e.delivery
+							p
+								| Цены распространяются на доставку по Москве и М.О.
+								|
+								br
+								| Cтоимость въезда машины  в зону ТТК и Садового кольца уточняйте у менеджера
+							+e.A.detail-link(href="#")
+								span Подробнее
+								+icon('arrow-right')
+					//-5
+					+e.content
+						+e.certificats
+							+certificatItem()
+							+certificatItem()
 	// end sProdPage
 
-mixin prodCardThumb(imgNum)
+mixin certificatItem()
+	+e.certificat-item
+		+e.cert-img
+			img(loading='lazy' src='img/svg/pdf.svg' alt="")
+		+e.cert-txt
+			a(href="#") Описание документа
+			.txt
+				span Док.pdf
+				span [весдока]
+
+mixin tabSlide(txt)
 	.swiper-slide
+		+e.btn&attributes(attributes)=txt
+
+mixin charIcon(imgNum)
+	+e.char-icon.char-icon-js
+		img(src=`img/svg/char-icon-${imgNum}.svg` alt="")
+		+e.hint.hint-js
+			block
+
+mixin charItem(headTxt)
+	+e.char-item
+		+e.char-head=headTxt
+		+e.char-val text
+
+mixin prodCardThumb(imgNum, slideClasses)
+	.swiper-slide(class=slideClasses)
 		img.swiper-lazy(src="#" data-src=`img/@2x/prod-card-${imgNum}.jpg` alt="")
 
 

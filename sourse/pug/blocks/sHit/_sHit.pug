@@ -1,10 +1,12 @@
-mixin sHit()
+mixin sHit(title='Хит продаж', hasPrices=true, prodPage=false)
 	// start sHit
 	+b.SECTION.sHit.section#sHit&attributes(attributes)
 		.container
+			if prodPage
+				+e.circle-btn.d-none.d-xl-flex
+					+icon('chevron-top')
 			+b.section-title
-				h2 Хит продаж
-				
+				h2=title
 			+e.slider
 				.swiper-container.hitSlider-js
 					.swiper-wrapper
@@ -33,19 +35,20 @@ mixin sHit()
 						+slide('2')
 						+slide('2')
 						+slide('2')
-			+e.prices
-				mixin item(t,i)
-					+e.col.col-md-auto
-						+e.pricesItem(href="#")
-							if i
-								+icon('certificate')
-							else
-								+icon('catalog')
-							span= t
-				.row.justify-content-center
-					+item('Прайс-лист. Алюминиевые решетки')
-					+item('Прайс-лист. Решетки дымоудаления')
-					+item('Прайс-лист. Наружные решетки')
-					+item('Прайс-лист. Расходные материалы')
-					+item('Сертификаты','i')
+			if hasPrices
+				+e.prices
+					mixin item(t,i)
+						+e.col.col-md-auto
+							+e.pricesItem(href="#")
+								if i
+									+icon('certificate')
+								else
+									+icon('catalog')
+								span= t
+					.row.justify-content-center
+						+item('Прайс-лист. Алюминиевые решетки')
+						+item('Прайс-лист. Решетки дымоудаления')
+						+item('Прайс-лист. Наружные решетки')
+						+item('Прайс-лист. Расходные материалы')
+						+item('Сертификаты','i')
 	// end sHit

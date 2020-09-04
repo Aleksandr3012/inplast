@@ -20,6 +20,8 @@
 		<!-- Custom Browsers Color-->
 		<meta name="theme-color" content="#3361d8">
 		<link rel="stylesheet" href="libs/swiper/css/swiper.min.css"/>
+		<!--select2-->
+		<link rel="stylesheet" href="libs/select2/css/select2.min.css"/>
 		<link rel="stylesheet" href="libs/@fancyapps/fancybox/jquery.fancybox.min.css"/>
 		<link rel="stylesheet" href="css/main.min.css"/>
 	</head>
@@ -198,7 +200,15 @@
 			<!-- start sProdPage-->
 			<section class="sProdPage section" id="sProdPage">
 				<div class="container">
-					<div class="section-title text-center d-none">
+					<nav class="breadcrumb-slider-js swiper-container" aria-label="breadcrumb">
+						<ol class="breadcrumb swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+							<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item">Главная</a></li>
+							<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item">Каталог</a></li>
+							<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item">Вентиляционное оборудование для чистых помещений</a></li>
+							<li class="breadcrumb-item swiper-slide active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item">Гигиенический воздухораспределитель NAF</a></li>
+						</ol>
+					</nav>
+					<div class="section-title text-center d-sm-none">
 						<h1>Гигиенический воздухораспределитель NAF</h1>
 						<div class="section-title__id"><span>ID товара:</span><span>0000</span>
 						</div>
@@ -208,7 +218,7 @@
 							<div class="sProdPage__thumb">
 								<div class="swiper-container prod-card-thumb-js">
 									<div class="swiper-wrapper">
-										<div class="swiper-slide"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-card-1.jpg" alt=""/></div>
+										<div class="swiper-slide active"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-card-1.jpg" alt=""/></div>
 										<div class="swiper-slide"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-card-2.jpg" alt=""/></div>
 										<div class="swiper-slide"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-card-3.jpg" alt=""/></div>
 										<div class="swiper-slide"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-card-4.jpg" alt=""/></div>
@@ -231,13 +241,391 @@
 							</div>
 						</div>
 						<div class="sProdPage__data">
+							<div class="section-title d-none d-sm-block">
+								<h1>Гигиенический воздухораспределитель NAF</h1>
+								<div class="section-title__id"><span>ID товара:</span><span>0000</span>
+								</div>
+							</div>
+							<div class="sProdPage__chars-list">
+								<div class="sProdPage__char-item">
+									<div class="sProdPage__char-head">Производитель:
+									</div>
+									<div class="sProdPage__char-val">text
+									</div>
+								</div>
+								<div class="sProdPage__char-item">
+									<div class="sProdPage__char-head">Материал:
+									</div>
+									<div class="sProdPage__char-val">text
+									</div>
+								</div>
+								<div class="sProdPage__char-item">
+									<div class="sProdPage__char-head">Название характеристики:
+									</div>
+									<div class="sProdPage__char-val">text
+									</div>
+								</div>
+								<div class="sProdPage__char-item">
+									<div class="sProdPage__char-head">Название характеристики:
+									</div>
+									<div class="sProdPage__char-val">text
+									</div>
+								</div>
+								<div class="sProdPage__char-item-select">
+									<div class="sProdPage__char-head sProdPage__char-head--select">Диаметр:
+									</div>
+									<div class="sProdPage__select-cont">
+										<select class="default-select-js" name="diameter">
+											<option value="100">100</option>
+											<option value="200">200</option>
+											<option value="300">300</option>
+										</select>
+									</div>
+								</div>
+								<div class="sProdPage__char-item-color">
+									<div class="sProdPage__char-head sProdPage__char-head--color">Цвет:
+									</div>
+									<div class="sProdPage__color-items"><a class="sProdPage__color-item active" href="#" style="background: linear-gradient(185.53deg, #FFFFFF 33.57%, #D8D8D8 95.59%);"></a><a class="sProdPage__color-item" href="#" style="background: linear-gradient(185.53deg, #A9A9A9 33.57%, #565656 100%);"></a>
+									</div>
+								</div>
+							</div>
+							<div class="sProdPage__chars-icons">
+								<div class="sProdPage__char-icon char-icon-js"><img src="img/svg/char-icon-1.svg" alt=""/>
+									<div class="sProdPage__hint hint-js">Диффузер
+									</div>
+								</div>
+								<div class="sProdPage__char-icon char-icon-js"><img src="img/svg/char-icon-2.svg" alt=""/>
+									<div class="sProdPage__hint hint-js">Гигиеническое<br/>исполнение VDI 6022
+									</div>
+								</div>
+								<div class="sProdPage__char-icon char-icon-js"><img src="img/svg/char-icon-3.svg" alt=""/>
+									<div class="sProdPage__hint hint-js">Система<br/>распределения воздуха
+									</div>
+								</div>
+								<div class="sProdPage__char-icon char-icon-js"><img src="img/svg/char-icon-4.svg" alt=""/>
+									<div class="sProdPage__hint hint-js">Чистые помещения
+									</div>
+								</div>
+							</div>
 						</div>
 						<div class="sProdPage__buy">
+							<div class="sProdPage__price-and-status">
+								<div class="sProdPage__price">66 666 ₽
+								</div>
+								<div class="sProdPage__status status-sucsess">В наличии
+								</div>
+							</div>
+							<!--status-danger-->
+							<div class="sProdPage__amount">
+								<div class="sProdPage__inputs">
+									<div class="sProdPage__minus-btn muted">
+									</div>
+									<input class="form-control" type="number" min="1" max="5" value="1"/>
+									<div class="sProdPage__plus-btn">
+									</div>
+								</div>
+								<div class="sProdPage__amount-txt">шт.
+								</div>
+								<button class="sProdPage__to-cart-btn" type="submit">В корзину
+								</button>
+							</div>
+							<div class="sProdPage__click-and-compare"><a class="sProdPage__one-click" href="#">Купить в 1 клик</a><a class="sProdPage__compare-btn" href="#">
+								<svg class="icon icon-comp ">
+									<use xlink:href="img/svg/sprite.svg#comp"></use>
+								</svg><span>Добавить к сравнению</span></a>
+							</div>
+						</div>
+					</div>
+					<div class="tabs">
+						<div class="swiper-container prod-tabs-slider-js">
+							<div class="tabs__caption swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="tabs__btn active">Описание
+									</div>
+								</div>
+								<!--.swiper-slide+e.btn.active Описание
+								-->
+								<div class="swiper-slide">
+									<div class="tabs__btn">Характеристики
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="tabs__btn">Оплата
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="tabs__btn">Доставка
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="tabs__btn">Сертификаты
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tabs__wrap">
+							<div class="tabs__content active">
+								<div class="tabs__prod-descr">
+									<p>Воздухораспределители NAF предназначены для использования в&nbsp;вентиляционных системах низкого и&nbsp;среднего давления с&nbsp;высокими гигиеническими требованиями. Воздухораспределители оснащены фильтрами высокой степени очистки класса H13. Стандартно воздухораспределители NAF изготавливаются из&nbsp;стали окрашенной, но&nbsp;возможно изготовление из&nbsp;нержавеющей стали.</p>
+								</div>
+							</div>
+							<div class="tabs__content">
+								<div class="tabs__chars">
+									<div class="tabs__chars-item"><b>Материал и&nbsp;отделка:</b>
+										<p>Камера статического давления:<br/>SL&nbsp;&mdash; сталь окрашенная<br/>SN&nbsp;&mdash; сталь нержавеющая</p>
+										<p>Кассета с&nbsp;фильтром:<br/>Класс фильтра Н13, корпус фильтра выполнен из&nbsp;МДФ&nbsp;&mdash; плит, температура рабочей среды до&nbsp;80&nbsp;С&deg;.</p>
+										<p>Воздухораздающие устройства:<br/>Согласно каталогу на&nbsp;выбранный тип устройства.</p>
+									</div>
+									<div class="tabs__chars-item"><b>Монтаж:</b>
+										<p>Воздухораздающие устройства:<br/>Крепятся на&nbsp;саморезы согласно указаниям по&nbsp;монтажу для выбранного типа устройства из&nbsp;каталога.</p>
+										<p>Кассета с&nbsp;фильтром:<br/>Устанавливается в&nbsp;корпус в&nbsp;специальные пазы, после чего фиксируется на&nbsp;винты.</p>
+										<p>Воздухораспределитель NAF:<br/>К&nbsp;корпусу прикреплены четыре крепежа для монтажа на&nbsp;шпильку.</p>
+									</div>
+								</div>
+							</div>
+							<div class="tabs__content">
+								<div class="tabs__no-cash">
+									<div class="tabs__no-cash-img"><img loading="lazy" src="img/svg/document.svg" alt=""/>
+									</div>
+									<div class="tabs__no-cash-txt">
+										<p><b>Безналичный расчет.</b>
+											Оплата покупки осуществляется по заранее выставленному счету.
+											<br/>Счета на безналичный расчет выставляются в случае, если сумма заказа превышает 1000 рублей.
+										</p><a class="tabs__detail-link" href="#"><span>Подробнее</span>
+										<svg class="icon icon-arrow-right ">
+											<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+										</svg></a>
+									</div>
+								</div>
+							</div>
+							<div class="tabs__content">
+								<div class="tabs__delivery">
+									<p>
+										Цены распространяются на доставку по Москве и М.О.
+										<br/>Cтоимость въезда машины  в зону ТТК и Садового кольца уточняйте у менеджера
+									</p><a class="tabs__detail-link" href="#"><span>Подробнее</span>
+									<svg class="icon icon-arrow-right ">
+										<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+									</svg></a>
+								</div>
+							</div>
+							<div class="tabs__content">
+								<div class="tabs__certificats">
+									<div class="tabs__certificat-item">
+										<div class="tabs__cert-img"><img loading="lazy" src="img/svg/pdf.svg" alt=""/>
+										</div>
+										<div class="tabs__cert-txt"><a href="#">Описание документа</a>
+											<div class="txt"><span>Док.pdf</span><span>[весдока]</span></div>
+										</div>
+									</div>
+									<div class="tabs__certificat-item">
+										<div class="tabs__cert-img"><img loading="lazy" src="img/svg/pdf.svg" alt=""/>
+										</div>
+										<div class="tabs__cert-txt"><a href="#">Описание документа</a>
+											<div class="txt"><span>Док.pdf</span><span>[весдока]</span></div>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</section>
 			<!-- end sProdPage-->
+			<!-- start sHit-->
+			<section class="sHit section" id="sHit">
+				<div class="container">
+					<div class="sHit__circle-btn d-none d-xl-flex">
+						<svg class="icon icon-chevron-top ">
+							<use xlink:href="img/svg/sprite.svg#chevron-top"></use>
+						</svg>
+					</div>
+					<div class="section-title">
+						<h2>Сопутствующие товары</h2>
+					</div>
+					<div class="sHit__slider">
+						<div class="swiper-container hitSlider-js">
+							<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<div class="sHit__sliderWrap"><a class="sHit__img" href="#">
+												<picture>
+													<source class="swiper-lazy" srcset="#" data-srcset="img/@2x/webp/hit-1.webp" type="image/webp"/><img class="swiper-lazy" src="#" data-src="img/@2x/hit-1.jpg" alt=""/>
+												</picture></a><a class="sHit__title" href="#">Гигиенический воздухораспределитель NAF</a>
+												<div class="sHit__price">66 666 ₽
+												</div>
+												<div class="sHit__buttons"><a class="sHit__btn link-modal" href="#">Купить</a><a class="sHit__view" href="#">
+													<svg class="icon icon-view ">
+														<use xlink:href="img/svg/sprite.svg#view"></use>
+													</svg></a>
+													<button class="sHit__compare" type="button">
+														<svg class="icon icon-comp ">
+															<use xlink:href="img/svg/sprite.svg#comp"></use>
+														</svg>
+													</button>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="sHit__sliderWrap"><a class="sHit__img" href="#">
+												<picture>
+													<source class="swiper-lazy" srcset="#" data-srcset="img/@2x/webp/hit-2.webp" type="image/webp"/><img class="swiper-lazy" src="#" data-src="img/@2x/hit-2.jpg" alt=""/>
+												</picture></a><a class="sHit__title" href="#">Название товара расчитано&nbsp;в&nbsp;высоту ну&nbsp;на три строчки максимум</a>
+												<div class="sHit__price">Цена ₽
+												</div>
+												<div class="sHit__buttons"><a class="sHit__btn link-modal" href="#">Купить</a><a class="sHit__view" href="#">
+													<svg class="icon icon-view ">
+														<use xlink:href="img/svg/sprite.svg#view"></use>
+													</svg></a>
+													<button class="sHit__compare" type="button">
+														<svg class="icon icon-comp ">
+															<use xlink:href="img/svg/sprite.svg#comp"></use>
+														</svg>
+													</button>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="sHit__sliderWrap"><a class="sHit__img" href="#">
+												<picture>
+													<source class="swiper-lazy" srcset="#" data-srcset="img/@2x/webp/hit-2.webp" type="image/webp"/><img class="swiper-lazy" src="#" data-src="img/@2x/hit-2.jpg" alt=""/>
+												</picture></a><a class="sHit__title" href="#">Название товара расчитано&nbsp;в&nbsp;высоту ну&nbsp;на три строчки максимум</a>
+												<div class="sHit__price">Цена ₽
+												</div>
+												<div class="sHit__buttons"><a class="sHit__btn link-modal" href="#">Купить</a><a class="sHit__view" href="#">
+													<svg class="icon icon-view ">
+														<use xlink:href="img/svg/sprite.svg#view"></use>
+													</svg></a>
+													<button class="sHit__compare" type="button">
+														<svg class="icon icon-comp ">
+															<use xlink:href="img/svg/sprite.svg#comp"></use>
+														</svg>
+													</button>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="sHit__sliderWrap"><a class="sHit__img" href="#">
+												<picture>
+													<source class="swiper-lazy" srcset="#" data-srcset="img/@2x/webp/hit-2.webp" type="image/webp"/><img class="swiper-lazy" src="#" data-src="img/@2x/hit-2.jpg" alt=""/>
+												</picture></a><a class="sHit__title" href="#">Название товара расчитано&nbsp;в&nbsp;высоту ну&nbsp;на три строчки максимум</a>
+												<div class="sHit__price">Цена ₽
+												</div>
+												<div class="sHit__buttons"><a class="sHit__btn link-modal" href="#">Купить</a><a class="sHit__view" href="#">
+													<svg class="icon icon-view ">
+														<use xlink:href="img/svg/sprite.svg#view"></use>
+													</svg></a>
+													<button class="sHit__compare" type="button">
+														<svg class="icon icon-comp ">
+															<use xlink:href="img/svg/sprite.svg#comp"></use>
+														</svg>
+													</button>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="sHit__sliderWrap"><a class="sHit__img" href="#">
+												<picture>
+													<source class="swiper-lazy" srcset="#" data-srcset="img/@2x/webp/hit-2.webp" type="image/webp"/><img class="swiper-lazy" src="#" data-src="img/@2x/hit-2.jpg" alt=""/>
+												</picture></a><a class="sHit__title" href="#">Название товара расчитано&nbsp;в&nbsp;высоту ну&nbsp;на три строчки максимум</a>
+												<div class="sHit__price">Цена ₽
+												</div>
+												<div class="sHit__buttons"><a class="sHit__btn link-modal" href="#">Купить</a><a class="sHit__view" href="#">
+													<svg class="icon icon-view ">
+														<use xlink:href="img/svg/sprite.svg#view"></use>
+													</svg></a>
+													<button class="sHit__compare" type="button">
+														<svg class="icon icon-comp ">
+															<use xlink:href="img/svg/sprite.svg#comp"></use>
+														</svg>
+													</button>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="sHit__sliderWrap"><a class="sHit__img" href="#">
+												<picture>
+													<source class="swiper-lazy" srcset="#" data-srcset="img/@2x/webp/hit-2.webp" type="image/webp"/><img class="swiper-lazy" src="#" data-src="img/@2x/hit-2.jpg" alt=""/>
+												</picture></a><a class="sHit__title" href="#">Название товара расчитано&nbsp;в&nbsp;высоту ну&nbsp;на три строчки максимум</a>
+												<div class="sHit__price">Цена ₽
+												</div>
+												<div class="sHit__buttons"><a class="sHit__btn link-modal" href="#">Купить</a><a class="sHit__view" href="#">
+													<svg class="icon icon-view ">
+														<use xlink:href="img/svg/sprite.svg#view"></use>
+													</svg></a>
+													<button class="sHit__compare" type="button">
+														<svg class="icon icon-comp ">
+															<use xlink:href="img/svg/sprite.svg#comp"></use>
+														</svg>
+													</button>
+												</div>
+											</div>
+										</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sHit-->
+			<!-- start sForm-->
+			<section class="sForm section" id="sForm">
+				<!-- picture-->
+				<picture class="picture-bg"> 
+					<noscript class="loading-lazy">
+						<source srcset="img/@2x/webp/form-bg.webp" loading="lazy" type="image/webp" media="(min-width:lazy)"/>
+						<source srcset="img/@1x/webp/form-bg.webp" loading="lazy" type="image/webp"/>
+						<source srcset="img/@2x/form-bg.png" loading="lazy" type="image/png" media="(min-width:lazy)"/>
+						<source srcset="img/@1x/form-bg.png" loading="lazy" type="image/png"/><img src="img/@2x/form-bg.png" loading="lazy" alt=""/>
+					</noscript>
+				</picture>
+				<!-- /picture-->
+				<div class="container">
+					<div class="row">
+						<div class="sForm__textCol col-lg-8 col-xl-auto">
+							<div class="section-title">
+								<h2>Узнайте стоимость своей системы уже сейчас</h2>
+								<div class="h6">Наш оператор свяжется с Вами в течении 15 минут</div>
+							</div>
+							<div class="sForm__contacts"><a class="sForm__tel" href="tel:74956639601"> 
+								<svg class="icon icon-phone ">
+									<use xlink:href="img/svg/sprite.svg#phone"></use>
+								</svg><span>+7 (495) 663-96-01</span></a><a class="sForm__mail" href="mailto:">
+								<svg class="icon icon-mail ">
+									<use xlink:href="img/svg/sprite.svg#mail"></use>
+								</svg><span>sales@inplast.ru</span></a>
+							</div>
+						</div>
+						<div class="sForm__col col">
+							<div class="form-wrap">
+								<form>
+									<input type="hidden" name="example-input-field"/>
+									<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+									<input class="utm_source" type="hidden" name="utm_source"/>
+									<input class="utm_term" type="hidden" name="utm_term"/>
+									<input class="utm_medium" type="hidden" name="utm_medium"/>
+									<input class="utm_campaign" type="hidden" name="utm_campaign"/>
+									<div class="form-wrap__title text-center">Получить расчет
+									</div>
+									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Ваше имя *" name="text"/>
+									</div>
+									<!-- +e.input-wrap-->
+									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="email" placeholder="Ваш e-mail *" name="email"/>
+									</div>
+									<!-- +e.input-wrap-->
+									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="Ваш телефон *" name="tel"/>
+									</div>
+									<!-- +e.input-wrap-->
+									<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" placeholder="Ваше сообщение" name="textarea"></textarea>
+									</div>
+									<!-- +e.input-wrap-->
+									<button class="form-wrap__btn" type="submit">Отправить
+									</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sForm-->
 			<footer class="footer block-with-lazy">
 				<div class="container">
 					<h2>footer</h2>
@@ -275,6 +663,8 @@
 		<!-- end modals-->
 		<script src="libs/loading-attribute-polyfill/loading-attribute-polyfill.min.js"></script>
 		<script src="libs/jquery/jquery.min.js"></script>
+		<!--select2-->
+		<script src="libs/select2/js/select2.full.min.js"></script>
 		<!-- modal libs-->
 		<script src="libs/@fancyapps/fancybox/jquery.fancybox.min.js"></script>
 		<!-- modal libs-->
