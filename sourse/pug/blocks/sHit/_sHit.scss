@@ -11,6 +11,12 @@
 	}
 
 	//prod page
+	&.prod-page-form{
+		padding-bottom: rem(33);
+		@include media-breakpoint-up(lg){
+			padding-bottom: rem(33);
+		}
+	}
 	.container{
 		position: relative;
 	}

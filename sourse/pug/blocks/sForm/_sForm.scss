@@ -14,6 +14,20 @@
 		}
 	}
 
+	//prod-page
+	&.prod-page-form{
+		.sForm__textCol{
+			padding-bottom: rem(40);
+			@include media-breakpoint-up(xl){
+				padding-bottom: 0;
+			}
+		}
+		.sForm__col{
+			margin-bottom: rem(20);
+		}
+	}
+	//end prod-page
+
 	h2 {
 		font-family: $default-font;
 		padding-top: 4px;
