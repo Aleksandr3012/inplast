@@ -1,10 +1,12 @@
-mixin sHit()
+mixin sHit(title='Хит продаж', hasPrices=true, prodPage=false)
 	// start sHit
 	+b.SECTION.sHit.section#sHit&attributes(attributes)
 		.container
+			if prodPage
+				+e.circle-btn.d-none.d-xl-flex
+					+icon('chevron-top')
 			+b.section-title
-				h2 Хит продаж
-				
+				h2=title
 			+e.slider
 				.swiper-container.hitSlider-js
 					.swiper-wrapper

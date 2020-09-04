@@ -1,5 +1,11 @@
 "use strict";
 
+function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -124,10 +130,12 @@ var JSCCommon = {
 		tabs.Btn.forEach(function (element, index) {
 			element.addEventListener('click', function () {
 				if (!element.classList.contains('active')) {
-					var siblings = element.parentNode.querySelector(".".concat(tab, "__btn.active"));
-					var siblingsContent = tabs.Content[index].parentNode.querySelector(".".concat(tab, "__content.active"));
-					siblings.classList.remove('active');
-					siblingsContent.classList.remove('active');
+					//turn off old
+					var oldActiveEl = element.closest(".".concat(tab)).querySelector(".".concat(tab, "__btn.active"));
+					var oldActiveContent = tabs.Content[index].closest(".".concat(tab)).querySelector(".".concat(tab, "__content.active"));
+					oldActiveEl.classList.remove('active');
+					oldActiveContent.classList.remove('active'); //turn on new(cklicked el)
+
 					element.classList.add('active');
 					tabs.Content[index].classList.add('active');
 				}
@@ -244,7 +252,8 @@ function eventHandler() {
 	var x = window.location.host;
 	var screenName; // screenName = 'main.jpg';
 
-	screenName = 'm_main.png';
+	screenName = 'm_main.png'; // screenName = '02-375.png';
+	// screenName = 'm_main.png';
 
 	if (screenName && x === "localhost:3000") {
 		$(".main-wrapper").after("<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
@@ -316,6 +325,100 @@ function eventHandler() {
 		slideToClickedSlide: true,
 		freeModeMomentum: true
 	})); // modal window
+	//luckyoneJs
+	//02 prod card
+
+	var prodCardThumb = new Swiper('.prod-card-thumb-js', {
+		slidesPerView: 'auto',
+		spaceBetween: 8,
+		slideToClickedSlide: true,
+		//breakpoints
+		breakpoints: {
+			10: {
+				direction: 'horizontal'
+			},
+			576: {
+				direction: 'vertical'
+			}
+		},
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 10
+		}
+	}); //
+
+	$('.prod-card-thumb-js .swiper-slide').click(function () {
+		$('.prod-card-thumb-js .swiper-slide').removeClass('active');
+		$(this).addClass('active');
+	});
+	var prodCardSlider = new Swiper('.prod-card-slider-js', {
+		slidesPerView: 1,
+		spaceBetween: 20,
+		loop: true,
+		thumbs: {
+			swiper: prodCardThumb
+		},
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 2
+		},
+		on: {
+			slideChange: function slideChange() {
+				if (prodCardSlider) {
+					var allThumbs = document.querySelectorAll('.prod-card-thumb-js .swiper-slide');
+
+					var _iterator = _createForOfIteratorHelper(allThumbs),
+							_step;
+
+					try {
+						for (_iterator.s(); !(_step = _iterator.n()).done;) {
+							var thumb = _step.value;
+							$(thumb).removeClass('active');
+						}
+					} catch (err) {
+						_iterator.e(err);
+					} finally {
+						_iterator.f();
+					}
+
+					$(allThumbs[prodCardSlider.realIndex]).addClass('active');
+				}
+			}
+		}
+	}); //select2
+
+	$('.default-select-js').select2({
+		minimumResultsForSearch: Infinity,
+		dropdownCssClass: "default-select"
+	}); //hints
+
+	$('.char-icon-js').mouseenter(function () {
+		$(this).find('.hint-js').fadeIn(function () {
+			$(this).addClass('active');
+		});
+	}).mouseleave(function () {
+		$(this).find('.hint-js').fadeOut(function () {
+			$(this).removeClass('active');
+		});
+	}); //breadcrumbs
+
+	var breadSl = new Swiper('.breadcrumb-slider-js', {
+		slidesPerView: 'auto',
+		// spaceBetween: 30,
+		freeMode: true,
+		freeModeMomentum: true,
+		// spaceBetween: 30,
+		watchOverflow: true
+	}); //tabs slider
+
+	var breadSl = new Swiper('.prod-tabs-slider-js', {
+		slidesPerView: 'auto',
+		spaceBetween: 20,
+		freeMode: true,
+		freeModeMomentum: true,
+		// spaceBetween: 30,
+		watchOverflow: true
+	}); //end luckyoneJs
 }
 
 ;

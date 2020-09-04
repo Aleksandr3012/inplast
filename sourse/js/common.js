@@ -110,10 +110,14 @@ const JSCCommon = {
 		tabs.Btn.forEach((element, index) => {
 			element.addEventListener('click', () => {
 				if (!element.classList.contains('active')) {
-					let siblings = element.parentNode.querySelector(`.${tab}__btn.active`);
-					let siblingsContent = tabs.Content[index].parentNode.querySelector(`.${tab}__content.active`);
-					siblings.classList.remove('active');
-					siblingsContent.classList.remove('active')
+					//turn off old
+					let oldActiveEl = element.closest(`.${tab}`).querySelector(`.${tab}__btn.active`);
+					let oldActiveContent = tabs.Content[index].closest(`.${tab}`).querySelector(`.${tab}__content.active`);
+
+					oldActiveEl.classList.remove('active');
+					oldActiveContent.classList.remove('active')
+
+					//turn on new(cklicked el)
 					element.classList.add('active');
 					tabs.Content[index].classList.add('active');
 				} 
@@ -233,6 +237,8 @@ function eventHandler() {
 	let screenName;
 	// screenName = 'main.jpg';
 	screenName = 'm_main.png';
+	// screenName = '02-375.png';
+	// screenName = 'm_main.png';
 	if (screenName && x === "localhost:3000") {
 		$(".main-wrapper").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
@@ -324,8 +330,104 @@ function eventHandler() {
 
 	});
 	// modal window
-	
 
+	//luckyoneJs
+
+	//02 prod card
+	let prodCardThumb = new Swiper('.prod-card-thumb-js', {
+		slidesPerView: 'auto',
+		spaceBetween: 8,
+		slideToClickedSlide: true,
+		//breakpoints
+		breakpoints: {
+			10: {
+				direction: 'horizontal',
+			},
+			576: {
+				direction: 'vertical',
+			},
+		},
+
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 10,
+		},
+	});
+
+	//
+	$('.prod-card-thumb-js .swiper-slide').click(function (){
+		$('.prod-card-thumb-js .swiper-slide').removeClass('active');
+		$(this).addClass('active');
+	});
+
+	let prodCardSlider = new Swiper('.prod-card-slider-js', {
+		slidesPerView: 1,
+		spaceBetween: 20,
+		loop: true,
+
+		thumbs: {
+			swiper: prodCardThumb,
+		},
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 2,
+		},
+		on : {
+			slideChange: () => {
+				if (prodCardSlider){
+					let allThumbs = document.querySelectorAll('.prod-card-thumb-js .swiper-slide');
+					for (let thumb of allThumbs){
+						$(thumb).removeClass('active');
+					}
+
+					$(allThumbs[prodCardSlider.realIndex]).addClass('active');
+				}
+			},
+		},
+
+	});
+
+	//select2
+	$('.default-select-js').select2({
+		minimumResultsForSearch: Infinity,
+		dropdownCssClass: "default-select",
+	});
+
+	//hints
+	$('.char-icon-js')
+	.mouseenter(function (){
+		$(this).find('.hint-js').fadeIn(function (){
+			$(this).addClass('active');
+		});
+	})
+	.mouseleave(function (){
+		$(this).find('.hint-js').fadeOut(function (){
+			$(this).removeClass('active');
+		});
+	});
+
+
+	//breadcrumbs
+	var breadSl = new Swiper('.breadcrumb-slider-js', {
+		slidesPerView: 'auto',
+		// spaceBetween: 30,
+		freeMode: true,
+		freeModeMomentum: true,
+		// spaceBetween: 30,
+		watchOverflow: true,
+	});
+
+	//tabs slider
+	var breadSl = new Swiper('.prod-tabs-slider-js', {
+		slidesPerView: 'auto',
+		spaceBetween: 20,
+		freeMode: true,
+		freeModeMomentum: true,
+		// spaceBetween: 30,
+		watchOverflow: true,
+	});
+
+	//end luckyoneJs
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
