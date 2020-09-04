@@ -1,1 +1,1 @@
-1. Отключил lazy плагин. Поставил  loading="lazy"
+1. <https://Aleksandr3012.github.io/inplast/public>
