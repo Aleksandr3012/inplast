@@ -39,13 +39,15 @@ mixin sHit()
 						+e.pricesItem(href="#")
 							if i
 								+icon('certificate')
+								+e.list= t
 							else
 								+icon('catalog')
-							span= t
+								+e.list Прайс-лист. 
+									span= t
 				.row.justify-content-center
-					+item('Прайс-лист. Алюминиевые решетки')
-					+item('Прайс-лист. Решетки дымоудаления')
-					+item('Прайс-лист. Наружные решетки')
-					+item('Прайс-лист. Расходные материалы')
+					+item('Алюминиевые решетки')
+					+item('Решетки дымоудаления')
+					+item('Наружные решетки')
+					+item('Расходные материалы')
 					+item('Сертификаты','i')
 	// end sHit

@@ -1,0 +1,27 @@
+mixin newsItem()
+	+b.newsItem
+		+e.imgWrap(href="#")
+			+pic('news-bg','bg','lazy','')
+		+e.date(href="#") дд.мм.гг
+		+e.title(href="#") Название новости
+		p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+		+e.details(href="#") Подробнее
+			img(src="img/arrow-r.svg", alt="")
+
+mixin sNews()
+	// start sNews
+	+b.SECTION.sNews.section#sNews&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Последние новости
+				+e.allNews(href="#") Все новости
+				
+			.row
+				.col-lg-4
+					+newsItem
+				.col-lg-4
+					+newsItem
+				.col-lg-4
+					+newsItem
+			.h6 Мы&nbsp;являемся производителями воздуховодов и&nbsp;фасонных изделий, шумоглушителей и&nbsp;крепежа для вентиляции, такого как шина монтажная, скоба вентиляционная, хомуты и&nbsp;уголки для крепления воздуховодов. Одно из&nbsp;главных наших преимуществ&nbsp;&mdash; полностью автоматизированное производство. Помимо этого мы&nbsp;продаем оборудование для балансировки систем отопления: ручные и&nbsp;автоматические балансировочные клапаны, регуляторы перепада давления, шаровые краны, фильтры именитых производителей, гарантирующих высокое качество и&nbsp;обоснованную цену. Нашу высококачественную продукцию мы&nbsp;производим на&nbsp;профессиональном оборудовании известных европейских брендов. Это позволяет нам выполнять заказы в&nbsp;любых масштабах и&nbsp;в&nbsp;самые короткие сроки.
+	// end sNews

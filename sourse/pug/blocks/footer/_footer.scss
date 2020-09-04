@@ -1,7 +1,123 @@
 .footer {
-		
+	padding-top: rem(20);
+	padding-bottom: var(--sPB);
+	background-color: $body-color;
+	color: #fff;
 
+	&__mnuTitle {
+		font-weight: 600;
+		font-size: 18px;
+		margin-bottom: 10px;
+		text-transform: uppercase;
+	}
 
+	li {
+		list-style: none;
+		padding-bottom: 9px;
+		@include media-breakpoint-up(md) {
+			padding-bottom: 6px;
+		}
+		a {
+			color: #fff;
+		}
+	}
+
+	&__logo {
+		margin-bottom: 10px;
+		picture {
+			min-height: 67px;
+		}
+		img {
+			// width: 100%;
+			// max-width: 240px;
+		}
+	}
+
+	&__copyright {
+		font-size: 12px;
+		margin-bottom: 24px;
+	}
+
+	&__location {
+		display: flex;
+		margin-bottom: 10px;
+		@include media-breakpoint-up(sm) {
+			margin-bottom: 24px;
+			max-width: 250px;
+		}
+		line-height: 1.4;
+		.icon {
+			font-size: rem(25);
+			margin-right: rem(10);
+		}
+	}
+
+	&__instagram {
+		color: #fff;
+		display: flex;
+		align-items: center;
+		@include media-breakpoint-up(md) {
+			font-size: 14px;
+		}
+
+		.icon {
+			font-size: 25px;
+			@include media-breakpoint-up(md) {
+				font-size: 30px;
+			}
+			margin-right: 10px;
+		}
+
+	}
+
+	&__col {
+		@include media-breakpoint-up(xl) {
+			max-width: 415px;
+		}
+	}
+
+	&__row {
+		@include media-breakpoint-up(md) {
+			padding-top: rem(10px);
+		}
+		@include media-breakpoint-up(xl) {
+			@include roww(60px);
+		}
+
+		.col-md-3 {
+			@include media-breakpoint-up(xl) {
+				&:nth-last-child(1) {
+					padding-right: 0px;
+				}
+				&:nth-child(2) {
+					padding-left: rem(11);
+				}
+			}
+		}
+	}
+
+	&__tel {
+		color: #fff;
+		display: block;
+		font-size: 18px;
+		margin-bottom: 10px;
+		.icon {
+			font-size: rem(25);
+			margin-right: 6px;
+		}
+	}
+
+	&__mail {
+		color: #fff;
+		display: block;
+		font-size: 18px;
+		margin-bottom: 12px;
+
+		.icon {
+			font-size: rem(24);
+			margin-right: 10px;
+		}
+	}
 // 
 @include media-breakpoint-up(xl) {}
 

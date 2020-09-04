@@ -8,6 +8,8 @@ include ../blocks/sCatalog/_sCatalog.pug
 include ../blocks/sServices/_sServices.pug
 include ../blocks/sHit/_sHit.pug
 include ../blocks/sProject/_sProject.pug
+include ../blocks/sVideo/_sVideo.pug
+include ../blocks/sNews/_sNews.pug
 
 block variables
 	- let  mainPage= null
@@ -30,7 +32,8 @@ block pagecontent
 	+sHit()
 	+sForm()
 	+sProject()
-	+sContact()
+	+sVideo()
+	+sNews()
 	+footer()
 
 
