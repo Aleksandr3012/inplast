@@ -4,8 +4,8 @@ mixin sContact()
 		+e.container.container
 			+b.section-title.text-center
 				h2 Контактная информация
-			.row
-				.col-md-6.col-lg-4
+			+e.row.row
+				.col-sm-7.col-md-6.col-lg-4
 					+e.title Реквизиты
 					+e.details
 						+e.detail-item
@@ -17,17 +17,17 @@ mixin sContact()
 						+e.detail-item
 							span Р/С:
 							span 00000000000 ИНФОРМ
-				.col-md-6.col-lg-4
+				+e.connect-col.col-sm-5.col-md-6.col-lg-4
 					+e.title Связь с нами
 					+e.tel-mail-cont
 						+telAndMailItem('phone')
 							li: a(href="tel:+74956639601") +7 (495) 663-96-01
-							li: a(href="tel:+74956639601") +7 (495) 663-96-01
-							li: a(href="tel:+74956639601") +7 (495) 663-96-01
+							li: a(href="tel:+74955438931") +7 (495) 543‑89-31
+							li: a(href="tel:+74955438925") +7 (495) 543‑89-25
 						+telAndMailItem('email', 'green-links')
 							li: a(href="mailto:sales@inplast.ru") sales@inplast.ru
 							li: a(href="mailto:info@inplast.ru") info@inplast.ru
-				.col-md-6.col-lg-4.offset-md-3.offset-lg-0
+				.col-lg-4
 					+e.title Где мы находимся
 					+e.shedule-cont
 						+sheduleItem('location')

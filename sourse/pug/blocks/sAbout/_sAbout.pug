@@ -1,0 +1,73 @@
+mixin sAbout()
+	// start sAbout
+	+b.SECTION.sAbout.section#sAbout&attributes(attributes)
+		+e.container.container
+			+b.section-title.text-center
+				h2
+					| Группа компаний
+					.text-primary
+						| Инпласт
+						|
+					| это
+			+e.row.row
+				+e.left-col.col-lg-6.col-xl-7
+					+e.bg
+						img(src="img/svg/russia.svg" alt="")
+					+e.years
+						+e.years-top
+							+e.years-num.years-num-js 15
+							+e.years-txt лет
+						+e.years-small на всероссийском рынке
+					+e.stat-row.row
+						+statRowItem(1 , '1500')
+							| крупных объектов по&#160;всей России и странам СНГ
+						+statRowItem(2 , '90%')
+							| комплектующих продукции
+							.text-primary
+								| SMAY
+								|
+							| на сертифицированном производстве
+						+statRowItem(3 , '120')
+							| видов решеток, диффузоров и другого сетевого оборудования
+				+e.right-col.col-lg-6.col-xl-5
+					+b.tabs
+						.swiper-container.tabs-slider-js
+							+e.caption.swiper-wrapper
+								+e.btn.swiper-slide 2005
+								+e.btn.swiper-slide 2007
+								+e.btn.swiper-slide 2011
+								+e.btn.swiper-slide 2013
+								+e.btn.swiper-slide.active 2015
+						+e.wrap
+							//-1
+							+e.content
+								ul
+									li Создание и становление компании ИНПЛАСТ
+									li Начало сотрудничества с компанией SMAY (Польша)
+							+e.content
+								ul
+									li Открытие филиала в г. Екатеринбург
+									li Начало производства воздуховодов, сетевого оборудования и шины монтажной
+							+e.content
+								ul
+									li Развитие вентиляционного бизнеса
+									li Расширение и переезд производственной базы в Московскую область
+									li Расширение и переезд производственной базы в Московскую область
+									li Открытие филиала в г. Сочи
+							+e.content
+								ul
+									li Подписание договора франчайзинга с компанией SMAY (Польша)
+									li Запуск производства линейки вентиляционных решеток
+							+e.content.active
+								ul
+									li ИНПЛАСТ — эксклюзивный дистрибьютор оборудования для балансировки систем отопления марки FlowCon (Дания) на территории таможенного союза
+									li Расширение станочного парка и внедрение технологии TDF
+	// end sAbout
+
+mixin statRowItem(imgNum, headTxt)
+	+e.stat-col.col-md-4
+		+e.stat-img
+			img(src=`img/@2x/about-stat-${imgNum}.png` alt="")
+		+e.stat-head=headTxt
+		+e.stat-txt
+			block

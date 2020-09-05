@@ -236,8 +236,8 @@ function eventHandler() {
 	var x = window.location.host;
 	let screenName;
 	// screenName = 'main.jpg';
-	screenName = 'm_main.png';
-	// screenName = '02-375.png';
+	//screenName = 'm_main.png';
+	screenName = '04-375.png';
 	// screenName = 'm_main.png';
 	if (screenName && x === "localhost:3000") {
 		$(".main-wrapper").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
@@ -418,13 +418,15 @@ function eventHandler() {
 	});
 
 	//tabs slider
-	var breadSl = new Swiper('.prod-tabs-slider-js', {
-		slidesPerView: 'auto',
-		spaceBetween: 20,
-		freeMode: true,
-		freeModeMomentum: true,
-		// spaceBetween: 30,
-		watchOverflow: true,
+	$('.tabs-slider-js').each(function (){
+		let tabsSlider = new Swiper(this, {
+			slidesPerView: 'auto',
+			spaceBetween: 20,
+			freeMode: true,
+			freeModeMomentum: true,
+			// spaceBetween: 30,
+			watchOverflow: true,
+		});
 	});
 
 	//end luckyoneJs

@@ -10,6 +10,7 @@ include ../blocks/sHit/_sHit.pug
 include ../blocks/sProject/_sProject.pug
 
 include ../blocks/sProdPage/_sProdPage.pug
+include ../blocks/sHow/_sHow.pug
 
 block variables
 	- let  mainPage= null
@@ -26,6 +27,7 @@ block pagecontent
 				.col-auto.col-lg-12
 					+top-nav()
 	+sContact()
+	+sHow()
 	+sForm()(class="static-form")
 	+footer()
 
