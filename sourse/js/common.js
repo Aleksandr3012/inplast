@@ -235,10 +235,7 @@ function eventHandler() {
 	// добавляет подложку для pixel perfect
 	var x = window.location.host;
 	let screenName;
-	// screenName = 'main.jpg';
-	//screenName = 'm_main.png';
 	screenName = '04-375.png';
-	// screenName = 'm_main.png';
 	if (screenName && x === "localhost:3000") {
 		$(".main-wrapper").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
@@ -448,6 +445,36 @@ function eventHandler() {
 			watchOverflow: true,
 		});
 	});
+	//logoes slider
+	let logoesSlider = new Swiper('.logoes-slider-js', {
+		slidesPerView: 'auto',
+		freeMode: true,
+		freeModeMomentum: true,
+		watchOverflow: true,
+
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 100,
+		},
+	});
+	//certificats slider
+	let certSlider = new Swiper('.cetificats-slider-js', {
+		slidesPerView: 'auto',
+		spaceBetween: 20,
+
+
+		//lazy
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 5,
+		},
+		//pugination
+		pagination: {
+			el: $(this).find('.office-slider-pugin'),
+			clickable: true,
+		},
+	});
+
 
 	//end luckyoneJs
 };

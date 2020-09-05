@@ -3,7 +3,23 @@
 	padding-top: calc((var(--sPT) * 2) + 127px);
 
 	//for aboutPage
+	&.about-page-projects{
+		padding-top: rem(30);
+		.section-title{
+			@extend .container;
+
+			h2{
+				font-size: rem(25);
+				line-height: (29/25);
+			}
+		}
+	}
+
 	&__top-txt{
+		margin-bottom: rem(40);
+		@include media-breakpoint-up(sm){
+			margin-bottom: rem(60);
+		}
 		p{
 			font-size: rem(18px);
 			line-height: (25/18);

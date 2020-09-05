@@ -12,7 +12,8 @@ include ../blocks/sProject/_sProject.pug
 include ../blocks/sProdPage/_sProdPage.pug
 include ../blocks/sHow/_sHow.pug
 include ../blocks/sAbout/_sAbout.pug
-include ../blocks/sQuality/_sQuality.pug
+include ../blocks/sLogoes/_sLogoes.pug
+include ../blocks/sLoudWords/_sLoudWords.pug
 
 block variables
 	- let  mainPage= null
@@ -29,7 +30,9 @@ block pagecontent
 				.col-auto.col-lg-12
 					+top-nav()
 	+sAbout()
-	+sProject()
+	+sProject('Качество нашей продукции подтверждается ее присутствием на самых разных объектах', true)(class='about-page-projects')
+	+sLogoes()
+	+sLoudWords()
 	+sForm()(class="static-form")
 	+footer()
 

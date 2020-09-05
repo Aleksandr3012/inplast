@@ -30,6 +30,9 @@
 			font-weight: 600;
 			//font-size: rem(40px);
 			line-height: (54/40);
+			@include media-breakpoint-up(sm){
+				font-size: rem(40px);
+			}
 			.text-primary{
 				display: inline;
 				font-weight: bold;

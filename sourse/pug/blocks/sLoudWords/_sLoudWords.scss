@@ -1,0 +1,122 @@
+// start .sLoudWords
+.sLoudWords {
+
+	--sPT: #{rem(30)};
+	--sPB: #{rem(10)};
+	--sTPB: #{rem(22)};
+	@include media-breakpoint-up(sm){
+		--sPT: #{rem(10)};
+		--sPB: #{rem(30)};
+		--sTPB: #{rem(28)};
+	}
+
+
+	.section-title{
+		h2{
+			font-family: $mono;
+			font-weight: bold;
+
+			font-size: rem(23);
+			line-height: 1.2;
+			@include media-breakpoint-up(sm){
+				font-size: rem(25px);
+				line-height: 1.16;
+			}
+
+
+			@include media-breakpoint-up(xl){
+				text-align: justify;
+			}
+		}
+	}
+
+	//slider
+	&__slider{
+		.swiper-container{
+			@include media-breakpoint-between(sm, md){
+				overflow: visible !important;
+			}
+		}
+		.swiper-wrapper{
+			@include media-breakpoint-up(md){
+				transform: none !important;
+			}
+		}
+		.swiper-slide{
+			@include media-breakpoint-between(sm, md){
+				width: calc(50% - 10px);
+			}
+			@include media-breakpoint-up(md){
+				//1 only
+				&:nth-child(1){
+					width: calc(50% - 10px);
+				}
+				// 2+
+				&:nth-child(n + 2){
+					width: calc(25% - (10px * 1.5));
+				}
+				// 4+
+				&:nth-child(n + 4){
+					transform: translateX(calc(-200% - 40px)) translateY(calc(100% + 30px));
+				}
+			}
+			@include media-breakpoint-up(lg){
+				//1 only
+				&:nth-child(1){
+					width: calc(50% - 10px);
+				}
+				// 2+
+				&:nth-child(n + 2){
+					width: calc(25% - (10px * 1.5));
+				}
+				// 4+
+				&:nth-child(n + 4){
+					transform: translateX(calc(-200% - 40px)) translateY(calc(100% + 30px));
+				}
+			}
+		}
+	}
+	&__img-link{
+		display: block;
+		position: relative;
+
+		padding-top: 133.75%;
+
+		img{
+			position: absolute;
+			top: 0;
+			left: 0;
+			border-radius: $border-radius;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+
+} // end.sLoudWords
