@@ -253,7 +253,6 @@ function eventHandler() {
 	var screenName; // screenName = 'main.jpg';
 
 	screenName = 'm_main.png'; // screenName = '02-375.png';
-	// screenName = 'm_main.png';
 
 	if (screenName && x === "localhost:3000") {
 		$(".main-wrapper").after("<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
@@ -306,6 +305,22 @@ function eventHandler() {
 			el: '.headerSlider-js .swiper-pagination',
 			// type: 'bullets',
 			clickable: true
+		}
+	}));
+	var projectSlider = new Swiper('.projectSlider-js', _objectSpread(_objectSpread({}, defaultSl), {}, {
+		slidesPerView: 1,
+		// autoplay: {
+		// 	delay: 6000,
+		// },
+		pagination: {
+			el: '.projectSlider-js .swiper-pagination',
+			// type: 'bullets',
+			clickable: true,
+			type: 'fraction'
+		},
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 2
 		}
 	}));
 	var hitSlider = new Swiper('.hitSlider-js', _objectSpread(_objectSpread({}, defaultSl), {}, {

@@ -4,7 +4,7 @@ mixin footer()
 			.row
 				.col.order-lg-last
 					+e.row.row
-						.col-6.col-md-3
+						.col-6.col-md-3.order-first
 							+e.mnuTitle Компания
 							ul
 								li: a(href="#") Главная
@@ -17,7 +17,7 @@ mixin footer()
 								li: a(href="#") Каталоги
 								li: a(href="#") Прайс-лист
 								li: a(href="#") Акции
-						.col-6.col-md-3.order-md-2
+						.col-6.col-md-3.order-md-first
 							+e.mnuTitle Информация
 							ul
 								li: a(href="#") Новости
