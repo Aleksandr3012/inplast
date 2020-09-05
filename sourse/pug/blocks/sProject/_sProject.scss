@@ -2,6 +2,19 @@
 .sProject {
 	padding-top: calc((var(--sPT) * 2) + 127px);
 
+	//for aboutPage
+	&__top-txt{
+		p{
+			font-size: rem(18px);
+			line-height: (25/18);
+			text-align: justify;
+		}
+		p:last-child{
+			margin-bottom: 0;
+		}
+	}
+	//end aboutPage
+
 	.container-fluid {
 		padding-left: 0;
 		padding-right: 0;
