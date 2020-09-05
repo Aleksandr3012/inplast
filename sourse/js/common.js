@@ -304,6 +304,26 @@ function eventHandler() {
 		},
 	});
 
+	const projectSlider = new Swiper('.projectSlider-js', {
+		// slidesPerView: 5,
+		...defaultSl,
+		slidesPerView: 1,
+		// autoplay: {
+		// 	delay: 6000,
+		// },
+		pagination: {
+			el: '.projectSlider-js .swiper-pagination',
+			// type: 'bullets',
+			clickable: true,
+			type: 'fraction',
+		},
+
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 2,
+		},
+	});
+
 	const hitSlider = new Swiper('.hitSlider-js', {
 		// slidesPerView: 5,
 		...defaultSl,

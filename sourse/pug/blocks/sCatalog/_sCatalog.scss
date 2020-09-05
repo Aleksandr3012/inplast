@@ -2,6 +2,9 @@
 // start .sCatalog
 .sCatalog {
 	padding-bottom: calc(var(--sPB) - 12.5px);
+	@include media-breakpoint-up(lg) {
+		padding-bottom: calc(var(--sPB) - 20px);
+	}
 	h2 {
 		@extend .mono;
 		font-weight: bold;
