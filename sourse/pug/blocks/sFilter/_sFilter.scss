@@ -1,26 +1,43 @@
+// start .sFilter
+.sFilter {
+	background: #F7F7F7;
+	border: 1px solid #C4C4C4;
+	border-radius: 2px;
 
-	// start .sFilter
-	.sFilter {
-		 
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
+	&__itemWrap {
+		max-height: 238px;
+		overflow-x: hidden;
+		overflow-y: auto;
+	}
+
+	&__item {
+
+	}
+
+	&__buttons {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	
+	&__btn {
+		@extend .btn;
+		@extend .btn-primary;
+		font-size: 14px;
+
+	}
+
+	&__skip {
+		@extend .btn;
+		border: 1px solid #A4A4A4;
+		font-size: 14px;
+		color: #7D7D7D;
+	}
+
+
 	@include media-breakpoint-up(sm) {}
-	
-	//
 	@include media-breakpoint-between(md, xl) { }
-	
-	
-	//
-	@include media-breakpoint-only(sm) {}
-	@include media-breakpoint-only(md) {}
-	@include media-breakpoint-only(lg) {}
 	@include media-breakpoint-only(xl) {}
-	
-	//
-	@include media-breakpoint-down(xl) {}
-	@include media-breakpoint-down(lg) {}
-	@include media-breakpoint-down(md) {}
 	@include media-breakpoint-down(sm) {}
 
 } // end.sFilter

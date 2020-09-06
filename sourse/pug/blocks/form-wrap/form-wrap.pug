@@ -54,8 +54,8 @@ mixin form-wrap()
 
 
 mixin in-c(typ="checkbox", text, name= typ )
-	+b.LABEL.custom-input
-		+e.INPUT.input(type= typ , name= name)&attributes(attributes)
+	+b.LABEL.custom-input&attributes(attributes)
+		+e.INPUT.input(type= typ , name= name)
 		+e.SPAN.lab
 		if block
 			block 
