@@ -1,9 +1,52 @@
 mixin sContact()
 	// start sContact
 	+b.SECTION.sContact.section#sContact&attributes(attributes)
-		.container
+		+e.container.container
 			+b.section-title.text-center
-				h2 sContact
-				
-			.row
+				h2 Контактная информация
+			+e.row.row
+				.col-sm-7.col-md-6.col-lg-4
+					+e.title Реквизиты
+					+e.details
+						+e.detail-item
+							span ИНН:
+							span 000000000000
+						+e.detail-item
+							span ОРГНИП:
+							span 000000000000000
+						+e.detail-item
+							span Р/С:
+							span 00000000000 ИНФОРМ
+				+e.connect-col.col-sm-5.col-md-6.col-lg-4
+					+e.title Связь с нами
+					+e.tel-mail-cont
+						+telAndMailItem('phone')
+							li: a(href="tel:+74956639601") +7 (495) 663-96-01
+							li: a(href="tel:+74955438931") +7 (495) 543‑89-31
+							li: a(href="tel:+74955438925") +7 (495) 543‑89-25
+						+telAndMailItem('email', 'green-links')
+							li: a(href="mailto:sales@inplast.ru") sales@inplast.ru
+							li: a(href="mailto:info@inplast.ru") info@inplast.ru
+				.col-lg-4
+					+e.title Где мы находимся
+					+e.shedule-cont
+						+sheduleItem('location')
+							p Россия, Московская область, Долгопрудный, Лихачёвский проезд, 4с1
+							a(href="#") Смотреть на карте
+						+sheduleItem('clock')
+							p 09:00 – 18:00 по будням
 	// end sContact
+mixin sheduleItem(imgName)
+	+e.shedule-item
+		+e.shedule-img
+			img(src=`img/svg/${imgName}.svg` alt="")
+		+e.shedule-content
+			block
+
+mixin telAndMailItem(imgName, contentClasses)
+	+e.tel-mail-item
+		+e.tel-mail-img
+			img(src=`img/svg/${imgName}.svg` alt="")
+		+e.tel-mail-content(class=contentClasses)
+			ul
+				block

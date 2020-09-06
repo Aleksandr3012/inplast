@@ -316,9 +316,8 @@ function eventHandler() {
 	// добавляет подложку для pixel perfect
 
 	var x = window.location.host;
-	var screenName; // screenName = 'main.jpg';
-
-	screenName = 'm_main.png'; // screenName = '02-375.png';
+	var screenName;
+	screenName = '04-375.png';
 
 	if (screenName && x === "localhost:3000") {
 		$(".main-wrapper").after("<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
@@ -492,13 +491,41 @@ function eventHandler() {
 		watchOverflow: true
 	}); //tabs slider
 
-	var breadSl = new Swiper('.prod-tabs-slider-js', {
+	$('.tabs-slider-js').each(function () {
+		var tabsSlider = new Swiper(this, {
+			slidesPerView: 'auto',
+			spaceBetween: 20,
+			freeMode: true,
+			freeModeMomentum: true,
+			// spaceBetween: 30,
+			watchOverflow: true
+		});
+	}); //logoes slider
+
+	var logoesSlider = new Swiper('.logoes-slider-js', {
 		slidesPerView: 'auto',
-		spaceBetween: 20,
 		freeMode: true,
 		freeModeMomentum: true,
-		// spaceBetween: 30,
-		watchOverflow: true
+		watchOverflow: true,
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 100
+		}
+	}); //certificats slider
+
+	var certSlider = new Swiper('.cetificats-slider-js', {
+		slidesPerView: 'auto',
+		spaceBetween: 20,
+		//lazy
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 5
+		},
+		//pugination
+		pagination: {
+			el: $(this).find('.office-slider-pugin'),
+			clickable: true
+		}
 	});
 	$('.drop-accardion-js').click(function () {
 		$(this).parent().toggleClass('active');

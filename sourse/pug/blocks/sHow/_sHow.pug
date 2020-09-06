@@ -1,0 +1,25 @@
+mixin sHow()
+	// start sHow
+	+b.SECTION.sHow.section#sHow&attributes(attributes)
+		+e.container.container
+			+b.section-title.text-center
+				h2 Как до нас добраться
+			+e.row.row
+				+howItem('car', 'На автомобиле', 'Cхема проезда', 'map-img')
+					p Текст некой длинны о&nbsp;том, как&nbsp;же удобнее и&nbsp;проще всего добраться до&nbsp;здания на&nbsp;личном автомобиле или такси
+				+howItem('subway', 'На общественном транспорте', 'Расписание транспорта', 'auchan-img')
+					p Текст некой длинны о&nbsp;том, какое метро ближе всего к&nbsp;зданию и&nbsp;как удобнее всего будет добираться от&nbsp;него до&nbsp;здания
+	// end sHow
+
+mixin howItem(iconName,transportTxt,linkTxt,imgName)
+	+e.col.col-md-6
+		+e.title
+			+e.icon
+				img(loading='lazy' src=`img/svg/${iconName}.svg` alt="")
+			span=transportTxt
+		+e.txt-content
+			block
+		+e.A.link(href="#")=linkTxt
+		+e.map-block
+			+e.img-cont
+				img(loading='lazy' src=`img/@2x/${imgName}.jpg` alt="")

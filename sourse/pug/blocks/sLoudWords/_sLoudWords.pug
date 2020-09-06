@@ -1,0 +1,25 @@
+mixin sLoudWords()
+	// start sLoudWords
+	+b.SECTION.sLoudWords.section#sLoudWords&attributes(attributes)
+		.container
+			+b.section-title
+				h2 За нас говорят не громкие слова и обещания, а быстрый результат и качественная, надежная работа
+			.row
+				.col-lg-8
+					//sLoudWords-stab
+					+e.slider
+						.swiper-container.cetificats-slider-js
+							.swiper-wrapper
+								+certSlide()
+								+certSlide()
+								+certSlide()
+								+certSlide()
+								+certSlide()
+				.col-lg-4
+					+e.
+	// end sLoudWords
+
+mixin certSlide()
+	.swiper-slide
+		+e.img-link(href=`img/@2x/sLoudWords-stab.jpg` data-fancybox=`cetificatsImgs`)
+			img.swiper-lazy(src="" data-src=`img/@2x/sLoudWords-stab.jpg` alt="")

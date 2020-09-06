@@ -1,0 +1,16 @@
+mixin sLogoes()
+	// start sLogoes
+	+b.SECTION.sLogoes.section#sLogoes&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Мы работаем с крупнейшими девелоперскими, строительными, инжиниринговыми и проектными организациями
+			+e.logoes-slider
+				.swiper-container.logoes-slider-js
+					.swiper-wrapper
+						.swiper-slide
+							- for (var i=1; i <= 12; i++)
+								+LogoesItem(`${i}`)
+	// end sLogoes
+mixin LogoesItem(imgNum)
+	+e.img-cont
+		img.swiper-lazy(src="#" data-src=`img/@2x/sLogoes-${imgNum}.png` alt="")

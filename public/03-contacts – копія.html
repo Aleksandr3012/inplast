@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>03-contacts</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, shrink-to-fit=no">
+		<link rel="shortcut icon" type="image/png" href="img/favicon/favicon.png"><meta name="format-detection" content="telephone=no">
+		<link rel="image_src" href="http://genrif.ru/assets/i/soc-logo.png">
+		<meta property="og:type" content="website">
+		<meta property="og:site_name" content="content">
+		<meta property="og:title" content="content">
+		<meta property="og:description" content="content">
+		<meta property="og:url" content="content">
+		<meta property="og:locale" content="ru_RU">
+		<meta property="og:image" content="path/to/image.jpg">
+		<meta property="og:image:width" content="968">
+		<meta property="og:image:height" content="504">
+		<!-- Custom Browsers Color-->
+		<meta name="theme-color" content="#3361d8">
+		<link rel="stylesheet" href="libs/swiper/css/swiper.min.css"/>
+		<!--select2-->
+		<link rel="stylesheet" href="libs/select2/css/select2.min.css"/>
+		<link rel="stylesheet" href="libs/@fancyapps/fancybox/jquery.fancybox.min.css"/>
+		<link rel="stylesheet" href="css/main.min.css"/>
+	</head>
+	<body><!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
+		<div class="main-wrapper">
+			<!-- start header-->
+			<header class="header" id="header">
+				<div class="container">
+					<div class="row align-items-center">
+						<div class="col col-lg-12">
+							<!-- start topLine-->
+							<div class="topLine" id="topLine">
+								<div class="row align-items-center">
+									<div class="col col-sm-auto"><a class="topLine__logo" href="/"><img class="res-i" src="img/@2x/logo.png" alt=""/><span class="topLine__logoTitle d-none d-lg-block">Доставка по Москве и регионам России</span></a>
+									</div>
+									<div class="topLine__searchCol col-auto col-sm">
+										<div class="form-wrap">
+											<form>
+												<input type="hidden" name="example-input-field"/>
+												<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+												<input class="utm_source" type="hidden" name="utm_source"/>
+												<input class="utm_term" type="hidden" name="utm_term"/>
+												<input class="utm_medium" type="hidden" name="utm_medium"/>
+												<input class="utm_campaign" type="hidden" name="utm_campaign"/>
+												<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="search" placeholder="Поиск" name="search"/>
+												</div>
+												<!-- +e.input-wrap-->
+												<button class="form-wrap__btn" type="button">
+													<svg class="icon icon-search ">
+														<use xlink:href="img/svg/sprite.svg#search"></use>
+													</svg>
+												</button>
+											</form>
+										</div>
+										<div class="topLine__btnOpen d-lg-none">
+											<svg class="icon icon-search ">
+												<use xlink:href="img/svg/sprite.svg#search"></use>
+											</svg>
+										</div>
+									</div>
+									<div class="topLine__col col-auto d-none d-md-block text-right"><a class="topLine__tel" href="tel:74956639601">+7 (495) 663-96-01</a><a class="topLine__call link-modal" href="#modal-call">Перезвоните мне</a>
+									</div>
+									<div class="col-auto d-none d-lg-block"><a class="topLine__mail" href="mailto:sales@inplast.ru">
+										<svg class="icon icon-mail ">
+											<use xlink:href="img/svg/sprite.svg#mail"></use>
+										</svg><span>sales@inplast.ru</span></a>
+										<div class="topLine__hours">
+											<svg class="icon icon-clock ">
+												<use xlink:href="img/svg/sprite.svg#clock"></use>
+											</svg><span>09:00–18:00 по будням</span>
+										</div><a class="topLine__location" href="https://yandex.ru/maps/-/CCQxE0qqxD" target="_blank">
+										<svg class="icon icon-location ">
+											<use xlink:href="img/svg/sprite.svg#location"></use>
+										</svg><span>г. Москва</span></a>
+									</div>
+								</div>
+							</div>
+							<!-- end topLine-->
+						</div>
+						<div class="col-auto col-lg-12">
+							<!-- start top-nav-->
+							<div class="top-nav block-with-lazy">
+								<div class="row align-items-center">
+									<div class="col d-none d-lg-block">
+										<ul class="top-nav__nav" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+											<li class="top-nav__item dropdown" itemprop="item">
+												<div class="top-nav__link"><a class="top-nav__link" href="#">Каталог</a>
+													<ul class="drop">
+														<li class="drop__item"><a class="drop__link" href="#" itemprop="url">Lorem, ipsum.</a>
+														</li>
+														<li class="drop__item"><a class="drop__link" href="#" itemprop="url">Lorem, ipsum dolor.</a>
+														</li>
+													</ul>
+												</div>
+											</li>
+											<li class="top-nav__item dropdown" itemprop="item"><a class="top-nav__link" href="#">О компании</a>
+												<ul class="drop">
+													<li class="drop__item"><a class="drop__link" href="#" itemprop="url">Lorem, ipsum.</a>
+													</li>
+													<li class="drop__item"><a class="drop__link" href="#" itemprop="url">Lorem, ipsum dolor.</a>
+													</li>
+												</ul>
+											</li>
+											<li class="top-nav__item dropdown" itemprop="item">
+												<div class="top-nav__link"><a class="top-nav__link" href="#">Скачать</a>
+													<ul class="drop">
+														<li class="drop__item"><a class="drop__link" href="#" itemprop="url">Lorem, ipsum.</a>
+														</li>
+														<li class="drop__item"><a class="drop__link" href="#" itemprop="url">Lorem, ipsum dolor.</a>
+														</li>
+													</ul>
+												</div>
+											</li>
+											<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#">Оплата</a>
+											</li>
+											<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#">Доставка</a>
+											</li>
+											<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#">Гарантии</a>
+											</li>
+											<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#">Акции</a>
+											</li>
+											<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#">Контакты</a>
+											</li>
+											<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#">Статьи</a>
+											</li>
+										</ul>
+									</div>
+									<div class="top-nav__col col-lg-auto"><a class="comparison" href="#">
+										<svg class="icon icon-comp ">
+											<use xlink:href="img/svg/sprite.svg#comp"></use>
+										</svg><span class="comparison__quantity">1</span></a><a class="basket" href="#">
+										<svg class="icon icon-basket ">
+											<use xlink:href="img/svg/sprite.svg#basket"></use>
+										</svg><span class="basket__quantity">1</span></a>
+										<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
+										</div>
+										<div class="menu-mobile menu-mobile--js d-lg-none">
+											<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+											</div>
+											<div class="menu-mobile__inner">
+												<ul class="menu-mobile__nav" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+													<li class="menu-mobile__item dropdown" itemprop="item">
+														<div class="menu-mobile__link"><a class="menu-mobile__link" href="#">Каталог</a>
+															<ul class="drop">
+																<li class="drop__item"><a class="drop__link" href="#" itemprop="url">Lorem, ipsum.</a>
+																</li>
+																<li class="drop__item"><a class="drop__link" href="#" itemprop="url">Lorem, ipsum dolor.</a>
+																</li>
+															</ul>
+														</div>
+													</li>
+													<li class="menu-mobile__item dropdown" itemprop="item"><a class="menu-mobile__link" href="#">О компании</a>
+														<ul class="drop">
+															<li class="drop__item"><a class="drop__link" href="#" itemprop="url">Lorem, ipsum.</a>
+															</li>
+															<li class="drop__item"><a class="drop__link" href="#" itemprop="url">Lorem, ipsum dolor.</a>
+															</li>
+														</ul>
+													</li>
+													<li class="menu-mobile__item dropdown" itemprop="item">
+														<div class="menu-mobile__link"><a class="menu-mobile__link" href="#">Скачать</a>
+															<ul class="drop">
+																<li class="drop__item"><a class="drop__link" href="#" itemprop="url">Lorem, ipsum.</a>
+																</li>
+																<li class="drop__item"><a class="drop__link" href="#" itemprop="url">Lorem, ipsum dolor.</a>
+																</li>
+															</ul>
+														</div>
+													</li>
+													<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#">Оплата</a>
+													</li>
+													<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#">Доставка</a>
+													</li>
+													<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#">Гарантии</a>
+													</li>
+													<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#">Акции</a>
+													</li>
+													<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#">Контакты</a>
+													</li>
+													<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#">Статьи</a>
+													</li>
+												</ul>
+												<div class="text-right"></div>
+											</div>
+										</div>
+										<!--  мобильное меню-->
+									</div>
+								</div>
+							</div>
+							<!-- end top-nav-->
+						</div>
+					</div>
+				</div>
+			</header>
+			<!-- end header-->
+			<!-- start sContact-->
+			<section class="sContact section" id="sContact">
+				<div class="sContact__container container">
+					<div class="section-title text-center">
+						<h2>Контактная информация</h2>
+					</div>
+					<div class="sContact__row row">
+						<div class="col-sm-7 col-md-6 col-lg-4">
+							<div class="sContact__title">Реквизиты
+							</div>
+							<div class="sContact__details">
+								<div class="sContact__detail-item"><span>ИНН:</span><span>000000000000</span>
+								</div>
+								<div class="sContact__detail-item"><span>ОРГНИП:</span><span>000000000000000</span>
+								</div>
+								<div class="sContact__detail-item"><span>Р/С:</span><span>00000000000 ИНФОРМ</span>
+								</div>
+							</div>
+						</div>
+						<div class="sContact__connect-col col-sm-5 col-md-6 col-lg-4">
+							<div class="sContact__title">Связь с нами
+							</div>
+							<div class="sContact__tel-mail-cont">
+								<div class="sContact__tel-mail-item">
+									<div class="sContact__tel-mail-img"><img src="img/svg/phone.svg" alt=""/>
+									</div>
+									<div class="sContact__tel-mail-content">
+										<ul>
+											<li><a href="tel:+74956639601">+7 (495) 663-96-01</a></li>
+											<li><a href="tel:+74955438931">+7 (495) 543‑89-31</a></li>
+											<li><a href="tel:+74955438925">+7 (495) 543‑89-25</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="sContact__tel-mail-item">
+									<div class="sContact__tel-mail-img"><img src="img/svg/email.svg" alt=""/>
+									</div>
+									<div class="sContact__tel-mail-content green-links">
+										<ul>
+											<li><a href="mailto:sales@inplast.ru">sales@inplast.ru</a></li>
+											<li><a href="mailto:info@inplast.ru">info@inplast.ru</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="sContact__title">Где мы находимся
+							</div>
+							<div class="sContact__shedule-cont">
+								<div class="sContact__shedule-item">
+									<div class="sContact__shedule-img"><img src="img/svg/location.svg" alt=""/>
+									</div>
+									<div class="sContact__shedule-content">
+										<p>Россия, Московская область, Долгопрудный, Лихачёвский проезд, 4с1</p><a href="#">Смотреть на карте</a>
+									</div>
+								</div>
+								<div class="sContact__shedule-item">
+									<div class="sContact__shedule-img"><img src="img/svg/clock.svg" alt=""/>
+									</div>
+									<div class="sContact__shedule-content">
+										<p>09:00 – 18:00 по будням</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sContact-->
+			<!-- start sHow-->
+			<section class="sHow section" id="sHow">
+				<div class="sHow__container container">
+					<div class="section-title text-center">
+						<h2>Как до нас добраться</h2>
+					</div>
+					<div class="sHow__row row">
+						<div class="sHow__col col-md-6">
+							<div class="sHow__title">
+								<div class="sHow__icon"><img loading="lazy" src="img/svg/car.svg" alt=""/>
+								</div><span>На автомобиле</span>
+							</div>
+							<div class="sHow__txt-content">
+								<p>Текст некой длинны о&nbsp;том, как&nbsp;же удобнее и&nbsp;проще всего добраться до&nbsp;здания на&nbsp;личном автомобиле или такси</p>
+							</div><a class="sHow__link" href="#">Cхема проезда</a>
+							<div class="sHow__map-block">
+								<div class="sHow__img-cont"><img loading="lazy" src="img/@2x/map-img.jpg" alt=""/>
+								</div>
+							</div>
+						</div>
+						<div class="sHow__col col-md-6">
+							<div class="sHow__title">
+								<div class="sHow__icon"><img loading="lazy" src="img/svg/subway.svg" alt=""/>
+								</div><span>На общественном транспорте</span>
+							</div>
+							<div class="sHow__txt-content">
+								<p>Текст некой длинны о&nbsp;том, какое метро ближе всего к&nbsp;зданию и&nbsp;как удобнее всего будет добираться от&nbsp;него до&nbsp;здания</p>
+							</div><a class="sHow__link" href="#">Расписание транспорта</a>
+							<div class="sHow__map-block">
+								<div class="sHow__img-cont"><img loading="lazy" src="img/@2x/auchan-img.jpg" alt=""/>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sHow-->
+			<!-- start sForm-->
+			<section class="sForm section static-form" id="sForm">
+				<!-- picture-->
+				<picture class="picture-bg"> 
+					<noscript class="loading-lazy">
+						<source srcset="img/@2x/webp/form-bg.webp" loading="lazy" type="image/webp"/><img src="img/@2x/form-bg.png" loading="lazy" alt=""/>
+					</noscript>
+				</picture>
+				<!-- /picture-->
+				<div class="container">
+					<div class="row">
+						<div class="sForm__textCol col-lg-8 col-xl-auto">
+							<div class="section-title">
+								<h2>Узнайте стоимость своей системы уже сейчас</h2>
+								<div class="h6">Наш оператор свяжется с&nbsp;Вами в течении 15&nbsp;минут</div>
+							</div>
+							<div class="sForm__contacts"><a class="sForm__tel" href="tel:74956639601"> 
+								<svg class="icon icon-phone ">
+									<use xlink:href="img/svg/sprite.svg#phone"></use>
+								</svg><span>+7 (495) 663-96-01</span></a><a class="sForm__mail" href="mailto:">
+								<svg class="icon icon-mail ">
+									<use xlink:href="img/svg/sprite.svg#mail"></use>
+								</svg><span>sales@inplast.ru</span></a>
+							</div>
+						</div>
+						<div class="sForm__col col">
+							<div class="form-wrap">
+								<form>
+									<input type="hidden" name="example-input-field"/>
+									<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+									<input class="utm_source" type="hidden" name="utm_source"/>
+									<input class="utm_term" type="hidden" name="utm_term"/>
+									<input class="utm_medium" type="hidden" name="utm_medium"/>
+									<input class="utm_campaign" type="hidden" name="utm_campaign"/>
+									<div class="form-wrap__title text-center">Получить расчет
+									</div>
+									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Ваше имя *" name="text"/>
+									</div>
+									<!-- +e.input-wrap-->
+									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="email" placeholder="Ваш e-mail *" name="email"/>
+									</div>
+									<!-- +e.input-wrap-->
+									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="Ваш телефон *" name="tel"/>
+									</div>
+									<!-- +e.input-wrap-->
+									<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" placeholder="Ваше сообщение" name="textarea"></textarea>
+									</div>
+									<!-- +e.input-wrap-->
+									<button class="form-wrap__btn" type="submit">Отправить
+									</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sForm-->
+			<footer class="footer block-with-lazy">
+				<div class="container">
+					<div class="row">
+						<div class="col order-lg-last">
+							<div class="footer__row row">
+								<div class="col-6 col-md-3">
+									<div class="footer__mnuTitle">Компания
+									</div>
+									<ul>
+										<li><a href="#">Главная</a></li>
+										<li><a href="#">О компании</a></li>
+										<li><a href="#">Проекты</a></li>
+										<li><a href="#">Вакансии</a></li>
+									</ul>
+								</div>
+								<div class="col-6 col-md-3">
+									<div class="footer__mnuTitle">Покупателям
+									</div>
+									<ul>
+										<li><a href="#">Каталоги</a></li>
+										<li><a href="#">Прайс-лист</a></li>
+										<li><a href="#">Акции</a></li>
+									</ul>
+								</div>
+								<div class="col-6 col-md-3 order-md-2">
+									<div class="footer__mnuTitle">Информация
+									</div>
+									<ul>
+										<li><a href="#">Новости</a></li>
+										<li><a href="#">Статьи</a></li>
+									</ul>
+								</div>
+								<div class="col-6 col-md-3">
+									<div class="footer__mnuTitle">Документы
+									</div>
+									<ul>
+										<li><a href="#">Сертификаты</a></li>
+										<li><a href="#">Реквизиты</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="footer__col col-lg-auto col-xl">
+							<div class="footer__contacts d-lg-none"><a class="footer__tel" href="tel:74956639601"> 
+								<svg class="icon icon-phone ">
+									<use xlink:href="img/svg/sprite.svg#phone"></use>
+								</svg><span>+7 (495) 663-96-01</span></a><a class="footer__mail" href="mailto:">
+								<svg class="icon icon-mail ">
+									<use xlink:href="img/svg/sprite.svg#mail"></use>
+								</svg><span>sales@inplast.ru</span></a>
+							</div><a class="footer__logo d-none d-lg-block" href="#">
+							<!-- picture-->
+							<picture> 
+								<noscript class="loading-lazy">
+									<source srcset="img/@2x/webp/logo-white.webp" loading="lazy" type="image/webp" media="(min-width:576px)"/>
+									<source srcset="img/@1x/webp/logo-white.webp" loading="lazy" type="image/webp"/>
+									<source srcset="img/@2x/logo-white.jpg" loading="lazy" type="image/jpg" media="(min-width:576px)"/>
+									<source srcset="img/@1x/logo-white.jpg" loading="lazy" type="image/jpg"/><img src="img/@2x/logo-white.jpg" loading="lazy" alt=""/>
+								</noscript>
+							</picture>
+							<!-- /picture--></a>
+							<div class="footer__copyright d-none d-lg-block">© 2005 — <span class="currentYear"></span> Торговый дом «ИНПЛАСТ»
+							</div>
+							<div class="footer__location"> 
+								<div class="d-lg-none">
+									<svg class="icon icon-location ">
+										<use xlink:href="img/svg/sprite.svg#location"></use>
+									</svg>
+								</div><span>г. Москва, Лихачёвский пр., 4, стр. 1, Долгопрудный</span>
+							</div><a class="footer__instagram" href="https://www.instagram.com/tdinplast/" target="_blank">
+							<svg class="icon icon-inst ">
+								<use xlink:href="img/svg/sprite.svg#inst"></use>
+							</svg><span>Мы в Instagram</span></a>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<!--  start modals-->
+		<div class="modal-win" id="modal-call" style="display: none">
+			<div class="form-wrap">
+				<form>
+					<input type="hidden" name="example-input-field"/>
+					<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+					<input class="utm_source" type="hidden" name="utm_source"/>
+					<input class="utm_term" type="hidden" name="utm_term"/>
+					<input class="utm_medium" type="hidden" name="utm_medium"/>
+					<input class="utm_campaign" type="hidden" name="utm_campaign"/>
+					<div class="text-center">
+						<div class="form-wrap__title form-data h3 ttu">Обратный звонок
+						</div>
+						<p class="after-headline">Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут</p>
+					</div>
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Ваше Имя" name="text" required="required"/> 
+					</div>
+					<!-- +e.input-wrap-->
+					<button class="form-wrap__btn btn" type="submit"> 
+					</button>
+					<div class="form-wrap__polite">
+						<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox" checked="checked"/><span class="custom-input__lab"></span><small class="custom-input__text text-secondary">Согласен на обработку и хранение моих персональных данных в соответствии с условиями</small>
+						</label>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- #modal-call-->
+		<!-- end modals-->
+		<script src="libs/loading-attribute-polyfill/loading-attribute-polyfill.min.js"></script>
+		<script src="libs/jquery/jquery.min.js"></script>
+		<!--select2-->
+		<script src="libs/select2/js/select2.full.min.js"></script>
+		<!-- modal libs-->
+		<script src="libs/@fancyapps/fancybox/jquery.fancybox.min.js"></script>
+		<!-- modal libs-->
+		<!-- slider libs-->
+		<script src="libs/swiper/js/swiper.min.js"></script>
+		<!-- /slider libs-->
+		<script src="libs/inputmask/inputmask.min.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+</html>

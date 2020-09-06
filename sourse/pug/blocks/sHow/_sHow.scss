@@ -1,0 +1,155 @@
+// start .sHow
+.sHow {
+
+	--sPT: #{rem(30)};
+	--sPB: #{rem(58)};
+	--sTPB: #{rem(22)};
+	@include media-breakpoint-up(sm){
+		--sPT: #{rem(26)};
+		--sPB: #{rem(90)};
+		--sTPB: #{rem(22)};
+	}
+
+	&__container{
+		@include media-breakpoint-up(xl){
+			max-width: 1086px;
+		}
+	}
+	&__row{
+		@include media-breakpoint-up(xl){
+			margin-right: -20px;
+			@include roww(100px);
+		}
+
+		& > *{
+			margin-bottom: rem(40);
+			&:last-child{
+				margin-bottom: 0;
+			}
+			@include media-breakpoint-up(md){
+				margin-bottom: 0;
+			}
+		}
+	}
+	.section-title{
+		h2{
+			//font-family: $mono;
+			font-style: normal;
+			font-weight: bold;
+			line-height: (35/30);
+		}
+	}
+
+	//
+	&__col{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		font-size: rem(18px);
+		line-height: (25/18);
+	}
+	&__title{
+		@include media-breakpoint-down(sm){
+			position: relative;
+			margin-right: -10px;
+		}
+
+		display: flex;
+		align-items: center;
+		margin-bottom: rem(10);
+
+		span{
+			font-weight: 600;
+			color: $primary;
+		}
+	}
+	&__icon{
+		margin-right: rem(10);
+		width: rem(30px);
+		height: rem(30px);
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		img{
+			width: auto;
+			height: auto;
+			max-height: 100%;
+			max-width: 100%;
+		}
+	}
+
+	&__txt-content{
+		margin-bottom: rem(7px);
+		@include media-breakpoint-up(sm){
+			margin-bottom: rem(4px);
+		}
+		p:last-child{
+			margin-bottom: 0;
+		}
+	}
+	&__link{
+		display: block;
+		@include mt();
+		font-size: rem(16px);
+		line-height: (22/16);
+
+		text-decoration-line: underline;
+		&:hover{
+			text-decoration-line: none;
+		}
+
+		margin-bottom: rem(30);
+	}
+	&__map-block{
+		position: relative;
+		height: 333px;
+		//padding-top: 69.96%;
+		//height: 0;
+
+		@include media-breakpoint-down(sm){
+			left: calc(-1 * (100vw - 100%) / 2);
+			width: 100vw;
+		}
+
+	}
+	&__img-cont{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__{}
+	&__{}
+	&__{}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+
+} // end.sHow
