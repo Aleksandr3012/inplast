@@ -1,0 +1,157 @@
+// start .sSmayProj
+.sSmayProj {
+
+	--sPT: #{rem(4)};
+	--sTPB: #{rem(25)};
+	--sPB: #{rem(60)};
+	@include media-breakpoint-up(sm){
+		--sPT: #{rem(0)};
+		--sTPB: #{rem(22)};
+		--sPB: #{rem(60)};
+	}
+
+	.section-title{
+		h2{
+			font-family: $mono;
+			font-weight: bold;
+
+			font-size: rem(28px);
+			line-height: (33/28);
+			@include media-breakpoint-up(sm){
+				font-size: rem(30px);
+				line-height: (35/30);
+			}
+		}
+	}
+
+	&__items{
+
+	}
+	&__item{
+		@include media-breakpoint-up(md){
+			display: flex;
+		}
+
+		padding-bottom: rem(40);
+		@include media-breakpoint-up(xl){
+			padding-bottom: rem(20);
+		}
+		&:last-child{
+			padding-bottom: 0;
+		}
+	}
+	&__img{
+		display: block;
+		flex-shrink: 0;
+
+		position: relative;
+		width: 100vw;
+		left: calc(-1 * (100vw - 100%) / 2);
+		margin-bottom: rem(20);
+		@include media-breakpoint-up(sm){
+			position: static;
+			width: 70%;
+			left: 0;
+		}
+		@include media-breakpoint-up(md){
+			width: 32.7%;
+			margin-bottom: 0;
+			margin-right: rem(20);
+		}
+
+	}
+	&__img-inner{
+		display: block;
+		position: relative;
+		background-color: $black;
+		overflow: hidden;
+		padding-top: 78.49%;
+
+		&:hover{
+			img{
+				transform: scale(1.1);
+				opacity: .8;
+			}
+		}
+		img{
+			@include mt();
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__content{
+
+	}
+	&__title{
+		font-family: $mono;
+		font-weight: bold;
+		font-size: rem(25px);
+		line-height: (29/25);
+		margin-bottom: rem(4);
+	}
+	&__date{
+		font-size: rem(14px);
+		line-height: (19/14);
+		color: rgba($body-color, .6);
+
+		margin-bottom: rem(20);
+	}
+	&__txt{
+		margin-bottom: rem(10);
+		p{
+			font-size: rem(18px);
+			line-height: (25/18);
+			text-align: justify;
+		}
+		p:last-child{
+			margin-bottom: 0;
+		}
+	}
+	&__det-link{
+		display: flex;
+		align-items: center;
+		@include mt();
+
+		span{
+			font-size: rem(18px);
+			line-height: (25/18);
+			margin-right: rem(10);
+		}
+		.icon{
+			@include mt();
+			font-size: rem(10);
+			color: transparent;
+			stroke: $primary;
+			stroke-width: 1px;
+		}
+	}
+	&__{}
+	&__{}
+	&__{}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+
+} // end.sSmayProj

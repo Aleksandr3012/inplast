@@ -7,10 +7,15 @@
 	@include media-breakpoint-up(sm){
 		--sPT: #{rem(10)};
 		--sPB: #{rem(30)};
-		--sTPB: #{rem(28)};
+		--sTPB: #{rem(22)};
 	}
 
-
+	&__row{
+		margin-bottom: rem(58px);
+		@include media-breakpoint-up(sm){
+			margin-bottom: rem(63);
+		}
+	}
 	.section-title{
 		h2{
 			font-family: $mono;
@@ -32,6 +37,14 @@
 
 	//slider
 	&__slider{
+		margin-bottom: rem(40);
+		@include media-breakpoint-up(lg){
+			margin-bottom: rem(0);
+		}
+		@include media-breakpoint-up(xl){
+			max-width: 89.5%;
+		}
+
 		.swiper-container{
 			@include media-breakpoint-between(sm, md){
 				overflow: visible !important;
@@ -75,6 +88,15 @@
 				}
 			}
 		}
+
+		//pugin
+		position: relative;
+		.certificat-slider-pugin{
+			position: absolute;
+			z-index: 2;
+			bottom: rem(20px);
+			left: 0;
+		}
 	}
 	&__img-link{
 		display: block;
@@ -92,10 +114,251 @@
 			object-fit: cover;
 		}
 	}
-	&__{}
-	&__{}
-	&__{}
-	&__{}
+
+	//feedback-slider
+	&__feedback-slider{
+		position: relative;
+
+		@include media-breakpoint-up(xl){
+			max-width: 98%;
+			margin-left: auto;
+		}
+		@include media-breakpoint-up(lg){
+			//!!
+			display: flex;
+			justify-content: stretch;
+			align-items: stretch;
+
+			min-height: 100%;
+			box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.13);
+			border-radius: rem(7px);
+		}
+
+		.swiper-container{
+			overflow: visible;
+			@include media-breakpoint-up(lg){
+				overflow: hidden;
+			}
+		}
+		.swiper-wrapper{
+			overflow: visible;
+			@include media-breakpoint-up(lg){
+				overflow: hidden;
+			}
+		}
+		.swiper-slide{
+			min-height: 439px;
+			@include media-breakpoint-up(lg){
+				min-height: 0;
+			}
+
+			height: auto;
+			padding: rem(20) rem(20) rem(40) rem(20);
+
+			box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.13);
+			border-radius: rem(7px);
+			@include media-breakpoint-up(lg){
+				box-shadow: none;
+				border-radius: 0;
+			}
+		}
+
+		.feedback-slider-pugin{
+			position: absolute;
+			z-index: 2;
+			bottom: rem(20px);
+			left: 0;
+		}
+	}
+	&__fb-title{
+		font-family: $mono;
+		font-weight: bold;
+		font-size: rem(20px);
+		line-height: (23/20);
+		margin-bottom: 3px;
+	}
+	&__fb-date{
+		font-size: rem(14px);
+		line-height: (19/14);
+		color: rgba($body-color, .5);
+
+		margin-bottom: rem(10px);
+	}
+	&__fb-txt{
+		p{
+			font-size: rem(18px);
+			line-height: (25/18);
+		}
+		p:last-child{
+			margin-bottom: 0;
+		}
+	}
+	//video
+	//video
+	&__video{
+		@include media-breakpoint-up(lg){
+			display: flex;
+		}
+		margin-bottom: rem(60);
+	}
+
+	&__v-txt{
+		p{
+			font-size: rem(18px);
+			line-height: (25/18);
+			text-align: justify;
+			margin-bottom: 0;
+		}
+
+	}
+	//slider-txt
+	//slider-txt
+	&__slider-txt{
+		flex-direction: column-reverse;
+		@include media-breakpoint-up(lg){
+			flex-direction: row;
+		}
+
+		display: flex;
+		padding-bottom: rem(50);
+		@include media-breakpoint-up(sm){
+			padding-bottom: rem(31);
+		}
+	}
+	&__s-txt{
+		@include media-breakpoint-up(lg){
+			width: 41.5%;
+			margin-right: 20px;
+		}
+
+		flex-shrink: 0;
+
+		p{
+			font-size: rem(18px);
+			line-height: (25/18);
+			text-align: justify;
+			@include media-breakpoint-up(sm){
+
+			}
+		}
+		p:last-child{
+			margin-bottom: 0;
+		}
+	}
+	//
+	&__s-sliders{
+		width: 100%;
+		margin-bottom: rem(30);
+		@include media-breakpoint-up(lg){
+			flex-grow: 1;
+			width: calc(58% - 20px);
+			margin-bottom: 0;
+		}
+	}
+
+	&__s-slider{
+		position: relative;
+		width: 100vw;
+		left: calc(-1 * (100vw - 100%) / 2);
+		@include media-breakpoint-up(sm){
+			position: static;
+			width: 100%;
+			left: 0;
+			margin-bottom: rem(15);
+		}
+
+		.swiper-container{
+
+		}
+		.swiper-wrapper{
+
+		}
+		.swiper-slide{
+			width: 100%;
+		}
+
+		position: relative;
+		.txt-slider-pugin{
+			position: absolute;
+			z-index: 2;
+			bottom: rem(20px);
+			left: 0;
+
+			.swiper-pagination-bullet{
+				background-color: $body-color;
+			}
+		}
+	}
+	&__txt-img-link{
+		display: block;
+		position: relative;
+		overflow: hidden;
+		background-color: $black;
+		padding-top: 54.66%;
+
+		&:hover{
+			img{
+				opacity: .8;
+				transform: scale(1.1);
+			}
+		}
+		img{
+			@include mt();
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__s-thumb{
+		position: relative;
+		&:after{
+			content: '';
+			z-index: 1;
+			position: absolute;
+			top: 0;
+			right: -20px;
+			background: linear-gradient(270.42deg, #FFFFFF 25.31%, rgba(255, 255, 255, 0) 99.63%);
+			height: 100%;
+			width: 81px;
+		}
+		.swiper-container{
+
+		}
+		.swiper-wrapper{
+
+		}
+		.swiper-slide{
+			cursor: pointer;
+			//width: calc((100% / 3) - (10px * 2 / 3));
+			width: 177px;
+		}
+	}
+	&__s-thumb-img{
+		position: relative;
+		background-color: $black;
+		overflow: hidden;
+		padding-top: 54.8%;
+
+		&:hover{
+			img{
+				opacity: .8;
+				transform: scale(1.1);
+			}
+		}
+
+		img{
+			@include mt();
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
 	&__{}
 	&__{}
 	@include media-breakpoint-up(xl) {}
@@ -120,3 +383,72 @@
 	@include media-breakpoint-down(sm) {}
 
 } // end.sLoudWords
+
+.video-frame{
+	flex-shrink: 0;
+
+	width: 100%;
+	margin-bottom: rem(20);
+	@include media-breakpoint-up(md){
+		width: 60%;
+	}
+	@include media-breakpoint-up(lg){
+		width: 42%;
+		margin-right: rem(40);
+		margin-bottom: 0;
+	}
+	&__link{
+		display: block;
+		position: relative;
+		width: 100%;
+		padding-top: 55.84%;
+		min-height: 176px;
+	}
+	&__img{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__play-btn{
+		position: absolute;
+		z-index: 1;
+		left: 50%;
+		top: 50%;
+		transform: translateX(-50%) translateY(-50%);
+
+		width: rem(48px);
+		height: rem(48px);
+		@include media-breakpoint-up(sm){
+			width: rem(70px);
+			height: rem(70px);
+		}
+		border-radius: 50%;
+		background-color: $dark;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		img{
+			transform: translateX(3px);
+			width: auto;
+			height: auto;
+
+			max-width: 36%;
+			@include media-breakpoint-up(sm){
+				max-width: 80%;
+			}
+
+			max-height: 80%;
+		}
+	}
+}

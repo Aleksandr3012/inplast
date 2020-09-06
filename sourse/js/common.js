@@ -235,7 +235,7 @@ function eventHandler() {
 	// добавляет подложку для pixel perfect
 	var x = window.location.host;
 	let screenName;
-	screenName = '04-375.png';
+	screenName = '05-1440.png';
 	if (screenName && x === "localhost:3000") {
 		$(".main-wrapper").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
@@ -249,7 +249,6 @@ function eventHandler() {
 	// добавляет текущий год в .currentYear
 
 	function whenResize() {
- 
 
 	}
 
@@ -462,18 +461,89 @@ function eventHandler() {
 		slidesPerView: 'auto',
 		spaceBetween: 20,
 
-
 		//lazy
 		lazy: {
 			loadPrevNext: true,
 			loadPrevNextAmount: 5,
 		},
+
 		//pugination
 		pagination: {
-			el: $(this).find('.office-slider-pugin'),
+			el: $(this).find('.certificat-slider-pugin'),
 			clickable: true,
 		},
 	});
+	//feedback slider
+	let feedBackSlider = new Swiper('.feedback-slider-js', {
+		slidesPerView: 'auto',
+		spaceBetween: 30,
+
+		//pugination
+		pagination: {
+			el: $(this).find('.feedback-slider-pugin'),
+			clickable: true,
+		},
+	});
+
+	//txt slider
+	let txtThumb = new Swiper('.txt-thumb-js', {
+		slidesPerView: 'auto',
+		spaceBetween: 10,
+
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 5,
+		},
+	});
+
+	let txtSlider = new Swiper('.txt-slider-js', {
+		slidesPerView: 1,
+		spaceBetween: 10,
+		loop: true,
+
+		thumbs: {
+			swiper: txtThumb,
+		},
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 2,
+		},
+
+		//pagination
+		pagination: {
+			el: $(this).find('.txt-slider-pugin'),
+			clickable: true,
+		},
+	});
+	//scroll link
+	fixedStip();
+
+	function fixedStip(){
+		let fixedStrip = document.querySelector('.scroll-top');
+		if(!fixedStrip) return
+
+		window.addEventListener("scroll", toggleFixedStrip.bind(undefined, fixedStrip), {passive:  true});
+		toggleFixedStrip(fixedStrip);
+
+		$(fixedStrip).click(function (){
+			window.scrollTo({
+				top: 0,
+				behavior: "smooth"
+			});
+		});
+	}
+	function toggleFixedStrip(fixedStrip){
+		if (window.scrollY > calcVh(50)){
+			$(fixedStrip).addClass('active');
+		}
+		else{
+			$(fixedStrip).removeClass('active');
+		}
+	}
+	function calcVh(v) {
+		var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+		return (v * h) / 100;
+	}
 
 
 	//end luckyoneJs
