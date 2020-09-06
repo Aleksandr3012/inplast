@@ -433,6 +433,13 @@ function eventHandler() {
 		freeModeMomentum: true,
 		// spaceBetween: 30,
 		watchOverflow: true
+	});
+	$('.drop-accardion-js').click(function () {
+		$(this).parent().toggleClass('active');
+		$(this).parent().find('.drop-accardion-toggle-js').toggle();
+	});
+	$('.mnu-accardion-js').click(function () {
+		$(this).toggleClass('active').parent().find('.mnu-accardion-toggle').toggleClass('active');
 	}); //end luckyoneJs
 }
 

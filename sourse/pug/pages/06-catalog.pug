@@ -1,0 +1,43 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sAdvantages/_sAdvantages.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sServices/_sServices.pug
+include ../blocks/sHit/_sHit.pug
+include ../blocks/sProject/_sProject.pug
+include ../blocks/sFilter/_sFilter.pug
+include ../blocks/sCatalogInner/_sCatalogInner.pug
+include ../blocks/sCatalogSlider/_sCatalogSlider.pug
+
+include ../blocks/sProdPage/_sProdPage.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= '02-prod-page'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	+header()
+		.container
+			.row.align-items-center
+				.col.col-lg-12
+					+topLine()
+				.col-auto.col-lg-12
+					+top-nav()
+	//- +sProdPage()
+	.container.section
+		+breadcrumb('Главная', 'Каталог', 'Вентиляционное оборудование для чистых помещений')
+		.row
+			.col-lg-3
+				+sFilter
+			.col-lg
+				+sCatalogSlider
+				+sCatalogInner
+	+footer()
+
+
+	

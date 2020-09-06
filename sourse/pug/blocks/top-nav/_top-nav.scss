@@ -77,19 +77,220 @@
 	}
 
 	.dropdown {
-		cursor: pointer;
-		&::after {
-			content: '';
-			width: 12px;
-			height: 6px;
+		// cursor: pointer;
+		position: relative;
+		.drop-open {
+			flex: 0 0 auto;
+			cursor: pointer;
+			max-width: 12px;
+			// height: 6px;
 			margin-left: 6px;
 			display: inline-block;
-			background-image: url('../img/dropdown.svg');
 			background-size: 100%;
 			background-position: center;
 			background-repeat: no-repeat;
 		}
-	}
+		&--catalog {
+			position: static;
+		}
+		
+		.drop {
+			flex-grow: 1;
+			z-index: 10;
+			text-align: left;
+			@include media-breakpoint-up(lg) {
+				position: absolute;
+				@include mt;
+				transform: scale(1,0);
+				top: 38px;
+				filter: drop-shadow(0px 2px 10px rgba(0, 0, 0, 0.2));
+			}
+			@include media-breakpoint-down(lg) {
+				display: none;
+			}
+			@include media-breakpoint-only(md) {
+				margin-right: -15px;
+			}
+			@include media-breakpoint-down(md) {
+				.container {
+					padding-right: 0px;
+					padding-left: 10px;
+				}
+			}
+			transform-origin: top;
+			background-color: #fff;
+
+			&__item {
+				@include media-breakpoint-up(lg) {
+					box-shadow: 0px 1px 0px #C4C4C4;
+				}
+
+				a {
+					color: $body-color;
+					padding: 0 20px;
+					@include media-breakpoint-up(lg) {
+						padding: 10px 20px;
+					}
+					display: block;
+					&:hover {
+						color: rgba($color: $primary, $alpha: 0.7);
+					}
+					@include media-breakpoint-down(lg) {
+						font-size: 14px;
+						margin-bottom: 10px;
+					}
+				}
+			}
+
+			li {
+				list-style: none;
+			}
+
+			&--about {
+				@include media-breakpoint-up(lg) {
+					width: 259px;
+				}
+			}
+			&--download {
+				@include media-breakpoint-up(lg) {
+					width: 220px;
+				}
+			}
+			&--catalog {
+				// left: 0;
+				@include media-breakpoint-up(lg) {
+					width: 100vw;
+					padding-top: 20px;
+					top: rem(50);
+					margin-left: calc(-1 * (100vw - 100%) / 2);
+				}
+				// transform: scale(1) !important;
+			}
+
+
+			&__title {
+				flex: 0 0 auto;
+				width: 90%;
+				color: $body-color;
+				font-size: 14px;
+				margin-bottom: 10px;
+				@include media-breakpoint-up(lg) {
+					font-family: $mono;
+					font-weight: bold;
+				}
+
+				&:hover {
+					color: $primary;
+				}
+			}
+
+			picture {
+				max-width: 42px;
+				margin-right: 10px;
+				
+			}
+
+			&__more, &__toggle {
+				color: $primary;
+				font-weight: 600;
+				font-size: 14px;
+			}
+
+			&__toggle {
+				display: none;
+			}
+
+			&__lodaMore {
+				cursor: pointer;
+				position: relative;
+				align-items: center;
+				&::after {
+					content: '';
+					width: 12px;
+					height: 6px;
+					margin-left: 6px;
+					display: inline-block;
+					background-size: 100%;
+					background-position: center;
+					background-repeat: no-repeat;
+					background-image: url('../img/dropdown-primary.svg');
+				}
+
+				&.active {
+					.drop__more {
+						display: none;
+					}
+					.drop__toggle {
+						display: block;
+					}
+					&::before {
+						transform: rotate(180deg);
+					}
+					&::after {
+						transform: rotate(180deg);
+					}
+				}
+			}
+
+			&__mnu {
+				padding-bottom: 10px;
+				@include media-breakpoint-up(lg) {
+					padding-bottom: 30px;
+				}
+				@include media-breakpoint-down(lg) {
+					width: 100%;
+				}
+				display: flex;
+				// align-items: center;
+				justify-content: space-between;
+				flex-wrap: wrap;
+				&.active {
+					.submenu {
+						display: block;
+					}
+					@include media-breakpoint-down(lg) {
+						.drop__title {
+						color: $primary;
+						}
+					}
+					.drop-open {
+						// padding-top: 0;
+						img {
+							transform: rotate(180deg);
+						}
+					}
+				}
+			}
+		}//drop end
+		
+		&:hover .drop {
+			transform: scale(1);
+		}
+		&.active {
+			.drop {
+				transform: scale(1);
+			}
+			.drop-open {
+				&:nth-child(1) {
+					transform: rotate(180deg);
+				}
+			}
+			.menu-mobile__link {
+				color: $primary;
+			}
+		}
+		.drop-white {
+			@include media-breakpoint-down(lg) {
+				display: none;
+			}
+		}
+		.drop-black {
+			@include media-breakpoint-up(lg) {
+				display: none;
+			}
+		}
+	}//dropdown end
+	
 
 	// 
 	@include media-breakpoint-up(xl) {}
@@ -110,9 +311,43 @@
 	@include media-breakpoint-down(xs) {}
 }
 
-.drop {
-	position: absolute;
-	transform: scale(1,0);
+
+.submenu {
+	@include media-breakpoint-down(lg) {
+		padding-left: 10px;
+	}
+	flex-grow: 1;
+	li {
+
+		a {
+			color: rgba($color: $body-color, $alpha: 0.7);
+			font-size: 14px;
+
+			&:hover {
+				color: rgba($color: $primary, $alpha: 0.7);
+			}
+		}
+	}
+	&__item {
+		@include media-breakpoint-up(lg) {
+			&:nth-child(n + 7) {
+				display: none;
+			}
+		}
+	}
+
+	&__link {
+		margin-bottom: 10px;
+	}
+
+	&.active {
+		.submenu__item {
+			display: block !important;
+		}
+	}
+	@include media-breakpoint-down(lg) {
+		display: none;
+	}
 }
 
 .comparison, .basket {
@@ -138,16 +373,99 @@
 }
 
 .basket {
+	position: relative;
+	cursor: pointer;
 	margin-left: 7px;
 	@include media-breakpoint-up(sm) {
 		margin-left: 13px;
 	}
-	.icon {
+	.icon-basket {
 		font-size: rem(30px);
 		@include media-breakpoint-down(lg) {
 			color: $body-color;
 		}
 	}
+
+	&__drop {
+		position: absolute;
+		z-index: 10;
+		top: 40px;
+		right: 0;
+		background: #FFFFFF;
+		box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.16);
+		width: 423px;
+		transform: scale(1,0);
+		@include mt;
+		transform-origin: top;
+	}
+	&:hover &__drop{
+		transform: scale(1);
+	}
+
+	table {
+		width: 100%;
+	}
+
+	picture {
+		max-width: 66px;
+	}
+
+	&__item {
+		border-bottom: solid 1px #C4C4C4;
+		padding: 10px 10px 20px;
+	}
+
+	&__title {
+		font-size: 12px;
+		max-width: 177px;
+	}
+
+	&__amount {
+		color: rgba($color: $body-color, $alpha: 0.5);
+		font-size: 12px;
+	}
+
+	&__ptice {
+		font-weight: 600;
+		font-size: 15px;
+		text-align: right;
+	}
+
+	&__delete {
+		border: none;
+		background-color: transparent;
+		.icon{
+			color: $body-color;
+			font-size: rem(16);
+		}
+	}
+
+	&__totalPrice {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		padding: 20px 10px 10px;
+
+		span {
+			font-size: 12px;
+			margin-right: 5px;
+		}
+	}
+	&__total {
+		font-weight: 600;
+		font-size: 18px;
+	}
+
+	&__btn {
+		@extend .btn;
+		@extend .btn-primary;
+		margin: 0 10px 10px auto;
+		display: block;
+		max-width: 196px;
+		text-transform: uppercase;
+	}
+
+
 }
 
 .comparison {

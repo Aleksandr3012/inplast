@@ -42,27 +42,236 @@ mixin mnu()
 	//- 		+e.LI.item( itemprop="item" ): +e.A.link(href= linkPatch  itemprop="url")= linkName
 	+e.UL.nav(itemscope itemtype="http://schema.org/SiteNavigationElement")
 		//- each linkPatch, linkName in nav
-		+e.LI.item.dropdown( itemprop="item" ): +e.link
+		+e.LI.item.dropdown--catalog( itemprop="item" )
 			+e.A.link(href="#") Каталог
-			+b.UL.drop
-				+e.LI.item
-					+e.A.link(href="#" itemprop="url") Lorem, ipsum.
-				+e.LI.item
-					+e.A.link(href="#" itemprop="url") Lorem, ipsum dolor.
+			.drop-open.drop-accardion-js
+				img.drop-white(src="/img/dropdown.svg", alt="")
+				img.drop-black(src="/img/dropdown-black.svg", alt="")
+			+b.drop--catalog.drop-accardion-toggle-js
+				.container
+					.row
+						.col-lg-3.d-flex
+							+pic('catalog-1.png')(class="d-none d-lg-block")
+							+e.mnu
+								+e.title(href="#") Воздуховоды и системы вентиляции
+								.drop-open.drop-accardion-js
+									img.drop-black(src="/img/dropdown-black.svg", alt="")
+								+b.UL.submenu
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Прямоугольного сечения
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Круглого сечения
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Сварные для систем дымоудаления
+									+e.LI.item: +e.A.link(href="#" itemprop="url") В огнезащите
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Гибкие
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Нержавеющие
+						.col-lg-3.d-flex
+							+pic('catalog-2.png')(class="d-none d-lg-block")
+							+e.mnu
+								+e.title(href="#") Фасонные изделия
+								.drop-open.drop-accardion-js
+									img.drop-black(src="/img/dropdown-black.svg", alt="")
+								+b.UL.submenu.mnu-accardion-toggle
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Тройник
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Нипель
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Муфта
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Крестовина
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Заглушка
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Врезка
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Переход
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Прямой участок
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Утка
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Отводы
+								+e.lodaMore.mnu-accardion-js.d-none.d-lg-flex
+									+e.more Ещё
+									+e.toggle Свернуть
+						.col-lg-3.d-flex
+							+pic('catalog-3.png')(class="d-none d-lg-block")
+							+e.mnu
+								+e.title(href="#") Детали систем вентиляции
+								.drop-open.drop-accardion-js
+									img.drop-black(src="/img/dropdown-black.svg", alt="")
+								+b.UL.submenu.mnu-accardion-toggle
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Сетевое оборудование
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Зонты
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Шумоглушители
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Узлы прохода через кровлю
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Гибкая вставка для вентилятора
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Круглые фланцы
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Шибер вентиляционный круглый
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Шибер вентиляционный прямоугольный
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Дефлектор вентиляционный
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Клапаны
+								+e.lodaMore.mnu-accardion-js.d-none.d-lg-flex
+									+e.more Ещё
+									+e.toggle Свернуть
+						.col-lg-3.d-flex
+							+pic('catalog-4.png')(class="d-none d-lg-block")
+							+e.mnu
+								+e.title(href="#") Воздухораспределители
+								.drop-open.drop-accardion-js
+									img.drop-black(src="/img/dropdown-black.svg", alt="")
+								+b.UL.submenu.mnu-accardion-toggle
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Для установки в ступени
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Сопловые
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Панели
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Низкоскоростные
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Генераторы комфорта
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Блоки для чистых помещений
+									+e.LI.item: +e.A.link(href="#" itemprop="url") С камерами
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Для воздуховодов
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Перфорированные
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Турбулизирующие
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Веерные
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Закручивающие
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Вихревые
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Регуляторы расхода воздуха
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Аксессуары
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Лючок инспекционный
+								+e.lodaMore.mnu-accardion-js.d-none.d-lg-flex
+									+e.more Ещё
+									+e.toggle Свернуть
+						.col-lg-3.d-flex
+							+pic('catalog-5.png')(class="d-none d-lg-block")
+							+e.mnu
+								+e.title(href="#") Вентиляционные решетки
+								.drop-open.drop-accardion-js
+									img.drop-black(src="/img/dropdown-black.svg", alt="")
+								+b.UL.submenu.mnu-accardion-toggle
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Стальные и нержавеющие
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Алюминиевые решетки
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Переточная решетка
+									+e.LI.item: +e.A.link(href="#" itemprop="url") С регулируемыми жалюзи
+									+e.LI.item: +e.A.link(href="#" itemprop="url") С фиксированными жалюзи
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Сотовые решетки
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Lorem, ipsum dolor.
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Lorem, ipsum dolor.
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Lorem, ipsum dolor.
+								+e.lodaMore.mnu-accardion-js.d-none.d-lg-flex
+									+e.more Ещё
+									+e.toggle Свернуть
+						.col-lg-3.d-flex
+							+pic('catalog-6.png')(class="d-none d-lg-block")
+							+e.mnu
+								+e.title(href="#") Диффузоры
+								.drop-open.drop-accardion-js
+									img.drop-black(src="/img/dropdown-black.svg", alt="")
+								+b.UL.submenu.mnu-accardion-toggle
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Вихревые
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Веерные
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Вытяжные
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Приточные
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Потолочные
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Сопловые
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Lorem, ipsum dolor.
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Lorem, ipsum dolor.
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Lorem, ipsum dolor.
+								+e.lodaMore.mnu-accardion-js.d-none.d-lg-flex
+									+e.more Ещё
+									+e.toggle Свернуть
+						.col-lg-3.d-flex
+							+pic('catalog-7.png')(class="d-none d-lg-block")
+							+e.mnu
+								+e.title(href="#") Вентиляторы
+								.drop-open.drop-accardion-js
+									img.drop-black(src="/img/dropdown-black.svg", alt="")
+								+b.UL.submenu.mnu-accardion-toggle
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Канальные
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Радиальные
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Вентиляторы дымоудаления
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Батутные
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Пылевые
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Принадлежности к радиальным вентиляторам
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Lorem, ipsum dolor.
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Lorem, ipsum dolor.
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Lorem, ipsum dolor.
+								+e.lodaMore.mnu-accardion-js.d-none.d-lg-flex
+									+e.more Ещё
+									+e.toggle Свернуть
+						.col-lg-3.d-flex
+							+pic('catalog-8.png')(class="d-none d-lg-block")
+							+e.mnu
+								+e.title(href="#") Фильтры
+								.drop-open.drop-accardion-js
+									img.drop-black(src="/img/dropdown-black.svg", alt="")
+								+b.UL.submenu.mnu-accardion-toggle
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Для круглых каналов
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Для прямоугольных каналов
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Карманные
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Кассетные
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Воздушные
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Бактерицидной обработки
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Lorem, ipsum dolor.
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Lorem, ipsum dolor.
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Lorem, ipsum dolor.
+								+e.lodaMore.mnu-accardion-js.d-none.d-lg-flex
+									+e.more Ещё
+									+e.toggle Свернуть
+						.col-lg-3.d-flex
+							+pic('catalog-9.png')(class="d-none d-lg-block")
+							+e.mnu
+								+e.title(href="#") Канальные нагреватели
+
+						.col-lg-3.d-flex
+							+pic('catalog-10.png')(class="d-none d-lg-block")
+							+e.mnu
+								+e.title(href="#") Вентиляционные установки
+
+						.col-lg-3.d-flex
+							+pic('catalog-11.png')(class="d-none d-lg-block")
+							+e.mnu
+								+e.title(href="#") Измерение и регулирование расхода воздуха
+								.drop-open.drop-accardion-js
+									img.drop-black(src="/img/dropdown-black.svg", alt="")
+								+b.UL.submenu
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Смесительные камеры
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Устройства для измерения и регулирования расхода воздуха
+						.col-lg-3.d-flex
+							+pic('catalog-12.png')(class="d-none d-lg-block")
+							+e.mnu
+								+e.title(href="#") Монтажные принадлежности
+								.drop-open.drop-accardion-js
+									img.drop-black(src="/img/dropdown-black.svg", alt="")
+								+b.UL.submenu
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Крепеж
+									+e.LI.item: +e.A.link(href="#" itemprop="url") Расходные материалы
+
 		+e.LI.item.dropdown( itemprop="item" )
 			+e.A.link(href="#") О компании
-			+b.UL.drop
+			.drop-open.drop-accardion-js
+				img.drop-white(src="/img/dropdown.svg", alt="")
+				img.drop-black(src="/img/dropdown-black.svg", alt="")
+			+b.UL.drop--about.drop-accardion-toggle-js
 				+e.LI.item
-					+e.A.link(href="#" itemprop="url") Lorem, ipsum.
+					+e.A.link(href="#" itemprop="url") Презентация Инпласт
 				+e.LI.item
-					+e.A.link(href="#" itemprop="url") Lorem, ipsum dolor.
-		+e.LI.item.dropdown( itemprop="item" ): +e.link
+					+e.A.link(href="#" itemprop="url") Бренд SMAY
+				+e.LI.item
+					+e.A.link(href="#" itemprop="url") Проекты
+				+e.LI.item
+					+e.A.link(href="#" itemprop="url") Проекты SMAY
+				+e.LI.item
+					+e.A.link(href="#" itemprop="url") Сертификаты
+				+e.LI.item
+					+e.A.link(href="#" itemprop="url") Техническая информация
+				+e.LI.item
+					+e.A.link(href="#" itemprop="url") Новости
+				+e.LI.item
+					+e.A.link(href="#" itemprop="url") Статьи
+				+e.LI.item
+					+e.A.link(href="#" itemprop="url") Вакансии
+				+e.LI.item
+					+e.A.link(href="#" itemprop="url") Видеопрезентация Инпласт
+				+e.LI.item
+					+e.A.link(href="#" itemprop="url") Видеопрезентация SMAY
+		+e.LI.item.dropdown( itemprop="item" )
 			+e.A.link(href="#") Скачать
-			+b.UL.drop
+			.drop-open.drop-accardion-js
+				img.drop-white(src="/img/dropdown.svg", alt="")
+				img.drop-black(src="/img/dropdown-black.svg", alt="")
+			+b.UL.drop--download.drop-accardion-toggle-js
 				+e.LI.item
-					+e.A.link(href="#" itemprop="url") Lorem, ipsum.
+					+e.A.link(href="#" itemprop="url") Прайс-листы
 				+e.LI.item
-					+e.A.link(href="#" itemprop="url") Lorem, ipsum dolor.
+					+e.A.link(href="#" itemprop="url") Библиотека для BIM проектирования
 		+e.LI.item( itemprop="item" ): +e.A.link(href="#") Оплата
 		+e.LI.item( itemprop="item" ): +e.A.link(href="#") Доставка
 		+e.LI.item( itemprop="item" ): +e.A.link(href="#") Гарантии
