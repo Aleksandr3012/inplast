@@ -14,8 +14,19 @@ mixin mob-mnu()
 		+b.toggle-menu-mobile--js
 			span
 		+e.inner
-		
 			+mnu()
+			+e.footer
+				+e.tel(href="tel:74956639601") +7 (495) 663-96-01
+				+e.call.link-modal(href="#modal-call") Перезвоните мне
+				+e.mail(href="mailto:sales@inplast.ru")
+					+icon('mail')
+					span sales@inplast.ru
+				+e.hours
+					+icon('clock')
+					span 09:00–18:00 по будням
+				+e.location(href="https://yandex.ru/maps/-/CCQxE0qqxD" target='_blank')
+					+icon('location')
+					span г. Москва
 			.text-right
 	//  мобильное меню
 mixin top-nav() 
@@ -28,8 +39,28 @@ mixin top-nav()
 				+b.comparison(href="#")
 					+icon('comp')
 					+e.quantity 1
-				+b.basket(href="#")
-					+icon('basket')
+				+b.basket
+					a(href="#")
+						+icon('basket')
 					+e.quantity 1
+					+e.drop
+						+e.item
+							table
+								tr
+									td
+										+pic('hit-1.png')
+									td
+										+e.title Гигиенический воздухораспределитель NAF
+									td 
+										+e.amount 1 шт.
+									td
+										+e.ptice 66 666 ₽
+									td
+										+e.delete(type="button")
+											+icon('delete')
+						+e.totalPrice
+							span Итого:
+							+e.total 66 666 ₽
+						+e.btn(href="#") Оформить заказ
 				+mob-mnu
 	// end top-nav

@@ -70,16 +70,16 @@ var JSCCommon = {
 	},
 	// /modalCall
 	toggleMenu: function toggleMenu() {
-		var _this = this;
+		var _this2 = this;
 
 		if (this.btnToggleMenuMobile) {
 			this.btnToggleMenuMobile.forEach(function (element) {
 				element.addEventListener('click', function () {
-					_this.btnToggleMenuMobile.forEach(function (element) {
+					_this2.btnToggleMenuMobile.forEach(function (element) {
 						return element.classList.toggle("on");
 					});
 
-					_this.menuMobile.classList.toggle("active");
+					_this2.menuMobile.classList.toggle("active");
 
 					document.body.classList.toggle("fixed");
 					return false;
@@ -97,7 +97,7 @@ var JSCCommon = {
 		}
 	},
 	mobileMenu: function mobileMenu() {
-		var _this2 = this;
+		var _this3 = this;
 
 		if (this.menuMobileLink) {
 			this.toggleMenu();
@@ -105,7 +105,7 @@ var JSCCommon = {
 				var container = event.target.closest(".menu-mobile--js.active"); // (1)
 
 				if (!container) {
-					_this2.closeMenu();
+					_this3.closeMenu();
 				}
 			}, {
 				passive: true
@@ -157,6 +157,71 @@ var JSCCommon = {
 		Inputmask("+9(999)999-99-99").mask(InputTel);
 	},
 	// /inputMask
+	customRange: function customRange() {
+		$(".range-wrap").each(function () {
+			var _this = $(this);
+
+			var $range = _this.find(".slider-js");
+
+			var $inputFrom = _this.find(".input_from");
+
+			var $inputTo = _this.find(".input_to");
+
+			var instance,
+					from,
+					to,
+					min = $range.data('min'),
+					max = $range.data('max');
+			$range.ionRangeSlider({
+				skin: "round",
+				type: "double",
+				grid: false,
+				grid_snap: false,
+				hide_min_max: true,
+				hide_from_to: true,
+				onStart: updateInputs,
+				onChange: updateInputs,
+				onFinish: updateInputs
+			});
+			instance = $range.data("ionRangeSlider");
+
+			function updateInputs(data) {
+				from = data.from;
+				to = data.to;
+				$inputFrom.prop("value", from);
+				$inputTo.prop("value", to);
+			}
+
+			$inputFrom.on("change", function () {
+				var val = $(this).prop("value"); // validate
+
+				if (val < min) {
+					val = min;
+				} else if (val > to) {
+					val = to;
+				}
+
+				instance.update({
+					from: val
+				});
+				$(this).prop("value", val);
+			});
+			$inputTo.on("change", function () {
+				var val = $(this).prop("value"); // validate
+
+				if (val < from) {
+					val = from;
+				} else if (val > max) {
+					val = max;
+				}
+
+				instance.update({
+					to: val
+				});
+				$(this).prop("value", val);
+			});
+		});
+	},
 	ifie: function ifie() {
 		var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
 
@@ -246,7 +311,8 @@ function eventHandler() {
 	JSCCommon.ifie();
 	JSCCommon.sendForm();
 	JSCCommon.heightwindow();
-	JSCCommon.animateScroll(); // JSCCommon.CustomInputFile();
+	JSCCommon.animateScroll();
+	JSCCommon.customRange(); // JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
 
 	var x = window.location.host;
@@ -460,7 +526,17 @@ function eventHandler() {
 			el: $(this).find('.certificat-slider-pugin'),
 			clickable: true
 		}
-	}); //feedback slider
+	});
+	$('.drop-accardion-js').click(function () {
+		$(this).parent().toggleClass('active');
+		$(this).parent().find('.drop-accardion-toggle-js').toggle();
+	});
+	$('.mnu-accardion-js').click(function () {
+		$(this).toggleClass('active').parent().find('.mnu-accardion-toggle').toggleClass('active');
+	});
+
+
+	//feedback slider
 
 	var feedBackSlider = new Swiper('.feedback-slider-js', {
 		slidesPerView: 'auto',
@@ -526,7 +602,9 @@ function eventHandler() {
 	function calcVh(v) {
 		var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 		return v * h / 100;
-	} //end luckyoneJs
+	}
+
+	//end luckyoneJs
 
 }
 

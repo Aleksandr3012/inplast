@@ -20,6 +20,7 @@
 		<!-- Custom Browsers Color-->
 		<meta name="theme-color" content="#3361d8">
 		<link rel="stylesheet" href="libs/swiper/css/swiper.min.css"/>
+		<link rel="stylesheet" href="libs/ion-rangeslider/css/ion.rangeSlider.min.css"/>
 		<!--select2-->
 		<link rel="stylesheet" href="libs/select2/css/select2.min.css"/>
 		<link rel="stylesheet" href="libs/@fancyapps/fancybox/jquery.fancybox.min.css"/>
@@ -87,33 +88,454 @@
 								<div class="row align-items-center">
 									<div class="col d-none d-lg-block">
 										<ul class="top-nav__nav" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-											<li class="top-nav__item dropdown" itemprop="item">
-												<div class="top-nav__link"><a class="top-nav__link" href="#">Каталог</a>
-													<ul class="drop">
-														<li class="drop__item"><a class="drop__link" href="#" itemprop="url">Lorem, ipsum.</a>
-														</li>
-														<li class="drop__item"><a class="drop__link" href="#" itemprop="url">Lorem, ipsum dolor.</a>
-														</li>
-													</ul>
+											<li class="top-nav__item dropdown dropdown--catalog" itemprop="item"><a class="top-nav__link" href="#">Каталог</a>
+												<div class="drop-open drop-accardion-js"><img class="drop-white" src="/img/dropdown.svg" alt=""/><img class="drop-black" src="/img/dropdown-black.svg" alt=""/></div>
+												<div class="drop drop--catalog drop-accardion-toggle-js">
+													<div class="container">
+														<div class="row">
+															<div class="col-lg-3 d-flex">
+																<!-- picture-->
+																<picture class="d-none d-lg-block"> 
+																	<noscript class="loading-lazy">
+																		<source srcset="img/@2x/webp/catalog-1.webp" loading="lazy" type="image/webp" media="(min-width:576px)"/>
+																		<source srcset="img/@1x/webp/catalog-1.webp" loading="lazy" type="image/webp"/>
+																		<source srcset="img/@2x/catalog-1.png" loading="lazy" type="image/png" media="(min-width:576px)"/>
+																		<source srcset="img/@1x/catalog-1.png" loading="lazy" type="image/png"/><img src="img/@2x/catalog-1.png" loading="lazy" alt=""/>
+																	</noscript>
+																</picture>
+																<!-- /picture-->
+																<div class="drop__mnu"><a class="drop__title" href="#">Воздуховоды и системы вентиляции</a>
+																	<div class="drop-open drop-accardion-js"><img class="drop-black" src="/img/dropdown-black.svg" alt=""/></div>
+																	<ul class="submenu">
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Прямоугольного сечения</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Круглого сечения</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Сварные для систем дымоудаления</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">В огнезащите</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Гибкие</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Нержавеющие</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+															<div class="col-lg-3 d-flex">
+																<!-- picture-->
+																<picture class="d-none d-lg-block"> 
+																	<noscript class="loading-lazy">
+																		<source srcset="img/@2x/webp/catalog-2.webp" loading="lazy" type="image/webp" media="(min-width:576px)"/>
+																		<source srcset="img/@1x/webp/catalog-2.webp" loading="lazy" type="image/webp"/>
+																		<source srcset="img/@2x/catalog-2.png" loading="lazy" type="image/png" media="(min-width:576px)"/>
+																		<source srcset="img/@1x/catalog-2.png" loading="lazy" type="image/png"/><img src="img/@2x/catalog-2.png" loading="lazy" alt=""/>
+																	</noscript>
+																</picture>
+																<!-- /picture-->
+																<div class="drop__mnu"><a class="drop__title" href="#">Фасонные изделия</a>
+																	<div class="drop-open drop-accardion-js"><img class="drop-black" src="/img/dropdown-black.svg" alt=""/></div>
+																	<ul class="submenu mnu-accardion-toggle">
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Тройник</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Нипель</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Муфта</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Крестовина</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Заглушка</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Врезка</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Переход</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Прямой участок</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Утка</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Отводы</a>
+																		</li>
+																	</ul>
+																	<div class="drop__lodaMore mnu-accardion-js d-none d-lg-flex">
+																		<div class="drop__more">Ещё
+																		</div>
+																		<div class="drop__toggle">Свернуть
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="col-lg-3 d-flex">
+																<!-- picture-->
+																<picture class="d-none d-lg-block"> 
+																	<noscript class="loading-lazy">
+																		<source srcset="img/@2x/webp/catalog-3.webp" loading="lazy" type="image/webp" media="(min-width:576px)"/>
+																		<source srcset="img/@1x/webp/catalog-3.webp" loading="lazy" type="image/webp"/>
+																		<source srcset="img/@2x/catalog-3.png" loading="lazy" type="image/png" media="(min-width:576px)"/>
+																		<source srcset="img/@1x/catalog-3.png" loading="lazy" type="image/png"/><img src="img/@2x/catalog-3.png" loading="lazy" alt=""/>
+																	</noscript>
+																</picture>
+																<!-- /picture-->
+																<div class="drop__mnu"><a class="drop__title" href="#">Детали систем вентиляции</a>
+																	<div class="drop-open drop-accardion-js"><img class="drop-black" src="/img/dropdown-black.svg" alt=""/></div>
+																	<ul class="submenu mnu-accardion-toggle">
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Сетевое оборудование</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Зонты</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Шумоглушители</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Узлы прохода через кровлю</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Гибкая вставка для вентилятора</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Круглые фланцы</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Шибер вентиляционный круглый</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Шибер вентиляционный прямоугольный</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Дефлектор вентиляционный</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Клапаны</a>
+																		</li>
+																	</ul>
+																	<div class="drop__lodaMore mnu-accardion-js d-none d-lg-flex">
+																		<div class="drop__more">Ещё
+																		</div>
+																		<div class="drop__toggle">Свернуть
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="col-lg-3 d-flex">
+																<!-- picture-->
+																<picture class="d-none d-lg-block"> 
+																	<noscript class="loading-lazy">
+																		<source srcset="img/@2x/webp/catalog-4.webp" loading="lazy" type="image/webp" media="(min-width:576px)"/>
+																		<source srcset="img/@1x/webp/catalog-4.webp" loading="lazy" type="image/webp"/>
+																		<source srcset="img/@2x/catalog-4.png" loading="lazy" type="image/png" media="(min-width:576px)"/>
+																		<source srcset="img/@1x/catalog-4.png" loading="lazy" type="image/png"/><img src="img/@2x/catalog-4.png" loading="lazy" alt=""/>
+																	</noscript>
+																</picture>
+																<!-- /picture-->
+																<div class="drop__mnu"><a class="drop__title" href="#">Воздухораспределители</a>
+																	<div class="drop-open drop-accardion-js"><img class="drop-black" src="/img/dropdown-black.svg" alt=""/></div>
+																	<ul class="submenu mnu-accardion-toggle">
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Для установки в ступени</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Сопловые</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Панели</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Низкоскоростные</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Генераторы комфорта</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Блоки для чистых помещений</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">С камерами</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Для воздуховодов</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Перфорированные</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Турбулизирующие</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Веерные</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Закручивающие</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Вихревые</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Регуляторы расхода воздуха</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Аксессуары</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Лючок инспекционный</a>
+																		</li>
+																	</ul>
+																	<div class="drop__lodaMore mnu-accardion-js d-none d-lg-flex">
+																		<div class="drop__more">Ещё
+																		</div>
+																		<div class="drop__toggle">Свернуть
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="col-lg-3 d-flex">
+																<!-- picture-->
+																<picture class="d-none d-lg-block"> 
+																	<noscript class="loading-lazy">
+																		<source srcset="img/@2x/webp/catalog-5.webp" loading="lazy" type="image/webp" media="(min-width:576px)"/>
+																		<source srcset="img/@1x/webp/catalog-5.webp" loading="lazy" type="image/webp"/>
+																		<source srcset="img/@2x/catalog-5.png" loading="lazy" type="image/png" media="(min-width:576px)"/>
+																		<source srcset="img/@1x/catalog-5.png" loading="lazy" type="image/png"/><img src="img/@2x/catalog-5.png" loading="lazy" alt=""/>
+																	</noscript>
+																</picture>
+																<!-- /picture-->
+																<div class="drop__mnu"><a class="drop__title" href="#">Вентиляционные решетки</a>
+																	<div class="drop-open drop-accardion-js"><img class="drop-black" src="/img/dropdown-black.svg" alt=""/></div>
+																	<ul class="submenu mnu-accardion-toggle">
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Стальные и нержавеющие</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Алюминиевые решетки</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Переточная решетка</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">С регулируемыми жалюзи</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">С фиксированными жалюзи</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Сотовые решетки</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Lorem, ipsum dolor.</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Lorem, ipsum dolor.</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Lorem, ipsum dolor.</a>
+																		</li>
+																	</ul>
+																	<div class="drop__lodaMore mnu-accardion-js d-none d-lg-flex">
+																		<div class="drop__more">Ещё
+																		</div>
+																		<div class="drop__toggle">Свернуть
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="col-lg-3 d-flex">
+																<!-- picture-->
+																<picture class="d-none d-lg-block"> 
+																	<noscript class="loading-lazy">
+																		<source srcset="img/@2x/webp/catalog-6.webp" loading="lazy" type="image/webp" media="(min-width:576px)"/>
+																		<source srcset="img/@1x/webp/catalog-6.webp" loading="lazy" type="image/webp"/>
+																		<source srcset="img/@2x/catalog-6.png" loading="lazy" type="image/png" media="(min-width:576px)"/>
+																		<source srcset="img/@1x/catalog-6.png" loading="lazy" type="image/png"/><img src="img/@2x/catalog-6.png" loading="lazy" alt=""/>
+																	</noscript>
+																</picture>
+																<!-- /picture-->
+																<div class="drop__mnu"><a class="drop__title" href="#">Диффузоры</a>
+																	<div class="drop-open drop-accardion-js"><img class="drop-black" src="/img/dropdown-black.svg" alt=""/></div>
+																	<ul class="submenu mnu-accardion-toggle">
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Вихревые</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Веерные</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Вытяжные</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Приточные</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Потолочные</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Сопловые</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Lorem, ipsum dolor.</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Lorem, ipsum dolor.</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Lorem, ipsum dolor.</a>
+																		</li>
+																	</ul>
+																	<div class="drop__lodaMore mnu-accardion-js d-none d-lg-flex">
+																		<div class="drop__more">Ещё
+																		</div>
+																		<div class="drop__toggle">Свернуть
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="col-lg-3 d-flex">
+																<!-- picture-->
+																<picture class="d-none d-lg-block"> 
+																	<noscript class="loading-lazy">
+																		<source srcset="img/@2x/webp/catalog-7.webp" loading="lazy" type="image/webp" media="(min-width:576px)"/>
+																		<source srcset="img/@1x/webp/catalog-7.webp" loading="lazy" type="image/webp"/>
+																		<source srcset="img/@2x/catalog-7.png" loading="lazy" type="image/png" media="(min-width:576px)"/>
+																		<source srcset="img/@1x/catalog-7.png" loading="lazy" type="image/png"/><img src="img/@2x/catalog-7.png" loading="lazy" alt=""/>
+																	</noscript>
+																</picture>
+																<!-- /picture-->
+																<div class="drop__mnu"><a class="drop__title" href="#">Вентиляторы</a>
+																	<div class="drop-open drop-accardion-js"><img class="drop-black" src="/img/dropdown-black.svg" alt=""/></div>
+																	<ul class="submenu mnu-accardion-toggle">
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Канальные</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Радиальные</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Вентиляторы дымоудаления</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Батутные</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Пылевые</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Принадлежности к радиальным вентиляторам</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Lorem, ipsum dolor.</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Lorem, ipsum dolor.</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Lorem, ipsum dolor.</a>
+																		</li>
+																	</ul>
+																	<div class="drop__lodaMore mnu-accardion-js d-none d-lg-flex">
+																		<div class="drop__more">Ещё
+																		</div>
+																		<div class="drop__toggle">Свернуть
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="col-lg-3 d-flex">
+																<!-- picture-->
+																<picture class="d-none d-lg-block"> 
+																	<noscript class="loading-lazy">
+																		<source srcset="img/@2x/webp/catalog-8.webp" loading="lazy" type="image/webp" media="(min-width:576px)"/>
+																		<source srcset="img/@1x/webp/catalog-8.webp" loading="lazy" type="image/webp"/>
+																		<source srcset="img/@2x/catalog-8.png" loading="lazy" type="image/png" media="(min-width:576px)"/>
+																		<source srcset="img/@1x/catalog-8.png" loading="lazy" type="image/png"/><img src="img/@2x/catalog-8.png" loading="lazy" alt=""/>
+																	</noscript>
+																</picture>
+																<!-- /picture-->
+																<div class="drop__mnu"><a class="drop__title" href="#">Фильтры</a>
+																	<div class="drop-open drop-accardion-js"><img class="drop-black" src="/img/dropdown-black.svg" alt=""/></div>
+																	<ul class="submenu mnu-accardion-toggle">
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Для круглых каналов</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Для прямоугольных каналов</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Карманные</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Кассетные</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Воздушные</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Бактерицидной обработки</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Lorem, ipsum dolor.</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Lorem, ipsum dolor.</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Lorem, ipsum dolor.</a>
+																		</li>
+																	</ul>
+																	<div class="drop__lodaMore mnu-accardion-js d-none d-lg-flex">
+																		<div class="drop__more">Ещё
+																		</div>
+																		<div class="drop__toggle">Свернуть
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="col-lg-3 d-flex">
+																<!-- picture-->
+																<picture class="d-none d-lg-block"> 
+																	<noscript class="loading-lazy">
+																		<source srcset="img/@2x/webp/catalog-9.webp" loading="lazy" type="image/webp" media="(min-width:576px)"/>
+																		<source srcset="img/@1x/webp/catalog-9.webp" loading="lazy" type="image/webp"/>
+																		<source srcset="img/@2x/catalog-9.png" loading="lazy" type="image/png" media="(min-width:576px)"/>
+																		<source srcset="img/@1x/catalog-9.png" loading="lazy" type="image/png"/><img src="img/@2x/catalog-9.png" loading="lazy" alt=""/>
+																	</noscript>
+																</picture>
+																<!-- /picture-->
+																<div class="drop__mnu"><a class="drop__title" href="#">Канальные нагреватели</a>
+																</div>
+															</div>
+															<div class="col-lg-3 d-flex">
+																<!-- picture-->
+																<picture class="d-none d-lg-block"> 
+																	<noscript class="loading-lazy">
+																		<source srcset="img/@2x/webp/catalog-10.webp" loading="lazy" type="image/webp" media="(min-width:576px)"/>
+																		<source srcset="img/@1x/webp/catalog-10.webp" loading="lazy" type="image/webp"/>
+																		<source srcset="img/@2x/catalog-10.png" loading="lazy" type="image/png" media="(min-width:576px)"/>
+																		<source srcset="img/@1x/catalog-10.png" loading="lazy" type="image/png"/><img src="img/@2x/catalog-10.png" loading="lazy" alt=""/>
+																	</noscript>
+																</picture>
+																<!-- /picture-->
+																<div class="drop__mnu"><a class="drop__title" href="#">Вентиляционные установки</a>
+																</div>
+															</div>
+															<div class="col-lg-3 d-flex">
+																<!-- picture-->
+																<picture class="d-none d-lg-block"> 
+																	<noscript class="loading-lazy">
+																		<source srcset="img/@2x/webp/catalog-11.webp" loading="lazy" type="image/webp" media="(min-width:576px)"/>
+																		<source srcset="img/@1x/webp/catalog-11.webp" loading="lazy" type="image/webp"/>
+																		<source srcset="img/@2x/catalog-11.png" loading="lazy" type="image/png" media="(min-width:576px)"/>
+																		<source srcset="img/@1x/catalog-11.png" loading="lazy" type="image/png"/><img src="img/@2x/catalog-11.png" loading="lazy" alt=""/>
+																	</noscript>
+																</picture>
+																<!-- /picture-->
+																<div class="drop__mnu"><a class="drop__title" href="#">Измерение и регулирование расхода воздуха</a>
+																	<div class="drop-open drop-accardion-js"><img class="drop-black" src="/img/dropdown-black.svg" alt=""/></div>
+																	<ul class="submenu">
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Смесительные камеры</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Устройства для измерения и регулирования расхода воздуха</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+															<div class="col-lg-3 d-flex">
+																<!-- picture-->
+																<picture class="d-none d-lg-block"> 
+																	<noscript class="loading-lazy">
+																		<source srcset="img/@2x/webp/catalog-12.webp" loading="lazy" type="image/webp" media="(min-width:576px)"/>
+																		<source srcset="img/@1x/webp/catalog-12.webp" loading="lazy" type="image/webp"/>
+																		<source srcset="img/@2x/catalog-12.png" loading="lazy" type="image/png" media="(min-width:576px)"/>
+																		<source srcset="img/@1x/catalog-12.png" loading="lazy" type="image/png"/><img src="img/@2x/catalog-12.png" loading="lazy" alt=""/>
+																	</noscript>
+																</picture>
+																<!-- /picture-->
+																<div class="drop__mnu"><a class="drop__title" href="#">Монтажные принадлежности</a>
+																	<div class="drop-open drop-accardion-js"><img class="drop-black" src="/img/dropdown-black.svg" alt=""/></div>
+																	<ul class="submenu">
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Крепеж</a>
+																		</li>
+																		<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Расходные материалы</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</div>
+													</div>
 												</div>
 											</li>
 											<li class="top-nav__item dropdown" itemprop="item"><a class="top-nav__link" href="#">О компании</a>
-												<ul class="drop">
-													<li class="drop__item"><a class="drop__link" href="#" itemprop="url">Lorem, ipsum.</a>
+												<div class="drop-open drop-accardion-js"><img class="drop-white" src="/img/dropdown.svg" alt=""/><img class="drop-black" src="/img/dropdown-black.svg" alt=""/></div>
+												<ul class="drop drop--about drop-accardion-toggle-js">
+													<li class="drop__item"><a class="drop__link" href="#" itemprop="url">Презентация Инпласт</a>
 													</li>
-													<li class="drop__item"><a class="drop__link" href="#" itemprop="url">Lorem, ipsum dolor.</a>
+													<li class="drop__item"><a class="drop__link" href="#" itemprop="url">Бренд SMAY</a>
+													</li>
+													<li class="drop__item"><a class="drop__link" href="#" itemprop="url">Проекты</a>
+													</li>
+													<li class="drop__item"><a class="drop__link" href="#" itemprop="url">Проекты SMAY</a>
+													</li>
+													<li class="drop__item"><a class="drop__link" href="#" itemprop="url">Сертификаты</a>
+													</li>
+													<li class="drop__item"><a class="drop__link" href="#" itemprop="url">Техническая информация</a>
+													</li>
+													<li class="drop__item"><a class="drop__link" href="#" itemprop="url">Новости</a>
+													</li>
+													<li class="drop__item"><a class="drop__link" href="#" itemprop="url">Статьи</a>
+													</li>
+													<li class="drop__item"><a class="drop__link" href="#" itemprop="url">Вакансии</a>
+													</li>
+													<li class="drop__item"><a class="drop__link" href="#" itemprop="url">Видеопрезентация Инпласт</a>
+													</li>
+													<li class="drop__item"><a class="drop__link" href="#" itemprop="url">Видеопрезентация SMAY</a>
 													</li>
 												</ul>
 											</li>
-											<li class="top-nav__item dropdown" itemprop="item">
-												<div class="top-nav__link"><a class="top-nav__link" href="#">Скачать</a>
-													<ul class="drop">
-														<li class="drop__item"><a class="drop__link" href="#" itemprop="url">Lorem, ipsum.</a>
-														</li>
-														<li class="drop__item"><a class="drop__link" href="#" itemprop="url">Lorem, ipsum dolor.</a>
-														</li>
-													</ul>
-												</div>
+											<li class="top-nav__item dropdown" itemprop="item"><a class="top-nav__link" href="#">Скачать</a>
+												<div class="drop-open drop-accardion-js"><img class="drop-white" src="/img/dropdown.svg" alt=""/><img class="drop-black" src="/img/dropdown-black.svg" alt=""/></div>
+												<ul class="drop drop--download drop-accardion-toggle-js">
+													<li class="drop__item"><a class="drop__link" href="#" itemprop="url">Прайс-листы</a>
+													</li>
+													<li class="drop__item"><a class="drop__link" href="#" itemprop="url">Библиотека для BIM проектирования</a>
+													</li>
+												</ul>
 											</li>
 											<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#">Оплата</a>
 											</li>
@@ -132,10 +554,57 @@
 									<div class="top-nav__col col-lg-auto"><a class="comparison" href="#">
 										<svg class="icon icon-comp ">
 											<use xlink:href="img/svg/sprite.svg#comp"></use>
-										</svg><span class="comparison__quantity">1</span></a><a class="basket" href="#">
-										<svg class="icon icon-basket ">
-											<use xlink:href="img/svg/sprite.svg#basket"></use>
-										</svg><span class="basket__quantity">1</span></a>
+										</svg><span class="comparison__quantity">1</span></a>
+										<div class="basket"><a href="#">
+												<svg class="icon icon-basket ">
+													<use xlink:href="img/svg/sprite.svg#basket"></use>
+												</svg></a>
+											<div class="basket__quantity">1
+											</div>
+											<div class="basket__drop">
+												<div class="basket__item">
+													<table>
+														<tr>
+															<td>
+																<!-- picture-->
+																<picture> 
+																	<noscript class="loading-lazy">
+																		<source srcset="img/@2x/webp/hit-1.webp" loading="lazy" type="image/webp" media="(min-width:576px)"/>
+																		<source srcset="img/@1x/webp/hit-1.webp" loading="lazy" type="image/webp"/>
+																		<source srcset="img/@2x/hit-1.png" loading="lazy" type="image/png" media="(min-width:576px)"/>
+																		<source srcset="img/@1x/hit-1.png" loading="lazy" type="image/png"/><img src="img/@2x/hit-1.png" loading="lazy" alt=""/>
+																	</noscript>
+																</picture>
+																<!-- /picture-->
+															</td>
+															<td>
+																<div class="basket__title">Гигиенический воздухораспределитель NAF
+																</div>
+															</td>
+															<td> 
+																<div class="basket__amount">1 шт.
+																</div>
+															</td>
+															<td>
+																<div class="basket__ptice">66 666 ₽
+																</div>
+															</td>
+															<td>
+																<button class="basket__delete" type="button">
+																	<svg class="icon icon-delete ">
+																		<use xlink:href="img/svg/sprite.svg#delete"></use>
+																	</svg>
+																</button>
+															</td>
+														</tr>
+													</table>
+												</div>
+												<div class="basket__totalPrice"><span>Итого:</span>
+													<div class="basket__total">66 666 ₽
+													</div>
+												</div><a class="basket__btn" href="#">Оформить заказ</a>
+											</div>
+										</div>
 										<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
 										</div>
 										<div class="menu-mobile menu-mobile--js d-lg-none">
@@ -143,33 +612,454 @@
 											</div>
 											<div class="menu-mobile__inner">
 												<ul class="menu-mobile__nav" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-													<li class="menu-mobile__item dropdown" itemprop="item">
-														<div class="menu-mobile__link"><a class="menu-mobile__link" href="#">Каталог</a>
-															<ul class="drop">
-																<li class="drop__item"><a class="drop__link" href="#" itemprop="url">Lorem, ipsum.</a>
-																</li>
-																<li class="drop__item"><a class="drop__link" href="#" itemprop="url">Lorem, ipsum dolor.</a>
-																</li>
-															</ul>
+													<li class="menu-mobile__item dropdown dropdown--catalog" itemprop="item"><a class="menu-mobile__link" href="#">Каталог</a>
+														<div class="drop-open drop-accardion-js"><img class="drop-white" src="/img/dropdown.svg" alt=""/><img class="drop-black" src="/img/dropdown-black.svg" alt=""/></div>
+														<div class="drop drop--catalog drop-accardion-toggle-js">
+															<div class="container">
+																<div class="row">
+																	<div class="col-lg-3 d-flex">
+																		<!-- picture-->
+																		<picture class="d-none d-lg-block"> 
+																			<noscript class="loading-lazy">
+																				<source srcset="img/@2x/webp/catalog-1.webp" loading="lazy" type="image/webp" media="(min-width:576px)"/>
+																				<source srcset="img/@1x/webp/catalog-1.webp" loading="lazy" type="image/webp"/>
+																				<source srcset="img/@2x/catalog-1.png" loading="lazy" type="image/png" media="(min-width:576px)"/>
+																				<source srcset="img/@1x/catalog-1.png" loading="lazy" type="image/png"/><img src="img/@2x/catalog-1.png" loading="lazy" alt=""/>
+																			</noscript>
+																		</picture>
+																		<!-- /picture-->
+																		<div class="drop__mnu"><a class="drop__title" href="#">Воздуховоды и системы вентиляции</a>
+																			<div class="drop-open drop-accardion-js"><img class="drop-black" src="/img/dropdown-black.svg" alt=""/></div>
+																			<ul class="submenu">
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Прямоугольного сечения</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Круглого сечения</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Сварные для систем дымоудаления</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">В огнезащите</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Гибкие</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Нержавеющие</a>
+																				</li>
+																			</ul>
+																		</div>
+																	</div>
+																	<div class="col-lg-3 d-flex">
+																		<!-- picture-->
+																		<picture class="d-none d-lg-block"> 
+																			<noscript class="loading-lazy">
+																				<source srcset="img/@2x/webp/catalog-2.webp" loading="lazy" type="image/webp" media="(min-width:576px)"/>
+																				<source srcset="img/@1x/webp/catalog-2.webp" loading="lazy" type="image/webp"/>
+																				<source srcset="img/@2x/catalog-2.png" loading="lazy" type="image/png" media="(min-width:576px)"/>
+																				<source srcset="img/@1x/catalog-2.png" loading="lazy" type="image/png"/><img src="img/@2x/catalog-2.png" loading="lazy" alt=""/>
+																			</noscript>
+																		</picture>
+																		<!-- /picture-->
+																		<div class="drop__mnu"><a class="drop__title" href="#">Фасонные изделия</a>
+																			<div class="drop-open drop-accardion-js"><img class="drop-black" src="/img/dropdown-black.svg" alt=""/></div>
+																			<ul class="submenu mnu-accardion-toggle">
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Тройник</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Нипель</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Муфта</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Крестовина</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Заглушка</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Врезка</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Переход</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Прямой участок</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Утка</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Отводы</a>
+																				</li>
+																			</ul>
+																			<div class="drop__lodaMore mnu-accardion-js d-none d-lg-flex">
+																				<div class="drop__more">Ещё
+																				</div>
+																				<div class="drop__toggle">Свернуть
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="col-lg-3 d-flex">
+																		<!-- picture-->
+																		<picture class="d-none d-lg-block"> 
+																			<noscript class="loading-lazy">
+																				<source srcset="img/@2x/webp/catalog-3.webp" loading="lazy" type="image/webp" media="(min-width:576px)"/>
+																				<source srcset="img/@1x/webp/catalog-3.webp" loading="lazy" type="image/webp"/>
+																				<source srcset="img/@2x/catalog-3.png" loading="lazy" type="image/png" media="(min-width:576px)"/>
+																				<source srcset="img/@1x/catalog-3.png" loading="lazy" type="image/png"/><img src="img/@2x/catalog-3.png" loading="lazy" alt=""/>
+																			</noscript>
+																		</picture>
+																		<!-- /picture-->
+																		<div class="drop__mnu"><a class="drop__title" href="#">Детали систем вентиляции</a>
+																			<div class="drop-open drop-accardion-js"><img class="drop-black" src="/img/dropdown-black.svg" alt=""/></div>
+																			<ul class="submenu mnu-accardion-toggle">
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Сетевое оборудование</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Зонты</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Шумоглушители</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Узлы прохода через кровлю</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Гибкая вставка для вентилятора</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Круглые фланцы</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Шибер вентиляционный круглый</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Шибер вентиляционный прямоугольный</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Дефлектор вентиляционный</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Клапаны</a>
+																				</li>
+																			</ul>
+																			<div class="drop__lodaMore mnu-accardion-js d-none d-lg-flex">
+																				<div class="drop__more">Ещё
+																				</div>
+																				<div class="drop__toggle">Свернуть
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="col-lg-3 d-flex">
+																		<!-- picture-->
+																		<picture class="d-none d-lg-block"> 
+																			<noscript class="loading-lazy">
+																				<source srcset="img/@2x/webp/catalog-4.webp" loading="lazy" type="image/webp" media="(min-width:576px)"/>
+																				<source srcset="img/@1x/webp/catalog-4.webp" loading="lazy" type="image/webp"/>
+																				<source srcset="img/@2x/catalog-4.png" loading="lazy" type="image/png" media="(min-width:576px)"/>
+																				<source srcset="img/@1x/catalog-4.png" loading="lazy" type="image/png"/><img src="img/@2x/catalog-4.png" loading="lazy" alt=""/>
+																			</noscript>
+																		</picture>
+																		<!-- /picture-->
+																		<div class="drop__mnu"><a class="drop__title" href="#">Воздухораспределители</a>
+																			<div class="drop-open drop-accardion-js"><img class="drop-black" src="/img/dropdown-black.svg" alt=""/></div>
+																			<ul class="submenu mnu-accardion-toggle">
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Для установки в ступени</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Сопловые</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Панели</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Низкоскоростные</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Генераторы комфорта</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Блоки для чистых помещений</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">С камерами</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Для воздуховодов</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Перфорированные</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Турбулизирующие</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Веерные</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Закручивающие</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Вихревые</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Регуляторы расхода воздуха</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Аксессуары</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Лючок инспекционный</a>
+																				</li>
+																			</ul>
+																			<div class="drop__lodaMore mnu-accardion-js d-none d-lg-flex">
+																				<div class="drop__more">Ещё
+																				</div>
+																				<div class="drop__toggle">Свернуть
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="col-lg-3 d-flex">
+																		<!-- picture-->
+																		<picture class="d-none d-lg-block"> 
+																			<noscript class="loading-lazy">
+																				<source srcset="img/@2x/webp/catalog-5.webp" loading="lazy" type="image/webp" media="(min-width:576px)"/>
+																				<source srcset="img/@1x/webp/catalog-5.webp" loading="lazy" type="image/webp"/>
+																				<source srcset="img/@2x/catalog-5.png" loading="lazy" type="image/png" media="(min-width:576px)"/>
+																				<source srcset="img/@1x/catalog-5.png" loading="lazy" type="image/png"/><img src="img/@2x/catalog-5.png" loading="lazy" alt=""/>
+																			</noscript>
+																		</picture>
+																		<!-- /picture-->
+																		<div class="drop__mnu"><a class="drop__title" href="#">Вентиляционные решетки</a>
+																			<div class="drop-open drop-accardion-js"><img class="drop-black" src="/img/dropdown-black.svg" alt=""/></div>
+																			<ul class="submenu mnu-accardion-toggle">
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Стальные и нержавеющие</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Алюминиевые решетки</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Переточная решетка</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">С регулируемыми жалюзи</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">С фиксированными жалюзи</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Сотовые решетки</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Lorem, ipsum dolor.</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Lorem, ipsum dolor.</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Lorem, ipsum dolor.</a>
+																				</li>
+																			</ul>
+																			<div class="drop__lodaMore mnu-accardion-js d-none d-lg-flex">
+																				<div class="drop__more">Ещё
+																				</div>
+																				<div class="drop__toggle">Свернуть
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="col-lg-3 d-flex">
+																		<!-- picture-->
+																		<picture class="d-none d-lg-block"> 
+																			<noscript class="loading-lazy">
+																				<source srcset="img/@2x/webp/catalog-6.webp" loading="lazy" type="image/webp" media="(min-width:576px)"/>
+																				<source srcset="img/@1x/webp/catalog-6.webp" loading="lazy" type="image/webp"/>
+																				<source srcset="img/@2x/catalog-6.png" loading="lazy" type="image/png" media="(min-width:576px)"/>
+																				<source srcset="img/@1x/catalog-6.png" loading="lazy" type="image/png"/><img src="img/@2x/catalog-6.png" loading="lazy" alt=""/>
+																			</noscript>
+																		</picture>
+																		<!-- /picture-->
+																		<div class="drop__mnu"><a class="drop__title" href="#">Диффузоры</a>
+																			<div class="drop-open drop-accardion-js"><img class="drop-black" src="/img/dropdown-black.svg" alt=""/></div>
+																			<ul class="submenu mnu-accardion-toggle">
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Вихревые</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Веерные</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Вытяжные</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Приточные</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Потолочные</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Сопловые</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Lorem, ipsum dolor.</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Lorem, ipsum dolor.</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Lorem, ipsum dolor.</a>
+																				</li>
+																			</ul>
+																			<div class="drop__lodaMore mnu-accardion-js d-none d-lg-flex">
+																				<div class="drop__more">Ещё
+																				</div>
+																				<div class="drop__toggle">Свернуть
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="col-lg-3 d-flex">
+																		<!-- picture-->
+																		<picture class="d-none d-lg-block"> 
+																			<noscript class="loading-lazy">
+																				<source srcset="img/@2x/webp/catalog-7.webp" loading="lazy" type="image/webp" media="(min-width:576px)"/>
+																				<source srcset="img/@1x/webp/catalog-7.webp" loading="lazy" type="image/webp"/>
+																				<source srcset="img/@2x/catalog-7.png" loading="lazy" type="image/png" media="(min-width:576px)"/>
+																				<source srcset="img/@1x/catalog-7.png" loading="lazy" type="image/png"/><img src="img/@2x/catalog-7.png" loading="lazy" alt=""/>
+																			</noscript>
+																		</picture>
+																		<!-- /picture-->
+																		<div class="drop__mnu"><a class="drop__title" href="#">Вентиляторы</a>
+																			<div class="drop-open drop-accardion-js"><img class="drop-black" src="/img/dropdown-black.svg" alt=""/></div>
+																			<ul class="submenu mnu-accardion-toggle">
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Канальные</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Радиальные</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Вентиляторы дымоудаления</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Батутные</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Пылевые</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Принадлежности к радиальным вентиляторам</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Lorem, ipsum dolor.</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Lorem, ipsum dolor.</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Lorem, ipsum dolor.</a>
+																				</li>
+																			</ul>
+																			<div class="drop__lodaMore mnu-accardion-js d-none d-lg-flex">
+																				<div class="drop__more">Ещё
+																				</div>
+																				<div class="drop__toggle">Свернуть
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="col-lg-3 d-flex">
+																		<!-- picture-->
+																		<picture class="d-none d-lg-block"> 
+																			<noscript class="loading-lazy">
+																				<source srcset="img/@2x/webp/catalog-8.webp" loading="lazy" type="image/webp" media="(min-width:576px)"/>
+																				<source srcset="img/@1x/webp/catalog-8.webp" loading="lazy" type="image/webp"/>
+																				<source srcset="img/@2x/catalog-8.png" loading="lazy" type="image/png" media="(min-width:576px)"/>
+																				<source srcset="img/@1x/catalog-8.png" loading="lazy" type="image/png"/><img src="img/@2x/catalog-8.png" loading="lazy" alt=""/>
+																			</noscript>
+																		</picture>
+																		<!-- /picture-->
+																		<div class="drop__mnu"><a class="drop__title" href="#">Фильтры</a>
+																			<div class="drop-open drop-accardion-js"><img class="drop-black" src="/img/dropdown-black.svg" alt=""/></div>
+																			<ul class="submenu mnu-accardion-toggle">
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Для круглых каналов</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Для прямоугольных каналов</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Карманные</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Кассетные</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Воздушные</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Бактерицидной обработки</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Lorem, ipsum dolor.</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Lorem, ipsum dolor.</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Lorem, ipsum dolor.</a>
+																				</li>
+																			</ul>
+																			<div class="drop__lodaMore mnu-accardion-js d-none d-lg-flex">
+																				<div class="drop__more">Ещё
+																				</div>
+																				<div class="drop__toggle">Свернуть
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="col-lg-3 d-flex">
+																		<!-- picture-->
+																		<picture class="d-none d-lg-block"> 
+																			<noscript class="loading-lazy">
+																				<source srcset="img/@2x/webp/catalog-9.webp" loading="lazy" type="image/webp" media="(min-width:576px)"/>
+																				<source srcset="img/@1x/webp/catalog-9.webp" loading="lazy" type="image/webp"/>
+																				<source srcset="img/@2x/catalog-9.png" loading="lazy" type="image/png" media="(min-width:576px)"/>
+																				<source srcset="img/@1x/catalog-9.png" loading="lazy" type="image/png"/><img src="img/@2x/catalog-9.png" loading="lazy" alt=""/>
+																			</noscript>
+																		</picture>
+																		<!-- /picture-->
+																		<div class="drop__mnu"><a class="drop__title" href="#">Канальные нагреватели</a>
+																		</div>
+																	</div>
+																	<div class="col-lg-3 d-flex">
+																		<!-- picture-->
+																		<picture class="d-none d-lg-block"> 
+																			<noscript class="loading-lazy">
+																				<source srcset="img/@2x/webp/catalog-10.webp" loading="lazy" type="image/webp" media="(min-width:576px)"/>
+																				<source srcset="img/@1x/webp/catalog-10.webp" loading="lazy" type="image/webp"/>
+																				<source srcset="img/@2x/catalog-10.png" loading="lazy" type="image/png" media="(min-width:576px)"/>
+																				<source srcset="img/@1x/catalog-10.png" loading="lazy" type="image/png"/><img src="img/@2x/catalog-10.png" loading="lazy" alt=""/>
+																			</noscript>
+																		</picture>
+																		<!-- /picture-->
+																		<div class="drop__mnu"><a class="drop__title" href="#">Вентиляционные установки</a>
+																		</div>
+																	</div>
+																	<div class="col-lg-3 d-flex">
+																		<!-- picture-->
+																		<picture class="d-none d-lg-block"> 
+																			<noscript class="loading-lazy">
+																				<source srcset="img/@2x/webp/catalog-11.webp" loading="lazy" type="image/webp" media="(min-width:576px)"/>
+																				<source srcset="img/@1x/webp/catalog-11.webp" loading="lazy" type="image/webp"/>
+																				<source srcset="img/@2x/catalog-11.png" loading="lazy" type="image/png" media="(min-width:576px)"/>
+																				<source srcset="img/@1x/catalog-11.png" loading="lazy" type="image/png"/><img src="img/@2x/catalog-11.png" loading="lazy" alt=""/>
+																			</noscript>
+																		</picture>
+																		<!-- /picture-->
+																		<div class="drop__mnu"><a class="drop__title" href="#">Измерение и регулирование расхода воздуха</a>
+																			<div class="drop-open drop-accardion-js"><img class="drop-black" src="/img/dropdown-black.svg" alt=""/></div>
+																			<ul class="submenu">
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Смесительные камеры</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Устройства для измерения и регулирования расхода воздуха</a>
+																				</li>
+																			</ul>
+																		</div>
+																	</div>
+																	<div class="col-lg-3 d-flex">
+																		<!-- picture-->
+																		<picture class="d-none d-lg-block"> 
+																			<noscript class="loading-lazy">
+																				<source srcset="img/@2x/webp/catalog-12.webp" loading="lazy" type="image/webp" media="(min-width:576px)"/>
+																				<source srcset="img/@1x/webp/catalog-12.webp" loading="lazy" type="image/webp"/>
+																				<source srcset="img/@2x/catalog-12.png" loading="lazy" type="image/png" media="(min-width:576px)"/>
+																				<source srcset="img/@1x/catalog-12.png" loading="lazy" type="image/png"/><img src="img/@2x/catalog-12.png" loading="lazy" alt=""/>
+																			</noscript>
+																		</picture>
+																		<!-- /picture-->
+																		<div class="drop__mnu"><a class="drop__title" href="#">Монтажные принадлежности</a>
+																			<div class="drop-open drop-accardion-js"><img class="drop-black" src="/img/dropdown-black.svg" alt=""/></div>
+																			<ul class="submenu">
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Крепеж</a>
+																				</li>
+																				<li class="submenu__item"><a class="submenu__link" href="#" itemprop="url">Расходные материалы</a>
+																				</li>
+																			</ul>
+																		</div>
+																	</div>
+																</div>
+															</div>
 														</div>
 													</li>
 													<li class="menu-mobile__item dropdown" itemprop="item"><a class="menu-mobile__link" href="#">О компании</a>
-														<ul class="drop">
-															<li class="drop__item"><a class="drop__link" href="#" itemprop="url">Lorem, ipsum.</a>
+														<div class="drop-open drop-accardion-js"><img class="drop-white" src="/img/dropdown.svg" alt=""/><img class="drop-black" src="/img/dropdown-black.svg" alt=""/></div>
+														<ul class="drop drop--about drop-accardion-toggle-js">
+															<li class="drop__item"><a class="drop__link" href="#" itemprop="url">Презентация Инпласт</a>
 															</li>
-															<li class="drop__item"><a class="drop__link" href="#" itemprop="url">Lorem, ipsum dolor.</a>
+															<li class="drop__item"><a class="drop__link" href="#" itemprop="url">Бренд SMAY</a>
+															</li>
+															<li class="drop__item"><a class="drop__link" href="#" itemprop="url">Проекты</a>
+															</li>
+															<li class="drop__item"><a class="drop__link" href="#" itemprop="url">Проекты SMAY</a>
+															</li>
+															<li class="drop__item"><a class="drop__link" href="#" itemprop="url">Сертификаты</a>
+															</li>
+															<li class="drop__item"><a class="drop__link" href="#" itemprop="url">Техническая информация</a>
+															</li>
+															<li class="drop__item"><a class="drop__link" href="#" itemprop="url">Новости</a>
+															</li>
+															<li class="drop__item"><a class="drop__link" href="#" itemprop="url">Статьи</a>
+															</li>
+															<li class="drop__item"><a class="drop__link" href="#" itemprop="url">Вакансии</a>
+															</li>
+															<li class="drop__item"><a class="drop__link" href="#" itemprop="url">Видеопрезентация Инпласт</a>
+															</li>
+															<li class="drop__item"><a class="drop__link" href="#" itemprop="url">Видеопрезентация SMAY</a>
 															</li>
 														</ul>
 													</li>
-													<li class="menu-mobile__item dropdown" itemprop="item">
-														<div class="menu-mobile__link"><a class="menu-mobile__link" href="#">Скачать</a>
-															<ul class="drop">
-																<li class="drop__item"><a class="drop__link" href="#" itemprop="url">Lorem, ipsum.</a>
-																</li>
-																<li class="drop__item"><a class="drop__link" href="#" itemprop="url">Lorem, ipsum dolor.</a>
-																</li>
-															</ul>
-														</div>
+													<li class="menu-mobile__item dropdown" itemprop="item"><a class="menu-mobile__link" href="#">Скачать</a>
+														<div class="drop-open drop-accardion-js"><img class="drop-white" src="/img/dropdown.svg" alt=""/><img class="drop-black" src="/img/dropdown-black.svg" alt=""/></div>
+														<ul class="drop drop--download drop-accardion-toggle-js">
+															<li class="drop__item"><a class="drop__link" href="#" itemprop="url">Прайс-листы</a>
+															</li>
+															<li class="drop__item"><a class="drop__link" href="#" itemprop="url">Библиотека для BIM проектирования</a>
+															</li>
+														</ul>
 													</li>
 													<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#">Оплата</a>
 													</li>
@@ -184,6 +1074,19 @@
 													<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#">Статьи</a>
 													</li>
 												</ul>
+												<div class="menu-mobile__footer"><a class="menu-mobile__tel" href="tel:74956639601">+7 (495) 663-96-01</a><a class="menu-mobile__call link-modal" href="#modal-call">Перезвоните мне</a><a class="menu-mobile__mail" href="mailto:sales@inplast.ru">
+													<svg class="icon icon-mail ">
+														<use xlink:href="img/svg/sprite.svg#mail"></use>
+													</svg><span>sales@inplast.ru</span></a>
+													<div class="menu-mobile__hours">
+														<svg class="icon icon-clock ">
+															<use xlink:href="img/svg/sprite.svg#clock"></use>
+														</svg><span>09:00–18:00 по будням</span>
+													</div><a class="menu-mobile__location" href="https://yandex.ru/maps/-/CCQxE0qqxD" target="_blank">
+													<svg class="icon icon-location ">
+														<use xlink:href="img/svg/sprite.svg#location"></use>
+													</svg><span>г. Москва</span></a>
+												</div>
 												<div class="text-right"></div>
 											</div>
 										</div>
@@ -477,6 +1380,7 @@
 		<!-- modal libs-->
 		<!-- slider libs-->
 		<script src="libs/swiper/js/swiper.min.js"></script>
+		<script src="libs/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
 		<!-- /slider libs-->
 		<script src="libs/inputmask/inputmask.min.js"></script>
 		<script src="js/common.js"></script>
