@@ -143,6 +143,74 @@ const JSCCommon = {
 		Inputmask("+9(999)999-99-99").mask(InputTel);
 	},
 	// /inputMask
+	customRange() {
+
+		$(".range-wrap").each(function () {
+			let _this = $(this);
+			var $range= _this.find(".slider-js");
+			var $inputFrom = _this.find(".input_from");
+			var $inputTo = _this.find(".input_to");
+			var instance, from, to,
+				min = $range.data('min'),
+				max = $range.data('max');
+			$range.ionRangeSlider({
+				skin: "round",
+				type: "double",
+				grid: false,
+				grid_snap: false,
+				hide_min_max: true,
+				hide_from_to: true,
+				onStart: updateInputs,
+				onChange: updateInputs,
+				onFinish: updateInputs
+			});
+			instance = $range.data("ionRangeSlider");
+
+			function updateInputs(data) {
+				from = data.from;
+				to = data.to;
+
+				$inputFrom.prop("value", from);
+				$inputTo.prop("value", to);
+			}
+
+			$inputFrom.on("change", function () {
+				var val = $(this).prop("value");
+
+				// validate
+				if (val < min) {
+					val = min;
+				} else if (val > to) {
+					val = to;
+				}
+
+				instance.update({
+					from: val
+				});
+
+				$(this).prop("value", val);
+
+			});
+
+			$inputTo.on("change", function () {
+				var val = $(this).prop("value");
+
+				// validate
+				if (val < from) {
+					val = from;
+				} else if (val > max) {
+					val = max;
+				}
+
+				instance.update({
+					to: val
+				});
+
+				$(this).prop("value", val);
+			});
+
+		})
+	},
 	ifie() {
 		var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
 		if (isIE11) {
@@ -230,7 +298,9 @@ function eventHandler() {
 	JSCCommon.sendForm();
 	JSCCommon.heightwindow();
 	JSCCommon.animateScroll();
+	JSCCommon.customRange();
 
+	
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
 	var x = window.location.host;
