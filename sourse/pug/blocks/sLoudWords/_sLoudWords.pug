@@ -4,22 +4,71 @@ mixin sLoudWords()
 		.container
 			+b.section-title
 				h2 За нас говорят не громкие слова и обещания, а быстрый результат и качественная, надежная работа
-			.row
+			+e.row.row
 				.col-lg-8
 					//sLoudWords-stab
 					+e.slider
 						.swiper-container.cetificats-slider-js
 							.swiper-wrapper
-								+certSlide()
-								+certSlide()
-								+certSlide()
-								+certSlide()
-								+certSlide()
+								- for (var i = 1; i <= 5; i++)
+									+certSlide()
+						.certificat-slider-pugin.swiper-pugin-frame.d-sm-none
 				.col-lg-4
-					+e.
+					+e.feedback-slider
+						.swiper-container.feedback-slider-js
+							.swiper-wrapper
+								- for (var i = 1; i <= 5; i++)
+									+feedBackSlide(i)
+							.feedback-slider-pugin.swiper-pugin-frame
+			+e.video
+				+videoFrame('video-stab')
+				+e.v-txt
+					p Мы являемся производителями воздуховодов и фасонных изделий, шумоглушителей и крепежа для вентиляции, такого как шина монтажная, скоба вентиляционная, хомуты и уголки для крепления воздуховодов. Одно из главных преимуществ – полностью автоматизированное производство.
+					p Нашу высококачественную продукцию мы производим на профессиональном оборудовании известных европейских брендов, что позволяет нам выполнять заказы в любых масштабах и в самые короткие сроки.
+			+e.slider-txt
+				+e.s-txt
+					p
+						| Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget dolor morbi non arcu risus quis varius. Penatibus et magnis dis parturient montes nascetur ridiculus. Suspendisse faucibus interdum posuere lorem ipsum dolor sit amet consectetur. Semper auctor neque vitae tempus. Amet facilisis magna etiam tempor orci eu lobortis elementum. Purus ut faucibus pulvinar elementum integer enim neque. Tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula. Nunc sed id semper risus in hendrerit gravida rutrum quisque. Ligula ullamcorper malesuada proin libero nunc consequat. Mauris nunc congue nisi vitae suscipit. Ullamcorper malesuada proin libero nunc consequat. Arcu non odio euismod lacinia at quis. Praesent semper feugiat nibh sed.
+				+e.s-sliders
+					+e.s-slider
+						.swiper-container.txt-slider-js
+							.swiper-wrapper
+								- for (var i = 1; i <= 6; i++)
+									+txtSlide()
+							.txt-slider-pugin.swiper-pugin-frame.d-sm-none
+					+e.s-thumb.d-none.d-sm-block
+						.swiper-container.txt-thumb-js
+							.swiper-wrapper
+								- for (var i = 1; i <= 6; i++)
+									+txtSlideThumb()
 	// end sLoudWords
+
+mixin txtSlideThumb()
+	.swiper-slide
+		+e.s-thumb-img
+			img.swiper-lazy(src="" data-src=`img/@2x/slider-txt-img.jpg` alt="")
+
+mixin txtSlide()
+	.swiper-slide
+		+e.txt-img-link(href=`img/@2x/slider-txt-img.jpg` data-fancybox=`txtSlideImgs`)
+			img.swiper-lazy(src="" data-src=`img/@2x/slider-txt-img.jpg` alt="")
+
+mixin feedBackSlide(num)
+	.swiper-slide
+		+e.fb-title=`ФИО или название компании${num}`
+		+e.fb-date дд.мм.гггг
+		+e.fb-txt
+			p Текст отзыва, хвалебные оды и различные описания того, как в принципе протекало сотрудничество
 
 mixin certSlide()
 	.swiper-slide
 		+e.img-link(href=`img/@2x/sLoudWords-stab.jpg` data-fancybox=`cetificatsImgs`)
 			img.swiper-lazy(src="" data-src=`img/@2x/sLoudWords-stab.jpg` alt="")
+
+mixin videoFrame(imgName)
+	+b.video-frame
+		+e.A.link(href="https://www.youtube.com/watch?v=en6gms6e54Q&list=PLIU76b8Cjem5B3sufBJ_KFTpKkMEvaTQR" data-fancybox="video")
+			+e.img
+				img(loading='lazy' src=`img/@2x/${imgName}.jpg` alt='')
+			+e.play-btn
+				img(loading="lazy" src='img/svg/play.svg' alt="")
