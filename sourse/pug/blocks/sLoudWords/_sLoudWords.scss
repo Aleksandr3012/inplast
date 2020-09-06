@@ -141,10 +141,7 @@
 			}
 		}
 		.swiper-wrapper{
-			overflow: visible;
-			@include media-breakpoint-up(lg){
-				overflow: hidden;
-			}
+
 		}
 		.swiper-slide{
 			min-height: 439px;

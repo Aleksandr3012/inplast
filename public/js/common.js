@@ -526,17 +526,7 @@ function eventHandler() {
 			el: $(this).find('.certificat-slider-pugin'),
 			clickable: true
 		}
-	});
-	$('.drop-accardion-js').click(function () {
-		$(this).parent().toggleClass('active');
-		$(this).parent().find('.drop-accardion-toggle-js').toggle();
-	});
-	$('.mnu-accardion-js').click(function () {
-		$(this).toggleClass('active').parent().find('.mnu-accardion-toggle').toggleClass('active');
-	});
-
-
-	//feedback slider
+	}); //feedback slider
 
 	var feedBackSlider = new Swiper('.feedback-slider-js', {
 		slidesPerView: 'auto',
@@ -604,8 +594,13 @@ function eventHandler() {
 		return v * h / 100;
 	}
 
-	//end luckyoneJs
-
+	$('.drop-accardion-js').click(function () {
+		$(this).parent().toggleClass('active');
+		$(this).parent().find('.drop-accardion-toggle-js').toggle();
+	});
+	$('.mnu-accardion-js').click(function () {
+		$(this).toggleClass('active').parent().find('.mnu-accardion-toggle').toggleClass('active');
+	}); //end luckyoneJs
 }
 
 ;
