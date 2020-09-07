@@ -1,13 +1,21 @@
 mixin sFilter()
 	// start sFilter
 	+b.sFilter#sFilter&attributes(attributes)
-		+e.itemWrap
-			+e.item
+
+		+e.item
+			+e.itemTopLine
 				+e.title Цена
+				.filter-accardion-js
+					img(src="img/chevron-top.svg", alt="")
+			+e.body.filter-accardion-toggle
 				+range('100.99','999999.99')
-		+e.itemWrap
-			+e.item
+
+		+e.item
+			+e.itemTopLine
 				+e.title Производитель 
+				.filter-accardion-js
+					img(src="img/chevron-top.svg", alt="")
+			+e.body.filter-accardion-toggle
 				+in-c('checkbox','Manufacturer name (1000)','manufacturer')
 				+in-c('checkbox','Manufacturer name (100)','manufacturer')
 				+in-c('checkbox','Manufacturer name (10)','manufacturer')
@@ -18,9 +26,13 @@ mixin sFilter()
 				+in-c('checkbox','Manufacturer name (0)','manufacturer')
 				+in-c('checkbox','Manufacturer name (0)','manufacturer')
 
-		+e.itemWrap
-			+e.item
+
+		+e.item
+			+e.itemTopLine
 				+e.title Материал
+				.filter-accardion-js
+					img(src="img/chevron-top.svg", alt="")
+			+e.body.filter-accardion-toggle
 				+in-c('checkbox','Material name (1000)','material')
 				+in-c('checkbox','Material name (100)','material')
 				+in-c('checkbox','Material name (10)','material')
@@ -32,13 +44,21 @@ mixin sFilter()
 				+in-c('checkbox','Material name (0)','material')
 				+in-c('checkbox','Material name (0)','material')
 
-		+e.itemWrap
-			+e.item
+
+		+e.item
+			+e.itemTopLine
 				+e.title Name
+				.filter-accardion-js
+					img(src="img/chevron-top.svg", alt="")
+			+e.body.filter-accardion-toggle
 				+range('0','100000')
-		+e.itemWrap
-			+e.item
+
+		+e.item
+			+e.itemTopLine
 				+e.title Name
+				.filter-accardion-js
+					img(src="img/chevron-top.svg", alt="")
+			+e.body.filter-accardion-toggle
 				+in-c('checkbox','Text (1000)','name')
 				+in-c('checkbox','Text (100)','name')
 				+in-c('checkbox','Text (10)','name')

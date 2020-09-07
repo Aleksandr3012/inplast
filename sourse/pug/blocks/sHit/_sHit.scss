@@ -81,6 +81,7 @@
 		@extend .btn-primary;
 		border-radius: 2px 0 0 2px;
 		min-width: 134px;
+		height: 34px;
 	}
 
 	&__buttons {
@@ -105,7 +106,7 @@
 
 	&__view {
 		border: solid 1px #dcdcdc;
-		height: 100%;
+		height: 34px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -131,7 +132,7 @@
 		border-radius: 0 2px 2px 0;
 		padding-left: 5px;
 		padding-right: 5px;
-		height: 100%;
+		height: 34px;
 		display: flex;
 		align-items: center;
 		justify-content: center;

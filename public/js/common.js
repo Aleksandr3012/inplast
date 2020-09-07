@@ -600,6 +600,9 @@ function eventHandler() {
 	});
 	$('.mnu-accardion-js').click(function () {
 		$(this).toggleClass('active').parent().find('.mnu-accardion-toggle').toggleClass('active');
+	});
+	$('.filter-accardion-js').click(function () {
+		$(this).toggleClass('active').parent().parent().find('.filter-accardion-toggle').slideToggle();
 	}); //end luckyoneJs
 }
 

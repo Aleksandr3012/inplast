@@ -1,6 +1,7 @@
 	// start .sProject
 .sProject {
 	padding-top: calc((var(--sPT) * 2) + 127px);
+	position: relative;
 
 	//for aboutPage
 	&.about-page-projects{
@@ -30,6 +31,20 @@
 		}
 	}
 	//end aboutPage
+
+	.section-title {
+		@include media-breakpoint-down(md) {
+			h2 {
+			color: #fff;
+			}
+			position: absolute;
+			z-index: 2;
+			top: 295px;
+			@include a-cent(x);
+			width: 315px;
+
+		}
+	}
 
 	.container-fluid {
 		padding-left: 0;

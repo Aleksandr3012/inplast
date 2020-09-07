@@ -115,8 +115,10 @@
 		letter-spacing: rem(-0.7);
 
 		span {
-			border-bottom: solid 2px #fff;
-			@include mt;
+			border-bottom: solid 2px;
+			@include media-breakpoint-up(lg) {
+				@include mt;
+			}
 		}
 		.icon {
 			font-size: rem(24);

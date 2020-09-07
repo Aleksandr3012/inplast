@@ -29,10 +29,10 @@ block pagecontent
 				.col-auto.col-lg-12
 					+top-nav()
 	//- +sProdPage()
-	.container.section
+	.container.section.catalogSection
 		+breadcrumb('Главная', 'Каталог', 'Вентиляционное оборудование для чистых помещений')
 		.row
-			.col-lg-3
+			.col-lg-auto.filterCol
 				+sFilter
 			.col-lg
 				+sCatalogSlider

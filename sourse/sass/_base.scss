@@ -46,6 +46,12 @@ h2 {
 	}
 }
 
+.filterCol {
+	@include media-breakpoint-up(lg) {
+		max-width: 300px;
+	}
+}
+
 
 .section {
 	@include bgs; 
