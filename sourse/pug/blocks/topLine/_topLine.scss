@@ -19,6 +19,8 @@
 	}
 
 	.form-wrap {
+		transform-origin: top center;
+		@include mt;
 		max-width: 369px;
 		position: relative;
 
@@ -36,7 +38,7 @@
 			color: $body-color;
 		}
 		@include media-breakpoint-down(md) {
-			display: none;
+			transform: scale(1,0);
 			position: absolute;
 			width: 250px;
 			right: -100px;
@@ -53,6 +55,12 @@
 		.icon {
 			font-size: rem(19);
 			color: $body-color;
+		}
+		&:hover, &:focus, &:active{
+			.form-wrap {
+				transform: scale(1);
+
+			}
 		}
 	}
 

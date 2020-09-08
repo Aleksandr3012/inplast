@@ -7,12 +7,13 @@ mixin topLine()
 					img.res-i(src="img/@2x/logo.png", alt="")
 					+e.logoTitle.d-none.d-lg-block Доставка по Москве и регионам России
 			+e.searchCol.col-auto.col-sm
-				+form-wrap(class='drop-accardion-toggle-js')
-					+input('Поиск','search')
-					+e.btn(type='button')
+				+e.btnOpen
+					.d-md-none
 						+icon('search')
-				+e.btnOpen.d-md-none.drop-accardion-js
-					+icon('search')
+					+form-wrap
+						+input('Поиск','search')
+						+e.btn(type='button')
+							+icon('search')
 
 			+e.col.col-auto.d-none.d-lg-block.text-right
 				+e.tel(href="tel:74956639601") +7 (495) 663-96-01
