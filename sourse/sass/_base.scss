@@ -46,9 +46,24 @@ h2 {
 	}
 }
 
-.filterCol {
+h3, h4 {
+	@extend .mono;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.catalogSection {
+
+	&__col {
+		@include media-breakpoint-up(lg) {
+			max-width: 310px;
+		}
+	}
+}
+
+.catalogSection > .row {
 	@include media-breakpoint-up(lg) {
-		max-width: 300px;
+		@include roww(20px);
 	}
 }
 

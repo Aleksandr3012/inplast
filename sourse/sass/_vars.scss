@@ -417,7 +417,7 @@ $line-height-lg: 2 !default;
 
 $h1-font-size: $font-size-base * 2.5 !default;
 $h2-font-size: rem(30px) !default;
-$h3-font-size: $font-size-base * 1.75 !default;
+$h3-font-size: rem(25px) !default;
 $h4-font-size: rem(20) !default;
 $h5-font-size: $font-size-base * 1.25 !default;
 $h6-font-size: rem(18px) !default;
@@ -952,22 +952,22 @@ $pagination-padding-x-sm: .5rem !default;
 $pagination-padding-y-lg: .75rem !default;
 $pagination-padding-x-lg: 1.5rem !default;
 
-$pagination-color: $link-color !default;
-$pagination-bg: $white !default;
+$pagination-color: $body-color !default;
+$pagination-bg: transparent !default;
 $pagination-border-width: $border-width !default;
-$pagination-border-radius: $border-radius !default;
+$pagination-border-radius: 2px !default;
 $pagination-margin-left: -$pagination-border-width !default;
-$pagination-border-color: $gray-300 !default;
+$pagination-border-color: transparent !default;
 
-$pagination-focus-box-shadow: $input-btn-focus-box-shadow !default;
+$pagination-focus-box-shadow: none !default;
 $pagination-focus-outline: 0 !default;
 
 $pagination-hover-color: $link-hover-color !default;
-$pagination-hover-bg: $gray-200 !default;
-$pagination-hover-border-color: $gray-300 !default;
+$pagination-hover-bg: transparent !default;
+$pagination-hover-border-color: transparent !default;
 
-$pagination-active-color: $component-active-color !default;
-$pagination-active-bg: $component-active-bg !default;
+$pagination-active-color: #fff !default;
+$pagination-active-bg: $primary !default;
 $pagination-active-border-color: $pagination-active-bg !default;
 
 $pagination-disabled-color: $gray-600 !default;

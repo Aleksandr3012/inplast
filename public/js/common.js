@@ -372,6 +372,27 @@ function eventHandler() {
 			clickable: true
 		}
 	}));
+	var sCatalogSlider = new Swiper('.sCatalogSlider-js', _objectSpread(_objectSpread({}, defaultSl), {}, {
+		slidesPerView: 'auto',
+		spaceBetween: 20,
+		loop: false,
+		// autoplay: {
+		// 	delay: 6000,
+		// },
+		navigation: {
+			nextEl: '.sCatalogSlider-next',
+			prevEl: '.sCatalogSlider-prev'
+		},
+		breakpoints: {
+			992: {
+				slidesPerView: 4
+			}
+		},
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 4
+		}
+	}));
 	var projectSlider = new Swiper('.projectSlider-js', _objectSpread(_objectSpread({}, defaultSl), {}, {
 		slidesPerView: 1,
 		// autoplay: {

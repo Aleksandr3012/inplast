@@ -51,10 +51,20 @@ $output-bourbon-deprecation-warnings: false;
 
 .pagination-wrapper ul {
 	@extend .pagination;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .pagination-wrapper li .page-numbers {
 	@extend .page-link;
+	font-weight: 600;
+	&.current {
+		background-color: $primary;
+		color: #fff;
+		pointer-events: none;
+		border-radius: 2px;
+	}
 }
 
 .pagination-wrapper li {

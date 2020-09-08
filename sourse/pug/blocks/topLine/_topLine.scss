@@ -35,8 +35,17 @@
 			font-size: rem(19);
 			color: $body-color;
 		}
-		@include media-breakpoint-down(lg) {
+		@include media-breakpoint-down(md) {
 			display: none;
+			position: absolute;
+			width: 250px;
+			right: -100px;
+			z-index: 5;
+			top: 53px;
+		}
+		@include media-breakpoint-down(sm) {
+			top: 39px;
+
 		}
 	}
 
@@ -64,6 +73,7 @@
 			padding-left: 0;
 			text-align: right;
 		}
+		position: relative;
 	}
 
 	&__call {

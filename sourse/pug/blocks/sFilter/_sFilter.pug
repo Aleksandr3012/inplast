@@ -1,77 +1,82 @@
 mixin sFilter()
 	// start sFilter
 	+b.sFilter#sFilter&attributes(attributes)
+		+e.filterToggleBtn.selected-positions.filter-accardion-js.d-lg-none
+			+e.fileterIcon
+				+icon('filter')
+				+e.iconDot
+			span Фильтр
+		+e.mainBlock.filter-accardion-toggle
+			+e.item
+				+e.itemTopLine
+					+e.title Цена
+					.filter-accardion-js
+						img(src="img/chevron-top.svg", alt="")
+				+e.body.filter-accardion-toggle
+					+range('100.99','999999.99')
 
-		+e.item
-			+e.itemTopLine
-				+e.title Цена
-				.filter-accardion-js
-					img(src="img/chevron-top.svg", alt="")
-			+e.body.filter-accardion-toggle
-				+range('100.99','999999.99')
-
-		+e.item
-			+e.itemTopLine
-				+e.title Производитель 
-				.filter-accardion-js
-					img(src="img/chevron-top.svg", alt="")
-			+e.body.filter-accardion-toggle
-				+in-c('checkbox','Manufacturer name (1000)','manufacturer')
-				+in-c('checkbox','Manufacturer name (100)','manufacturer')
-				+in-c('checkbox','Manufacturer name (10)','manufacturer')
-				+in-c('checkbox','Manufacturer name (0)','manufacturer')
-				+in-c('checkbox','Manufacturer name (0)','manufacturer')
-				+in-c('checkbox','Manufacturer name (0)','manufacturer')
-				+in-c('checkbox','Manufacturer name (0)','manufacturer')
-				+in-c('checkbox','Manufacturer name (0)','manufacturer')
-				+in-c('checkbox','Manufacturer name (0)','manufacturer')
-
-
-		+e.item
-			+e.itemTopLine
-				+e.title Материал
-				.filter-accardion-js
-					img(src="img/chevron-top.svg", alt="")
-			+e.body.filter-accardion-toggle
-				+in-c('checkbox','Material name (1000)','material')
-				+in-c('checkbox','Material name (100)','material')
-				+in-c('checkbox','Material name (10)','material')
-				+in-c('checkbox','Material name (0)','material')
-				+in-c('checkbox','Material name (0)','material')
-				+in-c('checkbox','Material name (0)','material')
-				+in-c('checkbox','Material name (0)','material')
-				+in-c('checkbox','Material name (0)','material')
-				+in-c('checkbox','Material name (0)','material')
-				+in-c('checkbox','Material name (0)','material')
+			+e.item
+				+e.itemTopLine
+					+e.title Производитель 
+					.filter-accardion-js
+						img(src="img/chevron-top.svg", alt="")
+				+e.body.filter-accardion-toggle
+					+in-c('checkbox','Manufacturer name (1000)','manufacturer')
+					+in-c('checkbox','Manufacturer name (100)','manufacturer')
+					+in-c('checkbox','Manufacturer name (10)','manufacturer')
+					+in-c('checkbox','Manufacturer name (0)','manufacturer')(class="checkbox-inactive")
+					+in-c('checkbox','Manufacturer name (0)','manufacturer')(class="checkbox-inactive")
+					+in-c('checkbox','Manufacturer name (0)','manufacturer')(class="checkbox-inactive")
+					+in-c('checkbox','Manufacturer name (0)','manufacturer')(class="checkbox-inactive")
+					+in-c('checkbox','Manufacturer name (0)','manufacturer')(class="checkbox-inactive")
+					+in-c('checkbox','Manufacturer name (0)','manufacturer')(class="checkbox-inactive")
 
 
-		+e.item
-			+e.itemTopLine
-				+e.title Name
-				.filter-accardion-js
-					img(src="img/chevron-top.svg", alt="")
-			+e.body.filter-accardion-toggle
-				+range('0','100000')
+			+e.item
+				+e.itemTopLine
+					+e.title Материал
+					.filter-accardion-js
+						img(src="img/chevron-top.svg", alt="")
+				+e.body.filter-accardion-toggle
+					+in-c('checkbox','Material name (1000)','material')
+					+in-c('checkbox','Material name (100)','material')
+					+in-c('checkbox','Material name (10)','material')
+					+in-c('checkbox','Material name (0)','material')(class="checkbox-inactive")
+					+in-c('checkbox','Material name (0)','material')(class="checkbox-inactive")
+					+in-c('checkbox','Material name (0)','material')(class="checkbox-inactive")
+					+in-c('checkbox','Material name (0)','material')(class="checkbox-inactive")
+					+in-c('checkbox','Material name (0)','material')(class="checkbox-inactive")
+					+in-c('checkbox','Material name (0)','material')(class="checkbox-inactive")
+					+in-c('checkbox','Material name (0)','material')(class="checkbox-inactive")
 
-		+e.item
-			+e.itemTopLine
-				+e.title Name
-				.filter-accardion-js
-					img(src="img/chevron-top.svg", alt="")
-			+e.body.filter-accardion-toggle
-				+in-c('checkbox','Text (1000)','name')
-				+in-c('checkbox','Text (100)','name')
-				+in-c('checkbox','Text (10)','name')
-				+in-c('checkbox','Text (0)','name')
-				+in-c('checkbox','Text (0)','name')
-				+in-c('checkbox','Text (0)','name')
-				+in-c('checkbox','Text (0)','name')
-				+in-c('checkbox','Text (0)','name')
-				+in-c('checkbox','Text (0)','name')
-				+in-c('checkbox','Text (0)','name')
-		+e.buttons
-			+e.btn(type="button") Показать
-			+e.skip(type="button") Сбросить
+
+			+e.item
+				+e.itemTopLine
+					+e.title Name
+					.filter-accardion-js
+						img(src="img/chevron-top.svg", alt="")
+				+e.body.filter-accardion-toggle
+					+range('0','100000')
+
+			+e.item
+				+e.itemTopLine
+					+e.title Name
+					.filter-accardion-js
+						img(src="img/chevron-top.svg", alt="")
+				+e.body.filter-accardion-toggle
+					+in-c('checkbox','Text (1000)','name')
+					+in-c('checkbox','Text (100)','name')
+					+in-c('checkbox','Text (10)','name')
+					+in-c('checkbox','Text (0)','name')(class="checkbox-inactive")
+					+in-c('checkbox','Text (0)','name')(class="checkbox-inactive")
+					+in-c('checkbox','Text (0)','name')(class="checkbox-inactive")
+					+in-c('checkbox','Text (0)','name')(class="checkbox-inactive")
+					+in-c('checkbox','Text (0)','name')(class="checkbox-inactive")
+					+in-c('checkbox','Text (0)','name')(class="checkbox-inactive")
+					+in-c('checkbox','Text (0)','name')(class="checkbox-inactive")
+			+e.buttons
+				+e.btn(type="button") Показать
+				+e.skip(type="button") Сбросить
 
 
 	// end sFilter

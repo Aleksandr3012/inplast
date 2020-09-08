@@ -17,7 +17,7 @@ include ../blocks/sProdPage/_sProdPage.pug
 block variables
 	- let  mainPage= null
 block title
-	- let  title= '02-prod-page'
+	- let  title= 'catalog'
 	title= title
 block pagecontent
 	//- +mob-mnu()
@@ -32,10 +32,11 @@ block pagecontent
 	.container.section.catalogSection
 		+breadcrumb('Главная', 'Каталог', 'Вентиляционное оборудование для чистых помещений')
 		.row
-			.col-lg-auto.filterCol
-				+sFilter
-			.col-lg
+			.col-lg-3
+				+sFilter(class="d-none d-lg-block")
+			.col-lg-9
 				+sCatalogSlider
+				+sFilter(class="d-lg-none")
 				+sCatalogInner
 	+footer()
 

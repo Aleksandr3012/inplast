@@ -1,9 +1,439 @@
 mixin sCatalogInner()
 	// start sCatalogInner
-	+b.SECTION.sCatalogInner.section#sCatalogInner&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 sCatalogInner
-				
-			.row
+	+b.sCatalogInner#sCatalogInner&attributes(attributes)
+		.row.justify-content-between
+			.col-auto
+				+e.filter
+					+e.select
+						select.default-select-js(name='sort')
+							option(value='popularity') По популярности
+							option(value='novelty') По новизне
+							option(value='lorem') Lorem, ipsum.
+					+e.select--price
+						select.default-select-js(name='price')
+							option(value='popularity') По цене
+							option(value='from dear') От дорогих
+							option(value='from cheap') От дешевых
+							option(value='by price') По цене
+							option(value='lorem') Lorem, ipsum.
+			.col-auto.d-none.d-md-flex
+				+e.list.active(href="#")
+					+icon('list-1')
+				+e.list(href="#")
+					+icon('list-2')
+				+e.list(href="#")
+					+icon('list-3')
+		//- catalogInnerItem start
+		mixin catalogInnerItem(a)
+			+b.catalogInnerItem&attributes(attributes)
+				if a
+					+e.availability.absent Нет в наличии
+				else
+					+e.availability В наличии
+				+e.imgWrap(href="#")
+					+pic('hit-2.png','','')
+				+e.title(href="#") Название товара<br> на две-три<br> строчки
+				p.d-none.d-md-block Краткое описание на строку
+				+e.row.row.justify-content-between
+					.col-auto.order-sm-last
+						+e.id(href='#') ID: 0000
+					.col-auto
+						+e.price Цена ₽
+				+e.buttonRow.row.justify-content-between
+					.col-md-5.d-none.d-md-block.text-center
+						+e.inputs
+							input.form-control(type="number" min='1' max='5' value="1")
+							+e.inputBtn
+								+e.plus-btn
+									img(src="img/chevron-down.svg", alt="")
+								+e.minus-btn
+									img(src="img/chevron-down.svg", alt="")
+
+						+e.amount-txt шт.
+					+e.col.col-md-7
+						+e.buttons
+							+e.btn.link-modal(href="#") Купить
+							+e.compare(type="button")
+								+icon('comp')
+						+e.oneClick(href='#') Купить в 1 клик
+			//- catalogInnerItem end
+		+e.row.row
+			.col-6.col-lg-4
+				+catalogInnerItem
+			.col-6.col-lg-4
+				+catalogInnerItem('a')
+			.col-6.col-lg-4
+				+catalogInnerItem
+			.col-6.col-lg-4
+				+catalogInnerItem
+			.col-6.col-lg-4
+				+catalogInnerItem
+			.col-6.col-lg-4
+				+catalogInnerItem
+			.col-6.col-lg-4
+				+catalogInnerItem('a')
+			.col-6.col-lg-4
+				+catalogInnerItem('a')
+			.col-6.col-lg-4
+				+catalogInnerItem('a')
+		+e.loadMore 
+			+icon('load')
+			span Показать ещё
+		+pugin()
+		+e.seo
+			h3 Заголовок
+			p Какой-то Seo-текст <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			h4 Подзаголовок 
+			p Какой-то Seo-текст <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
 	// end sCatalogInner
+
+mixin sCatalogInner-list()
+	// start sCatalogInner
+	+b.sCatalogInner#sCatalogInner&attributes(attributes)
+		.row.justify-content-between
+			.col-auto
+				+e.filter
+					+e.select
+						select.default-select-js(name='sort')
+							option(value='popularity') По популярности
+							option(value='novelty') По новизне
+							option(value='lorem') Lorem, ipsum.
+					+e.select--price
+						select.default-select-js(name='price')
+							option(value='popularity') По цене
+							option(value='from dear') От дорогих
+							option(value='from cheap') От дешевых
+							option(value='by price') По цене
+							option(value='lorem') Lorem, ipsum.
+			.col-auto.d-none.d-md-flex
+				+e.list(href="#")
+					+icon('list-1')
+				+e.list.active(href="#")
+					+icon('list-2')
+				+e.list(href="#")
+					+icon('list-3')
+		//- catalogInnerItem start
+		mixin catalogInnerItem(a)
+			+b.catalogInnerItem--list&attributes(attributes)
+				if a
+					+e.availability.absent Нет в наличии
+				else
+					+e.availability В наличии
+				.row
+					.col-md-2.col-lg-3
+						+e.imgWrap(href="#")
+							+pic('hit-2.png','','')
+					+e.textCol.col-md-auto
+						+e.title(href="#") Название 
+						p.d-none.d-md-block Краткое описание на строку
+						.d-none.d-md-block
+							+charItem('Производитель:','text')
+							+charItem('Материал:','text')
+							+charItem('Название характеристики:','text')
+							+charItem('Название характеристики:','text')
+							+e.chars-icons
+								+charIcon(1)
+									| Диффузер
+								+charIcon(2)
+									| Гигиеническое
+									br
+									| исполнение VDI 6022
+								+charIcon(3)
+									| Система
+									br
+									| распределения воздуха
+								+charIcon(4)
+									| Чистые помещения
+					.col-md
+						+e.buy
+							+e.price-and-status
+								+e.price Цена ₽
+								+e.id ID: 0000
+							//status-danger
+							+e.amount.d-none.d-md-flex
+								+e.inputs
+									+e.minus-btn.muted
+									input.form-control(type="number" min='1' max='5' value="1")
+									+e.plus-btn
+								+e.amount-txt шт.
+								+e.BUTTON.to-cart-btn(type='submit') В корзину
+							+e.click-and-compare.d-none.d-md-block
+								+e.A.one-click(href="#") Купить в 1 клик
+								+e.A.compare-btn(href='#')
+									+icon('comp')
+									span Добавить к сравнению
+				+e.buttonRow.row.justify-content-between.d-md-none
+					.col-md-5.d-none.d-md-block.text-center
+						+e.inputs
+							input.form-control(type="number" min='1' max='5' value="1")
+							+e.inputBtn
+								+e.plus-btn
+									img(src="img/chevron-down.svg", alt="")
+								+e.minus-btn
+									img(src="img/chevron-down.svg", alt="")
+
+						+e.amount-txt шт.
+					+e.col.col-md-7
+						+e.buttons
+							+e.btn.link-modal(href="#") Купить
+							+e.compare(type="button")
+								+icon('comp')
+						+e.oneClick(href='#') Купить в 1 клик
+		+e.row.row
+			.col-6.col-md-12
+				+catalogInnerItem
+			.col-6.col-md-12
+				+catalogInnerItem('a')
+			.col-6.col-md-12
+				+catalogInnerItem
+			.col-6.col-md-12
+				+catalogInnerItem
+			.col-6.col-md-12
+				+catalogInnerItem
+			.col-6.col-md-12
+				+catalogInnerItem
+			.col-6.col-md-12
+				+catalogInnerItem('a')
+			.col-6.col-md-12
+				+catalogInnerItem('a')
+			.col-6.col-md-12
+				+catalogInnerItem('a')
+			
+		+e.loadMore 
+			+icon('load')
+			span Показать ещё
+		+pugin()
+		+e.seo
+			h3 Заголовок
+			p Какой-то Seo-текст <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			h4 Подзаголовок 
+			p Какой-то Seo-текст <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+	// end sCatalogInner-list
+
+mixin sCatalogInner-list()
+	// start sCatalogInner
+	+b.sCatalogInner#sCatalogInner&attributes(attributes)
+		.row.justify-content-between
+			.col-auto
+				+e.filter
+					+e.select
+						select.default-select-js(name='sort')
+							option(value='popularity') По популярности
+							option(value='novelty') По новизне
+							option(value='lorem') Lorem, ipsum.
+					+e.select--price
+						select.default-select-js(name='price')
+							option(value='popularity') По цене
+							option(value='from dear') От дорогих
+							option(value='from cheap') От дешевых
+							option(value='by price') По цене
+							option(value='lorem') Lorem, ipsum.
+			.col-auto.d-none.d-md-flex
+				+e.list(href="#")
+					+icon('list-1')
+				+e.list.active(href="#")
+					+icon('list-2')
+				+e.list(href="#")
+					+icon('list-3')
+		//- catalogInnerItem start
+		mixin catalogInnerItem(a)
+			+b.catalogInnerItem--list&attributes(attributes)
+				if a
+					+e.availability.absent Нет в наличии
+				else
+					+e.availability В наличии
+				.row
+					.col-md-2.col-lg-3
+						+e.imgWrap(href="#")
+							+pic('hit-2.png','','')
+					+e.textCol.col-md-auto
+						+e.title(href="#") Название 
+						p.d-none.d-md-block Краткое описание на строку
+						.d-none.d-md-block
+							+charItem('Производитель:','text')
+							+charItem('Материал:','text')
+							+charItem('Название характеристики:','text')
+							+charItem('Название характеристики:','text')
+							+e.chars-icons
+								+charIcon(1)
+									| Диффузер
+								+charIcon(2)
+									| Гигиеническое
+									br
+									| исполнение VDI 6022
+								+charIcon(3)
+									| Система
+									br
+									| распределения воздуха
+								+charIcon(4)
+									| Чистые помещения
+					.col-md
+						+e.buy
+							+e.price-and-status
+								+e.price Цена ₽
+								+e.id ID: 0000
+							//status-danger
+							+e.amount.d-none.d-md-flex
+								+e.inputs
+									+e.minus-btn.muted
+									input.form-control(type="number" min='1' max='5' value="1")
+									+e.plus-btn
+								+e.amount-txt шт.
+								+e.BUTTON.to-cart-btn(type='submit') В корзину
+							+e.click-and-compare.d-none.d-md-block
+								+e.A.one-click(href="#") Купить в 1 клик
+								+e.A.compare-btn(href='#')
+									+icon('comp')
+									span Добавить к сравнению
+				+e.buttonRow.row.justify-content-between.d-md-none
+					.col-md-5.d-none.d-md-block.text-center
+						+e.inputs
+							input.form-control(type="number" min='1' max='5' value="1")
+							+e.inputBtn
+								+e.plus-btn
+									img(src="img/chevron-down.svg", alt="")
+								+e.minus-btn
+									img(src="img/chevron-down.svg", alt="")
+
+						+e.amount-txt шт.
+					+e.col.col-md-7
+						+e.buttons
+							+e.btn.link-modal(href="#") Купить
+							+e.compare(type="button")
+								+icon('comp')
+						+e.oneClick(href='#') Купить в 1 клик
+		+e.row.row
+			.col-6.col-md-12
+				+catalogInnerItem
+			.col-6.col-md-12
+				+catalogInnerItem('a')
+			.col-6.col-md-12
+				+catalogInnerItem
+			.col-6.col-md-12
+				+catalogInnerItem
+			.col-6.col-md-12
+				+catalogInnerItem
+			.col-6.col-md-12
+				+catalogInnerItem
+			.col-6.col-md-12
+				+catalogInnerItem('a')
+			.col-6.col-md-12
+				+catalogInnerItem('a')
+			.col-6.col-md-12
+				+catalogInnerItem('a')
+			
+		+e.loadMore 
+			+icon('load')
+			span Показать ещё
+		+pugin()
+		+e.seo
+			h3 Заголовок
+			p Какой-то Seo-текст <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			h4 Подзаголовок 
+			p Какой-то Seo-текст <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+	// end sCatalogInner-list
+
+
+mixin sCatalogInner-list-sm()
+	// start sCatalogInner
+	+b.sCatalogInner#sCatalogInner&attributes(attributes)
+		.row.justify-content-between
+			.col-auto
+				+e.filter
+					+e.select
+						select.default-select-js(name='sort')
+							option(value='popularity') По популярности
+							option(value='novelty') По новизне
+							option(value='lorem') Lorem, ipsum.
+					+e.select--price
+						select.default-select-js(name='price')
+							option(value='popularity') По цене
+							option(value='from dear') От дорогих
+							option(value='from cheap') От дешевых
+							option(value='by price') По цене
+							option(value='lorem') Lorem, ipsum.
+			.col-auto.d-none.d-md-flex
+				+e.list(href="#")
+					+icon('list-1')
+				+e.list(href="#")
+					+icon('list-2')
+				+e.list.active(href="#")
+					+icon('list-3')
+		//- catalogInnerItem start
+		mixin catalogInnerItem(a)
+			+b.catalogInnerItem--list-sm&attributes(attributes)
+				.d-md-none
+					if a
+						+e.availability.absent Нет в наличии
+					else
+						+e.availability В наличии
+				.row.align-items-center
+					.col-md-2
+						+e.imgWrap(href="#")
+							+pic('hit-2.png','','')
+					.col-md
+						+e.title(href="#") Название 
+						p.d-none.d-md-block Краткое описание на строку
+						.d-none.d-md-block
+							if a
+								+e.status.status-danger Нет в наличии
+							else
+								+e.status.status-sucsess В наличии
+
+					.col-md-auto
+						+e.buy
+							+e.price-and-status
+								+e.price Цена ₽
+								+e.id ID: 0000
+					.col-md-auto
+						+e.buttonRow.row.justify-content-between
+							.col-md-5.d-none.d-md-block.text-center
+								+e.inputs
+									input.form-control(type="number" min='1' max='5' value="1")
+									+e.inputBtn
+										+e.plus-btn
+											img(src="img/chevron-down.svg", alt="")
+										+e.minus-btn
+											img(src="img/chevron-down.svg", alt="")
+
+								+e.amount-txt шт.
+							+e.col.col-md-7
+								+e.buttons
+									+e.btn.link-modal(href="#") Купить
+									+e.compare(type="button")
+										+icon('comp')
+								+e.oneClick(href='#') Купить в 1 клик
+		+e.row.row
+			.col-6.col-md-12
+				+catalogInnerItem
+			.col-6.col-md-12
+				+catalogInnerItem('a')
+			.col-6.col-md-12
+				+catalogInnerItem
+			.col-6.col-md-12
+				+catalogInnerItem
+			.col-6.col-md-12
+				+catalogInnerItem
+			.col-6.col-md-12
+				+catalogInnerItem
+			.col-6.col-md-12
+				+catalogInnerItem('a')
+			.col-6.col-md-12
+				+catalogInnerItem('a')
+			.col-6.col-md-12
+				+catalogInnerItem('a')
+			
+		+e.loadMore 
+			+icon('load')
+			span Показать ещё
+		+pugin()
+		+e.seo
+			h3 Заголовок
+			p Какой-то Seo-текст <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			h4 Подзаголовок 
+			p Какой-то Seo-текст <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+	// end sCatalogInner-list

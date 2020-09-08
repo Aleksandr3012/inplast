@@ -1,9 +1,25 @@
 mixin sCatalogSlider()
 	// start sCatalogSlider
-	+b.SECTION.sCatalogSlider.section#sCatalogSlider&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 sCatalogSlider
-				
-			.row
+	+b.sCatalogSlider#sCatalogSlider&attributes(attributes)
+		.swiper-container.sCatalogSlider-js
+			.swiper-wrapper
+				mixin slide(img,t)
+					.swiper-slide
+						+e.sliderWrap.text-center(href="#")
+							picture
+								source.swiper-lazy(srcset="#" data-srcset=`img/@2x/webp/catalog-slider-${img}.webp` type="image/webp")
+								img.swiper-lazy(src="#" data-src=`img/@2x/catalog-slider-${img}.jpg`, alt="")
+							+e.title= t
+				+slide('1','Герметичные клапаны воздушные')
+				+slide('2','Блоки воздухораздающие с боковым подводом')
+				+slide('3','Фасадные решетки')
+				+slide('4','Воздухораздающие блоки с прямоугольным патрубком')
+				+slide('1','Герметичные клапаны воздушные')
+				+slide('2','Блоки воздухораздающие с боковым подводом')
+				+slide('3','Фасадные решетки')
+				+slide('4','Воздухораздающие блоки с прямоугольным патрубком')
+		.sCatalogSlider-next.d-none.d-lg-flex
+			img(src="img/svg/chevron-top.svg", alt="")
+		.sCatalogSlider-prev.d-none.d-lg-flex
+			img(src="img/svg/chevron-top.svg", alt="")
 	// end sCatalogSlider

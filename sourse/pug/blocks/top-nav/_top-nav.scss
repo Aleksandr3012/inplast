@@ -395,10 +395,18 @@
 	&__drop {
 		position: absolute;
 		z-index: 10;
-		top: 40px;
-		right: 0;
+		right: -74px;
+		top: 43px;
+		@include media-breakpoint-up(sm) {
+			right: 0;
+			top: 57px;
+		}
+		@include media-breakpoint-up(lg) {
+			top: 40px;
+		}
 		background: #FFFFFF;
 		box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.16);
+		width: 320px;
 		@include media-breakpoint-up(sm) {
 			width: 423px;
 		}
@@ -406,17 +414,12 @@
 		@include mt;
 		transform-origin: top;
 	}
-	&:hover &__drop{
+	&:hover &__drop, &:focus &__drop, &:active &__drop{
 		transform: scale(1);
 	}
 
 	table {
 		width: 100%;
-		td {
-			&:nth-child(5) {
-				display: block;
-			}
-		}
 	}
 
 	picture {
@@ -434,14 +437,107 @@
 	}
 
 	&__amount {
-		color: rgba($color: $body-color, $alpha: 0.5);
-		font-size: 12px;
+		@include media-breakpoint-up(lg) {
+			color: rgba($color: $body-color, $alpha: 0.5);
+			font-size: 12px;
+		}
+	}
+	&__amount{
+		display: inline-flex;
+		align-items: center;
+		margin-top: 10px;
+		margin-left: 60px;
+		max-width: 286px;
+		@include media-breakpoint-up(sm) {
+			margin-left: 85px;
+		}
+		@include media-breakpoint-up(md){
+			padding-bottom: rem(0);
+			max-width: 100%;
+		}
+		@include media-breakpoint-up(lg) {
+			margin-left: 0;
+		}
+	}
+	//inputs
+	&__inputs{
+		position: relative;
+		width: 114px;
+		// height: 40px;
+		height: 29px;
+		margin-right: 10px;
+		@include media-breakpoint-up(sm){
+			width: 96px;
+			margin-right: rem(6);
+		}
+
+		input{
+			outline: none !important;
+			max-width: 100%;
+			min-height: 0;
+
+			// padding: 8.5px 10px;
+			padding: 3px 10px;
+			@include media-breakpoint-up(sm){
+			}
+			text-align: center;
+
+			font-weight: 600;
+			font-size: rem(17px);
+			line-height: (23/17);
+			//color: $body-color;
+		}
+	}
+	//btns
+	&__minus-btn,
+	&__plus-btn{
+		position: absolute;
+		top: 0;
+
+		height: 100%;
+		z-index: 1;
+		//background-color: rgba(red, .05);
+
+		@include mt();
+		&.muted{
+			opacity: .5;
+		}
+
+		width: 33px;
+		&:before,
+		&:after{
+			position: absolute;
+			background-color: $body-color;
+			top: 50%;
+			left: 50%;
+			transform: translateX(-50%) translateY(-50%);
+		}
+		&:before{
+			content: '';
+			width: 13px;
+			height: 3px;
+		}
+		&:after{
+			height: 13px;
+			width: 3px;
+		}
+	}
+
+	&__minus-btn{
+		left: 0;
+	}
+	&__plus-btn{
+		right: 0;
+		&:after{
+			content: '';
+		}
 	}
 
 	&__ptice {
 		font-weight: 600;
 		font-size: 15px;
 		text-align: right;
+		min-width: 70px;
 	}
 
 	&__delete {
@@ -450,6 +546,9 @@
 		.icon{
 			color: $body-color;
 			font-size: rem(16);
+		}
+		@include media-breakpoint-down(lg) {
+			display: inline-block;
 		}
 	}
 
