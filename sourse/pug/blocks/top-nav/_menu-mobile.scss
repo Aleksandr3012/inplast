@@ -162,7 +162,10 @@ $h: em(2);
 		justify-content: space-between;
 		padding: 0 90px 10px 20px;
 		.drop-open {
+			max-width: none !important;
+			width: 16%;
 			padding-top: 0 !important;
+			text-align: center;
 		}
 	}
 
