@@ -1,0 +1,46 @@
+mixin sBasket()
+	// start sBasket
+	+b.SECTION.sBasket.section#sBasket&attributes(attributes)
+		.container
+			+e.added-to-cart
+				+icon('mark')
+				span Добавлено в корзину
+			+b.section-title
+				h2 Корзина
+			.row.d-none.d-md-flex
+				.col-md-4.col-xl-6
+					+e.name Товар
+				.col-md
+					+e.name Цена
+				.col-md-2
+					+e.name Количество
+				.col-md
+					+e.name Сумма
+				.col-md
+			+e.item.row.align-items-center.justify-content-center
+				.col-md-4.col-xl-6
+					+e.product
+						+e.imgWrap(href="#")
+							+pic('hit-2.png','','')
+						+e.title(href="#") Название 
+				.col-sm-4.col-md
+					+e.price Цена ₽
+				.col-sm-4.col-md-2
+					+e.inputs
+						+e.minus-btn
+						input.form-control(type="number" min='1' max='5' value="1")
+						+e.plus-btn
+				.col-sm-4.col-md
+					+e.price Сумма&nbsp;₽
+				.col-md
+					+e.delete(type='submit')
+						+icon('delete')
+						span Удалить
+			+e.total
+				span Итого:
+				+e.totalPrice Сумма&nbsp;₽
+			+e.buttons
+				+e.clear(type='submit') Очистить корзину
+				+e.arrange(href="#") Оформить заказ
+			a.mt-4.link-modal.btn(href="#modal-processed") модалка - заказ оформлен
+	// end sBasket

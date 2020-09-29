@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>catalog</title>
+		<title>basket</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, shrink-to-fit=no">
@@ -1122,850 +1122,87 @@
 				<nav class="breadcrumb-slider-js swiper-container" aria-label="breadcrumb">
 					<ol class="breadcrumb swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
 						<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item">Главная</a></li>
-						<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item">Каталог</a></li>
-						<li class="breadcrumb-item swiper-slide active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item">Вентиляционное оборудование для чистых помещений</a></li>
+						<li class="breadcrumb-item swiper-slide active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item">Каталог</a></li>
 					</ol>
 				</nav>
-				<div class="row">
-					<div class="col-lg-3">
-						<!-- start sFilter-->
-						<div class="sFilter d-none d-lg-block" id="sFilter">
-							<div class="sFilter__filterToggleBtn selected-positions filter-accardion-js d-lg-none">
-								<div class="sFilter__fileterIcon">
-									<svg class="icon icon-filter ">
-										<use xlink:href="img/svg/sprite.svg#filter"></use>
-									</svg>
-									<div class="sFilter__iconDot">
-									</div>
-								</div><span>Фильтр</span>
+				<!-- start sBasket-->
+				<section class="sBasket section" id="sBasket">
+					<div class="container">
+						<div class="sBasket__added-to-cart">
+							<svg class="icon icon-mark ">
+								<use xlink:href="img/svg/sprite.svg#mark"></use>
+							</svg><span>Добавлено в корзину</span>
+						</div>
+						<div class="section-title">
+							<h2>Корзина</h2>
+						</div>
+						<div class="row d-none d-md-flex">
+							<div class="col-md-4 col-xl-6">
+								<div class="sBasket__name">Товар
+								</div>
 							</div>
-							<div class="sFilter__mainBlock filter-accardion-toggle">
-								<div class="sFilter__item">
-									<div class="sFilter__itemTopLine">
-										<div class="sFilter__title">Цена
-										</div>
-										<div class="filter-accardion-js"><img src="img/chevron-top.svg" alt=""/></div>
+							<div class="col-md">
+								<div class="sBasket__name">Цена
+								</div>
+							</div>
+							<div class="col-md-2">
+								<div class="sBasket__name">Количество
+								</div>
+							</div>
+							<div class="col-md">
+								<div class="sBasket__name">Сумма
+								</div>
+							</div>
+							<div class="col-md"></div>
+						</div>
+						<div class="sBasket__item row align-items-center justify-content-center">
+							<div class="col-md-4 col-xl-6">
+								<div class="sBasket__product"><a class="sBasket__imgWrap" href="#">
+									<!-- picture-->
+									<picture> 
+										<noscript class="loading-lazy">
+											<source srcset="img/@2x/webp/hit-2.webp" loading="lazy" type="image/webp"/><img src="img/@2x/hit-2.png" loading="lazy" alt=""/>
+										</noscript>
+									</picture>
+									<!-- /picture--></a><a class="sBasket__title" href="#">Название </a>
+								</div>
+							</div>
+							<div class="col-sm-4 col-md">
+								<div class="sBasket__price">Цена ₽
+								</div>
+							</div>
+							<div class="col-sm-4 col-md-2">
+								<div class="sBasket__inputs">
+									<div class="sBasket__minus-btn">
 									</div>
-									<div class="sFilter__body filter-accardion-toggle">
-										<div class="range-wrap price_slider_amount">
-											<div class="row">
-												<div class="col-6"> 
-													<div class="form-group"><input class="input_from form-control form-control-sm" type="text"/>
-													</div>
-												</div>
-												<div class="col-6">
-													<div class="form-group"><input class="input_to form-control form-control-sm" type="text"/>
-													</div>
-												</div>
-											</div>
-											<input class="range-slider slider-js" type="text" data-min="100.99" data-max="999999.99"/>
-										</div>
+									<input class="form-control" type="number" min="1" max="5" value="1"/>
+									<div class="sBasket__plus-btn">
 									</div>
 								</div>
-								<div class="sFilter__item">
-									<div class="sFilter__itemTopLine">
-										<div class="sFilter__title">Производитель 
-										</div>
-										<div class="filter-accardion-js"><img src="img/chevron-top.svg" alt=""/></div>
-									</div>
-									<div class="sFilter__body filter-accardion-toggle">
-										<label class="custom-input"><input class="custom-input__input" type="checkbox" name="manufacturer"/><span class="custom-input__lab"></span><span class="custom-input__text">Manufacturer name (1000)</span>
-										</label>
-										<label class="custom-input"><input class="custom-input__input" type="checkbox" name="manufacturer"/><span class="custom-input__lab"></span><span class="custom-input__text">Manufacturer name (100)</span>
-										</label>
-										<label class="custom-input"><input class="custom-input__input" type="checkbox" name="manufacturer"/><span class="custom-input__lab"></span><span class="custom-input__text">Manufacturer name (10)</span>
-										</label>
-										<label class="custom-input checkbox-inactive"><input class="custom-input__input" type="checkbox" name="manufacturer"/><span class="custom-input__lab"></span><span class="custom-input__text">Manufacturer name (0)</span>
-										</label>
-										<label class="custom-input checkbox-inactive"><input class="custom-input__input" type="checkbox" name="manufacturer"/><span class="custom-input__lab"></span><span class="custom-input__text">Manufacturer name (0)</span>
-										</label>
-										<label class="custom-input checkbox-inactive"><input class="custom-input__input" type="checkbox" name="manufacturer"/><span class="custom-input__lab"></span><span class="custom-input__text">Manufacturer name (0)</span>
-										</label>
-										<label class="custom-input checkbox-inactive"><input class="custom-input__input" type="checkbox" name="manufacturer"/><span class="custom-input__lab"></span><span class="custom-input__text">Manufacturer name (0)</span>
-										</label>
-										<label class="custom-input checkbox-inactive"><input class="custom-input__input" type="checkbox" name="manufacturer"/><span class="custom-input__lab"></span><span class="custom-input__text">Manufacturer name (0)</span>
-										</label>
-										<label class="custom-input checkbox-inactive"><input class="custom-input__input" type="checkbox" name="manufacturer"/><span class="custom-input__lab"></span><span class="custom-input__text">Manufacturer name (0)</span>
-										</label>
-									</div>
+							</div>
+							<div class="col-sm-4 col-md">
+								<div class="sBasket__price">Сумма&nbsp;₽
 								</div>
-								<div class="sFilter__item">
-									<div class="sFilter__itemTopLine">
-										<div class="sFilter__title">Материал
-										</div>
-										<div class="filter-accardion-js"><img src="img/chevron-top.svg" alt=""/></div>
-									</div>
-									<div class="sFilter__body filter-accardion-toggle">
-										<label class="custom-input"><input class="custom-input__input" type="checkbox" name="material"/><span class="custom-input__lab"></span><span class="custom-input__text">Material name (1000)</span>
-										</label>
-										<label class="custom-input"><input class="custom-input__input" type="checkbox" name="material"/><span class="custom-input__lab"></span><span class="custom-input__text">Material name (100)</span>
-										</label>
-										<label class="custom-input"><input class="custom-input__input" type="checkbox" name="material"/><span class="custom-input__lab"></span><span class="custom-input__text">Material name (10)</span>
-										</label>
-										<label class="custom-input checkbox-inactive"><input class="custom-input__input" type="checkbox" name="material"/><span class="custom-input__lab"></span><span class="custom-input__text">Material name (0)</span>
-										</label>
-										<label class="custom-input checkbox-inactive"><input class="custom-input__input" type="checkbox" name="material"/><span class="custom-input__lab"></span><span class="custom-input__text">Material name (0)</span>
-										</label>
-										<label class="custom-input checkbox-inactive"><input class="custom-input__input" type="checkbox" name="material"/><span class="custom-input__lab"></span><span class="custom-input__text">Material name (0)</span>
-										</label>
-										<label class="custom-input checkbox-inactive"><input class="custom-input__input" type="checkbox" name="material"/><span class="custom-input__lab"></span><span class="custom-input__text">Material name (0)</span>
-										</label>
-										<label class="custom-input checkbox-inactive"><input class="custom-input__input" type="checkbox" name="material"/><span class="custom-input__lab"></span><span class="custom-input__text">Material name (0)</span>
-										</label>
-										<label class="custom-input checkbox-inactive"><input class="custom-input__input" type="checkbox" name="material"/><span class="custom-input__lab"></span><span class="custom-input__text">Material name (0)</span>
-										</label>
-										<label class="custom-input checkbox-inactive"><input class="custom-input__input" type="checkbox" name="material"/><span class="custom-input__lab"></span><span class="custom-input__text">Material name (0)</span>
-										</label>
-									</div>
-								</div>
-								<div class="sFilter__item">
-									<div class="sFilter__itemTopLine">
-										<div class="sFilter__title">Name
-										</div>
-										<div class="filter-accardion-js"><img src="img/chevron-top.svg" alt=""/></div>
-									</div>
-									<div class="sFilter__body filter-accardion-toggle">
-										<div class="range-wrap price_slider_amount">
-											<div class="row">
-												<div class="col-6"> 
-													<div class="form-group"><input class="input_from form-control form-control-sm" type="text"/>
-													</div>
-												</div>
-												<div class="col-6">
-													<div class="form-group"><input class="input_to form-control form-control-sm" type="text"/>
-													</div>
-												</div>
-											</div>
-											<input class="range-slider slider-js" type="text" data-min="0" data-max="100000"/>
-										</div>
-									</div>
-								</div>
-								<div class="sFilter__item">
-									<div class="sFilter__itemTopLine">
-										<div class="sFilter__title">Name
-										</div>
-										<div class="filter-accardion-js"><img src="img/chevron-top.svg" alt=""/></div>
-									</div>
-									<div class="sFilter__body filter-accardion-toggle">
-										<label class="custom-input"><input class="custom-input__input" type="checkbox" name="name"/><span class="custom-input__lab"></span><span class="custom-input__text">Text (1000)</span>
-										</label>
-										<label class="custom-input"><input class="custom-input__input" type="checkbox" name="name"/><span class="custom-input__lab"></span><span class="custom-input__text">Text (100)</span>
-										</label>
-										<label class="custom-input"><input class="custom-input__input" type="checkbox" name="name"/><span class="custom-input__lab"></span><span class="custom-input__text">Text (10)</span>
-										</label>
-										<label class="custom-input checkbox-inactive"><input class="custom-input__input" type="checkbox" name="name"/><span class="custom-input__lab"></span><span class="custom-input__text">Text (0)</span>
-										</label>
-										<label class="custom-input checkbox-inactive"><input class="custom-input__input" type="checkbox" name="name"/><span class="custom-input__lab"></span><span class="custom-input__text">Text (0)</span>
-										</label>
-										<label class="custom-input checkbox-inactive"><input class="custom-input__input" type="checkbox" name="name"/><span class="custom-input__lab"></span><span class="custom-input__text">Text (0)</span>
-										</label>
-										<label class="custom-input checkbox-inactive"><input class="custom-input__input" type="checkbox" name="name"/><span class="custom-input__lab"></span><span class="custom-input__text">Text (0)</span>
-										</label>
-										<label class="custom-input checkbox-inactive"><input class="custom-input__input" type="checkbox" name="name"/><span class="custom-input__lab"></span><span class="custom-input__text">Text (0)</span>
-										</label>
-										<label class="custom-input checkbox-inactive"><input class="custom-input__input" type="checkbox" name="name"/><span class="custom-input__lab"></span><span class="custom-input__text">Text (0)</span>
-										</label>
-										<label class="custom-input checkbox-inactive"><input class="custom-input__input" type="checkbox" name="name"/><span class="custom-input__lab"></span><span class="custom-input__text">Text (0)</span>
-										</label>
-									</div>
-								</div>
-								<div class="sFilter__buttons">
-									<button class="sFilter__btn" type="button">Показать
-									</button>
-									<button class="sFilter__skip" type="button">Сбросить
-									</button>
-								</div>
+							</div>
+							<div class="col-md">
+								<button class="sBasket__delete" type="submit">
+									<svg class="icon icon-delete ">
+										<use xlink:href="img/svg/sprite.svg#delete"></use>
+									</svg><span>Удалить</span>
+								</button>
 							</div>
 						</div>
-						<!-- end sFilter-->
+						<div class="sBasket__total"><span>Итого:</span>
+							<div class="sBasket__totalPrice">Сумма&nbsp;₽
+							</div>
+						</div>
+						<div class="sBasket__buttons">
+							<button class="sBasket__clear" type="submit">Очистить корзину
+							</button><a class="sBasket__arrange" href="#">Оформить заказ</a>
+						</div><a class="mt-4 link-modal btn" href="#modal-processed">модалка - заказ оформлен</a>
 					</div>
-					<div class="col-lg-9">
-						<!-- start sCatalogSlider-->
-						<div class="sCatalogSlider" id="sCatalogSlider">
-							<div class="swiper-container sCatalogSlider-js">
-								<div class="swiper-wrapper">
-											<div class="swiper-slide"><a class="sCatalogSlider__sliderWrap text-center" href="#">
-												<picture>
-													<source class="swiper-lazy" srcset="#" data-srcset="img/@2x/webp/catalog-slider-1.webp" type="image/webp"/><img class="swiper-lazy" src="#" data-src="img/@2x/catalog-slider-1.jpg" alt=""/>
-												</picture><span class="sCatalogSlider__title">Герметичные клапаны воздушные</span></a>
-											</div>
-											<div class="swiper-slide"><a class="sCatalogSlider__sliderWrap text-center" href="#">
-												<picture>
-													<source class="swiper-lazy" srcset="#" data-srcset="img/@2x/webp/catalog-slider-2.webp" type="image/webp"/><img class="swiper-lazy" src="#" data-src="img/@2x/catalog-slider-2.jpg" alt=""/>
-												</picture><span class="sCatalogSlider__title">Блоки воздухораздающие с боковым подводом</span></a>
-											</div>
-											<div class="swiper-slide"><a class="sCatalogSlider__sliderWrap text-center" href="#">
-												<picture>
-													<source class="swiper-lazy" srcset="#" data-srcset="img/@2x/webp/catalog-slider-3.webp" type="image/webp"/><img class="swiper-lazy" src="#" data-src="img/@2x/catalog-slider-3.jpg" alt=""/>
-												</picture><span class="sCatalogSlider__title">Фасадные решетки</span></a>
-											</div>
-											<div class="swiper-slide"><a class="sCatalogSlider__sliderWrap text-center" href="#">
-												<picture>
-													<source class="swiper-lazy" srcset="#" data-srcset="img/@2x/webp/catalog-slider-4.webp" type="image/webp"/><img class="swiper-lazy" src="#" data-src="img/@2x/catalog-slider-4.jpg" alt=""/>
-												</picture><span class="sCatalogSlider__title">Воздухораздающие блоки с прямоугольным патрубком</span></a>
-											</div>
-											<div class="swiper-slide"><a class="sCatalogSlider__sliderWrap text-center" href="#">
-												<picture>
-													<source class="swiper-lazy" srcset="#" data-srcset="img/@2x/webp/catalog-slider-1.webp" type="image/webp"/><img class="swiper-lazy" src="#" data-src="img/@2x/catalog-slider-1.jpg" alt=""/>
-												</picture><span class="sCatalogSlider__title">Герметичные клапаны воздушные</span></a>
-											</div>
-											<div class="swiper-slide"><a class="sCatalogSlider__sliderWrap text-center" href="#">
-												<picture>
-													<source class="swiper-lazy" srcset="#" data-srcset="img/@2x/webp/catalog-slider-2.webp" type="image/webp"/><img class="swiper-lazy" src="#" data-src="img/@2x/catalog-slider-2.jpg" alt=""/>
-												</picture><span class="sCatalogSlider__title">Блоки воздухораздающие с боковым подводом</span></a>
-											</div>
-											<div class="swiper-slide"><a class="sCatalogSlider__sliderWrap text-center" href="#">
-												<picture>
-													<source class="swiper-lazy" srcset="#" data-srcset="img/@2x/webp/catalog-slider-3.webp" type="image/webp"/><img class="swiper-lazy" src="#" data-src="img/@2x/catalog-slider-3.jpg" alt=""/>
-												</picture><span class="sCatalogSlider__title">Фасадные решетки</span></a>
-											</div>
-											<div class="swiper-slide"><a class="sCatalogSlider__sliderWrap text-center" href="#">
-												<picture>
-													<source class="swiper-lazy" srcset="#" data-srcset="img/@2x/webp/catalog-slider-4.webp" type="image/webp"/><img class="swiper-lazy" src="#" data-src="img/@2x/catalog-slider-4.jpg" alt=""/>
-												</picture><span class="sCatalogSlider__title">Воздухораздающие блоки с прямоугольным патрубком</span></a>
-											</div>
-								</div>
-							</div>
-							<div class="sCatalogSlider-next d-none d-lg-flex"><img src="img/svg/chevron-top.svg" alt=""/></div>
-							<div class="sCatalogSlider-prev d-none d-lg-flex"><img src="img/svg/chevron-top.svg" alt=""/></div>
-						</div>
-						<!-- end sCatalogSlider-->
-						<!-- start sFilter-->
-						<div class="sFilter d-lg-none" id="sFilter">
-							<div class="sFilter__filterToggleBtn selected-positions filter-accardion-js d-lg-none">
-								<div class="sFilter__fileterIcon">
-									<svg class="icon icon-filter ">
-										<use xlink:href="img/svg/sprite.svg#filter"></use>
-									</svg>
-									<div class="sFilter__iconDot">
-									</div>
-								</div><span>Фильтр</span>
-							</div>
-							<div class="sFilter__mainBlock filter-accardion-toggle">
-								<div class="sFilter__item">
-									<div class="sFilter__itemTopLine">
-										<div class="sFilter__title">Цена
-										</div>
-										<div class="filter-accardion-js"><img src="img/chevron-top.svg" alt=""/></div>
-									</div>
-									<div class="sFilter__body filter-accardion-toggle">
-										<div class="range-wrap price_slider_amount">
-											<div class="row">
-												<div class="col-6"> 
-													<div class="form-group"><input class="input_from form-control form-control-sm" type="text"/>
-													</div>
-												</div>
-												<div class="col-6">
-													<div class="form-group"><input class="input_to form-control form-control-sm" type="text"/>
-													</div>
-												</div>
-											</div>
-											<input class="range-slider slider-js" type="text" data-min="100.99" data-max="999999.99"/>
-										</div>
-									</div>
-								</div>
-								<div class="sFilter__item">
-									<div class="sFilter__itemTopLine">
-										<div class="sFilter__title">Производитель 
-										</div>
-										<div class="filter-accardion-js"><img src="img/chevron-top.svg" alt=""/></div>
-									</div>
-									<div class="sFilter__body filter-accardion-toggle">
-										<label class="custom-input"><input class="custom-input__input" type="checkbox" name="manufacturer"/><span class="custom-input__lab"></span><span class="custom-input__text">Manufacturer name (1000)</span>
-										</label>
-										<label class="custom-input"><input class="custom-input__input" type="checkbox" name="manufacturer"/><span class="custom-input__lab"></span><span class="custom-input__text">Manufacturer name (100)</span>
-										</label>
-										<label class="custom-input"><input class="custom-input__input" type="checkbox" name="manufacturer"/><span class="custom-input__lab"></span><span class="custom-input__text">Manufacturer name (10)</span>
-										</label>
-										<label class="custom-input checkbox-inactive"><input class="custom-input__input" type="checkbox" name="manufacturer"/><span class="custom-input__lab"></span><span class="custom-input__text">Manufacturer name (0)</span>
-										</label>
-										<label class="custom-input checkbox-inactive"><input class="custom-input__input" type="checkbox" name="manufacturer"/><span class="custom-input__lab"></span><span class="custom-input__text">Manufacturer name (0)</span>
-										</label>
-										<label class="custom-input checkbox-inactive"><input class="custom-input__input" type="checkbox" name="manufacturer"/><span class="custom-input__lab"></span><span class="custom-input__text">Manufacturer name (0)</span>
-										</label>
-										<label class="custom-input checkbox-inactive"><input class="custom-input__input" type="checkbox" name="manufacturer"/><span class="custom-input__lab"></span><span class="custom-input__text">Manufacturer name (0)</span>
-										</label>
-										<label class="custom-input checkbox-inactive"><input class="custom-input__input" type="checkbox" name="manufacturer"/><span class="custom-input__lab"></span><span class="custom-input__text">Manufacturer name (0)</span>
-										</label>
-										<label class="custom-input checkbox-inactive"><input class="custom-input__input" type="checkbox" name="manufacturer"/><span class="custom-input__lab"></span><span class="custom-input__text">Manufacturer name (0)</span>
-										</label>
-									</div>
-								</div>
-								<div class="sFilter__item">
-									<div class="sFilter__itemTopLine">
-										<div class="sFilter__title">Материал
-										</div>
-										<div class="filter-accardion-js"><img src="img/chevron-top.svg" alt=""/></div>
-									</div>
-									<div class="sFilter__body filter-accardion-toggle">
-										<label class="custom-input"><input class="custom-input__input" type="checkbox" name="material"/><span class="custom-input__lab"></span><span class="custom-input__text">Material name (1000)</span>
-										</label>
-										<label class="custom-input"><input class="custom-input__input" type="checkbox" name="material"/><span class="custom-input__lab"></span><span class="custom-input__text">Material name (100)</span>
-										</label>
-										<label class="custom-input"><input class="custom-input__input" type="checkbox" name="material"/><span class="custom-input__lab"></span><span class="custom-input__text">Material name (10)</span>
-										</label>
-										<label class="custom-input checkbox-inactive"><input class="custom-input__input" type="checkbox" name="material"/><span class="custom-input__lab"></span><span class="custom-input__text">Material name (0)</span>
-										</label>
-										<label class="custom-input checkbox-inactive"><input class="custom-input__input" type="checkbox" name="material"/><span class="custom-input__lab"></span><span class="custom-input__text">Material name (0)</span>
-										</label>
-										<label class="custom-input checkbox-inactive"><input class="custom-input__input" type="checkbox" name="material"/><span class="custom-input__lab"></span><span class="custom-input__text">Material name (0)</span>
-										</label>
-										<label class="custom-input checkbox-inactive"><input class="custom-input__input" type="checkbox" name="material"/><span class="custom-input__lab"></span><span class="custom-input__text">Material name (0)</span>
-										</label>
-										<label class="custom-input checkbox-inactive"><input class="custom-input__input" type="checkbox" name="material"/><span class="custom-input__lab"></span><span class="custom-input__text">Material name (0)</span>
-										</label>
-										<label class="custom-input checkbox-inactive"><input class="custom-input__input" type="checkbox" name="material"/><span class="custom-input__lab"></span><span class="custom-input__text">Material name (0)</span>
-										</label>
-										<label class="custom-input checkbox-inactive"><input class="custom-input__input" type="checkbox" name="material"/><span class="custom-input__lab"></span><span class="custom-input__text">Material name (0)</span>
-										</label>
-									</div>
-								</div>
-								<div class="sFilter__item">
-									<div class="sFilter__itemTopLine">
-										<div class="sFilter__title">Name
-										</div>
-										<div class="filter-accardion-js"><img src="img/chevron-top.svg" alt=""/></div>
-									</div>
-									<div class="sFilter__body filter-accardion-toggle">
-										<div class="range-wrap price_slider_amount">
-											<div class="row">
-												<div class="col-6"> 
-													<div class="form-group"><input class="input_from form-control form-control-sm" type="text"/>
-													</div>
-												</div>
-												<div class="col-6">
-													<div class="form-group"><input class="input_to form-control form-control-sm" type="text"/>
-													</div>
-												</div>
-											</div>
-											<input class="range-slider slider-js" type="text" data-min="0" data-max="100000"/>
-										</div>
-									</div>
-								</div>
-								<div class="sFilter__item">
-									<div class="sFilter__itemTopLine">
-										<div class="sFilter__title">Name
-										</div>
-										<div class="filter-accardion-js"><img src="img/chevron-top.svg" alt=""/></div>
-									</div>
-									<div class="sFilter__body filter-accardion-toggle">
-										<label class="custom-input"><input class="custom-input__input" type="checkbox" name="name"/><span class="custom-input__lab"></span><span class="custom-input__text">Text (1000)</span>
-										</label>
-										<label class="custom-input"><input class="custom-input__input" type="checkbox" name="name"/><span class="custom-input__lab"></span><span class="custom-input__text">Text (100)</span>
-										</label>
-										<label class="custom-input"><input class="custom-input__input" type="checkbox" name="name"/><span class="custom-input__lab"></span><span class="custom-input__text">Text (10)</span>
-										</label>
-										<label class="custom-input checkbox-inactive"><input class="custom-input__input" type="checkbox" name="name"/><span class="custom-input__lab"></span><span class="custom-input__text">Text (0)</span>
-										</label>
-										<label class="custom-input checkbox-inactive"><input class="custom-input__input" type="checkbox" name="name"/><span class="custom-input__lab"></span><span class="custom-input__text">Text (0)</span>
-										</label>
-										<label class="custom-input checkbox-inactive"><input class="custom-input__input" type="checkbox" name="name"/><span class="custom-input__lab"></span><span class="custom-input__text">Text (0)</span>
-										</label>
-										<label class="custom-input checkbox-inactive"><input class="custom-input__input" type="checkbox" name="name"/><span class="custom-input__lab"></span><span class="custom-input__text">Text (0)</span>
-										</label>
-										<label class="custom-input checkbox-inactive"><input class="custom-input__input" type="checkbox" name="name"/><span class="custom-input__lab"></span><span class="custom-input__text">Text (0)</span>
-										</label>
-										<label class="custom-input checkbox-inactive"><input class="custom-input__input" type="checkbox" name="name"/><span class="custom-input__lab"></span><span class="custom-input__text">Text (0)</span>
-										</label>
-										<label class="custom-input checkbox-inactive"><input class="custom-input__input" type="checkbox" name="name"/><span class="custom-input__lab"></span><span class="custom-input__text">Text (0)</span>
-										</label>
-									</div>
-								</div>
-								<div class="sFilter__buttons">
-									<button class="sFilter__btn" type="button">Показать
-									</button>
-									<button class="sFilter__skip" type="button">Сбросить
-									</button>
-								</div>
-							</div>
-						</div>
-						<!-- end sFilter-->
-						<!-- start sCatalogInner-->
-						<div class="sCatalogInner" id="sCatalogInner">
-							<div class="row justify-content-between">
-								<div class="col-auto">
-									<div class="sCatalogInner__filter">
-										<div class="sCatalogInner__select">
-											<select class="default-select-js" name="sort">
-												<option value="popularity">По популярности</option>
-												<option value="novelty">По новизне</option>
-												<option value="lorem">Lorem, ipsum.</option>
-											</select>
-										</div>
-										<div class="sCatalogInner__select sCatalogInner__select--price">
-											<select class="default-select-js" name="price">
-												<option value="popularity">По цене</option>
-												<option value="from dear">От дорогих</option>
-												<option value="from cheap">От дешевых</option>
-												<option value="by price">По цене</option>
-												<option value="lorem">Lorem, ipsum.</option>
-											</select>
-										</div>
-									</div>
-								</div>
-								<div class="col-auto d-none d-md-flex"><a class="sCatalogInner__list active" href="#">
-									<svg class="icon icon-list-1 ">
-										<use xlink:href="img/svg/sprite.svg#list-1"></use>
-									</svg></a><a class="sCatalogInner__list" href="#">
-									<svg class="icon icon-list-2 ">
-										<use xlink:href="img/svg/sprite.svg#list-2"></use>
-									</svg></a><a class="sCatalogInner__list" href="#">
-									<svg class="icon icon-list-3 ">
-										<use xlink:href="img/svg/sprite.svg#list-3"></use>
-									</svg></a>
-								</div>
-							</div>
-							<div class="sCatalogInner__row row">
-								<div class="col-6 col-lg-4">
-									<div class="catalogInnerItem">
-										<div class="catalogInnerItem__availability">В наличии
-										</div><a class="catalogInnerItem__imgWrap" href="#">
-										<!-- picture-->
-										<picture> 
-											<noscript class="loading-lazy">
-												<source srcset="img/@2x/webp/hit-2.webp" loading="lazy" type="image/webp"/><img src="img/@2x/hit-2.png" loading="lazy" alt=""/>
-											</noscript>
-										</picture>
-										<!-- /picture--></a><a class="catalogInnerItem__title" href="#">Название товара<br> на две-три<br> строчки</a>
-										<p class="d-none d-md-block">Краткое описание на строку</p>
-										<div class="catalogInnerItem__row row justify-content-between">
-											<div class="col-auto order-sm-last"><a class="catalogInnerItem__id" href="#">ID: 0000</a>
-											</div>
-											<div class="col-auto">
-												<div class="catalogInnerItem__price">Цена ₽
-												</div>
-											</div>
-										</div>
-										<div class="catalogInnerItem__buttonRow row justify-content-between">
-											<div class="col-md-5 d-none d-md-block text-center">
-												<div class="catalogInnerItem__inputs">
-													<input class="form-control" type="number" min="1" max="5" value="1"/>
-													<div class="catalogInnerItem__inputBtn">
-														<div class="catalogInnerItem__plus-btn"><img src="img/chevron-down.svg" alt=""/>
-														</div>
-														<div class="catalogInnerItem__minus-btn"><img src="img/chevron-down.svg" alt=""/>
-														</div>
-													</div>
-												</div>
-												<div class="catalogInnerItem__amount-txt">шт.
-												</div>
-											</div>
-											<div class="catalogInnerItem__col col-md-7">
-												<div class="catalogInnerItem__buttons"><a class="catalogInnerItem__btn link-modal" href="#">Купить</a>
-													<button class="catalogInnerItem__compare" type="button">
-														<svg class="icon icon-comp ">
-															<use xlink:href="img/svg/sprite.svg#comp"></use>
-														</svg>
-													</button>
-												</div><a class="catalogInnerItem__oneClick" href="#">Купить в 1 клик</a>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-6 col-lg-4">
-									<div class="catalogInnerItem">
-										<div class="catalogInnerItem__availability absent">Нет в наличии
-										</div><a class="catalogInnerItem__imgWrap" href="#">
-										<!-- picture-->
-										<picture> 
-											<noscript class="loading-lazy">
-												<source srcset="img/@2x/webp/hit-2.webp" loading="lazy" type="image/webp"/><img src="img/@2x/hit-2.png" loading="lazy" alt=""/>
-											</noscript>
-										</picture>
-										<!-- /picture--></a><a class="catalogInnerItem__title" href="#">Название товара<br> на две-три<br> строчки</a>
-										<p class="d-none d-md-block">Краткое описание на строку</p>
-										<div class="catalogInnerItem__row row justify-content-between">
-											<div class="col-auto order-sm-last"><a class="catalogInnerItem__id" href="#">ID: 0000</a>
-											</div>
-											<div class="col-auto">
-												<div class="catalogInnerItem__price">Цена ₽
-												</div>
-											</div>
-										</div>
-										<div class="catalogInnerItem__buttonRow row justify-content-between">
-											<div class="col-md-5 d-none d-md-block text-center">
-												<div class="catalogInnerItem__inputs">
-													<input class="form-control" type="number" min="1" max="5" value="1"/>
-													<div class="catalogInnerItem__inputBtn">
-														<div class="catalogInnerItem__plus-btn"><img src="img/chevron-down.svg" alt=""/>
-														</div>
-														<div class="catalogInnerItem__minus-btn"><img src="img/chevron-down.svg" alt=""/>
-														</div>
-													</div>
-												</div>
-												<div class="catalogInnerItem__amount-txt">шт.
-												</div>
-											</div>
-											<div class="catalogInnerItem__col col-md-7">
-												<div class="catalogInnerItem__buttons"><a class="catalogInnerItem__btn link-modal" href="#">Купить</a>
-													<button class="catalogInnerItem__compare" type="button">
-														<svg class="icon icon-comp ">
-															<use xlink:href="img/svg/sprite.svg#comp"></use>
-														</svg>
-													</button>
-												</div><a class="catalogInnerItem__oneClick" href="#">Купить в 1 клик</a>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-6 col-lg-4">
-									<div class="catalogInnerItem">
-										<div class="catalogInnerItem__availability">В наличии
-										</div><a class="catalogInnerItem__imgWrap" href="#">
-										<!-- picture-->
-										<picture> 
-											<noscript class="loading-lazy">
-												<source srcset="img/@2x/webp/hit-2.webp" loading="lazy" type="image/webp"/><img src="img/@2x/hit-2.png" loading="lazy" alt=""/>
-											</noscript>
-										</picture>
-										<!-- /picture--></a><a class="catalogInnerItem__title" href="#">Название товара<br> на две-три<br> строчки</a>
-										<p class="d-none d-md-block">Краткое описание на строку</p>
-										<div class="catalogInnerItem__row row justify-content-between">
-											<div class="col-auto order-sm-last"><a class="catalogInnerItem__id" href="#">ID: 0000</a>
-											</div>
-											<div class="col-auto">
-												<div class="catalogInnerItem__price">Цена ₽
-												</div>
-											</div>
-										</div>
-										<div class="catalogInnerItem__buttonRow row justify-content-between">
-											<div class="col-md-5 d-none d-md-block text-center">
-												<div class="catalogInnerItem__inputs">
-													<input class="form-control" type="number" min="1" max="5" value="1"/>
-													<div class="catalogInnerItem__inputBtn">
-														<div class="catalogInnerItem__plus-btn"><img src="img/chevron-down.svg" alt=""/>
-														</div>
-														<div class="catalogInnerItem__minus-btn"><img src="img/chevron-down.svg" alt=""/>
-														</div>
-													</div>
-												</div>
-												<div class="catalogInnerItem__amount-txt">шт.
-												</div>
-											</div>
-											<div class="catalogInnerItem__col col-md-7">
-												<div class="catalogInnerItem__buttons"><a class="catalogInnerItem__btn link-modal" href="#">Купить</a>
-													<button class="catalogInnerItem__compare" type="button">
-														<svg class="icon icon-comp ">
-															<use xlink:href="img/svg/sprite.svg#comp"></use>
-														</svg>
-													</button>
-												</div><a class="catalogInnerItem__oneClick" href="#">Купить в 1 клик</a>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-6 col-lg-4">
-									<div class="catalogInnerItem">
-										<div class="catalogInnerItem__availability">В наличии
-										</div><a class="catalogInnerItem__imgWrap" href="#">
-										<!-- picture-->
-										<picture> 
-											<noscript class="loading-lazy">
-												<source srcset="img/@2x/webp/hit-2.webp" loading="lazy" type="image/webp"/><img src="img/@2x/hit-2.png" loading="lazy" alt=""/>
-											</noscript>
-										</picture>
-										<!-- /picture--></a><a class="catalogInnerItem__title" href="#">Название товара<br> на две-три<br> строчки</a>
-										<p class="d-none d-md-block">Краткое описание на строку</p>
-										<div class="catalogInnerItem__row row justify-content-between">
-											<div class="col-auto order-sm-last"><a class="catalogInnerItem__id" href="#">ID: 0000</a>
-											</div>
-											<div class="col-auto">
-												<div class="catalogInnerItem__price">Цена ₽
-												</div>
-											</div>
-										</div>
-										<div class="catalogInnerItem__buttonRow row justify-content-between">
-											<div class="col-md-5 d-none d-md-block text-center">
-												<div class="catalogInnerItem__inputs">
-													<input class="form-control" type="number" min="1" max="5" value="1"/>
-													<div class="catalogInnerItem__inputBtn">
-														<div class="catalogInnerItem__plus-btn"><img src="img/chevron-down.svg" alt=""/>
-														</div>
-														<div class="catalogInnerItem__minus-btn"><img src="img/chevron-down.svg" alt=""/>
-														</div>
-													</div>
-												</div>
-												<div class="catalogInnerItem__amount-txt">шт.
-												</div>
-											</div>
-											<div class="catalogInnerItem__col col-md-7">
-												<div class="catalogInnerItem__buttons"><a class="catalogInnerItem__btn link-modal" href="#">Купить</a>
-													<button class="catalogInnerItem__compare" type="button">
-														<svg class="icon icon-comp ">
-															<use xlink:href="img/svg/sprite.svg#comp"></use>
-														</svg>
-													</button>
-												</div><a class="catalogInnerItem__oneClick" href="#">Купить в 1 клик</a>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-6 col-lg-4">
-									<div class="catalogInnerItem">
-										<div class="catalogInnerItem__availability">В наличии
-										</div><a class="catalogInnerItem__imgWrap" href="#">
-										<!-- picture-->
-										<picture> 
-											<noscript class="loading-lazy">
-												<source srcset="img/@2x/webp/hit-2.webp" loading="lazy" type="image/webp"/><img src="img/@2x/hit-2.png" loading="lazy" alt=""/>
-											</noscript>
-										</picture>
-										<!-- /picture--></a><a class="catalogInnerItem__title" href="#">Название товара<br> на две-три<br> строчки</a>
-										<p class="d-none d-md-block">Краткое описание на строку</p>
-										<div class="catalogInnerItem__row row justify-content-between">
-											<div class="col-auto order-sm-last"><a class="catalogInnerItem__id" href="#">ID: 0000</a>
-											</div>
-											<div class="col-auto">
-												<div class="catalogInnerItem__price">Цена ₽
-												</div>
-											</div>
-										</div>
-										<div class="catalogInnerItem__buttonRow row justify-content-between">
-											<div class="col-md-5 d-none d-md-block text-center">
-												<div class="catalogInnerItem__inputs">
-													<input class="form-control" type="number" min="1" max="5" value="1"/>
-													<div class="catalogInnerItem__inputBtn">
-														<div class="catalogInnerItem__plus-btn"><img src="img/chevron-down.svg" alt=""/>
-														</div>
-														<div class="catalogInnerItem__minus-btn"><img src="img/chevron-down.svg" alt=""/>
-														</div>
-													</div>
-												</div>
-												<div class="catalogInnerItem__amount-txt">шт.
-												</div>
-											</div>
-											<div class="catalogInnerItem__col col-md-7">
-												<div class="catalogInnerItem__buttons"><a class="catalogInnerItem__btn link-modal" href="#">Купить</a>
-													<button class="catalogInnerItem__compare" type="button">
-														<svg class="icon icon-comp ">
-															<use xlink:href="img/svg/sprite.svg#comp"></use>
-														</svg>
-													</button>
-												</div><a class="catalogInnerItem__oneClick" href="#">Купить в 1 клик</a>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-6 col-lg-4">
-									<div class="catalogInnerItem">
-										<div class="catalogInnerItem__availability">В наличии
-										</div><a class="catalogInnerItem__imgWrap" href="#">
-										<!-- picture-->
-										<picture> 
-											<noscript class="loading-lazy">
-												<source srcset="img/@2x/webp/hit-2.webp" loading="lazy" type="image/webp"/><img src="img/@2x/hit-2.png" loading="lazy" alt=""/>
-											</noscript>
-										</picture>
-										<!-- /picture--></a><a class="catalogInnerItem__title" href="#">Название товара<br> на две-три<br> строчки</a>
-										<p class="d-none d-md-block">Краткое описание на строку</p>
-										<div class="catalogInnerItem__row row justify-content-between">
-											<div class="col-auto order-sm-last"><a class="catalogInnerItem__id" href="#">ID: 0000</a>
-											</div>
-											<div class="col-auto">
-												<div class="catalogInnerItem__price">Цена ₽
-												</div>
-											</div>
-										</div>
-										<div class="catalogInnerItem__buttonRow row justify-content-between">
-											<div class="col-md-5 d-none d-md-block text-center">
-												<div class="catalogInnerItem__inputs">
-													<input class="form-control" type="number" min="1" max="5" value="1"/>
-													<div class="catalogInnerItem__inputBtn">
-														<div class="catalogInnerItem__plus-btn"><img src="img/chevron-down.svg" alt=""/>
-														</div>
-														<div class="catalogInnerItem__minus-btn"><img src="img/chevron-down.svg" alt=""/>
-														</div>
-													</div>
-												</div>
-												<div class="catalogInnerItem__amount-txt">шт.
-												</div>
-											</div>
-											<div class="catalogInnerItem__col col-md-7">
-												<div class="catalogInnerItem__buttons"><a class="catalogInnerItem__btn link-modal" href="#">Купить</a>
-													<button class="catalogInnerItem__compare" type="button">
-														<svg class="icon icon-comp ">
-															<use xlink:href="img/svg/sprite.svg#comp"></use>
-														</svg>
-													</button>
-												</div><a class="catalogInnerItem__oneClick" href="#">Купить в 1 клик</a>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-6 col-lg-4">
-									<div class="catalogInnerItem">
-										<div class="catalogInnerItem__availability absent">Нет в наличии
-										</div><a class="catalogInnerItem__imgWrap" href="#">
-										<!-- picture-->
-										<picture> 
-											<noscript class="loading-lazy">
-												<source srcset="img/@2x/webp/hit-2.webp" loading="lazy" type="image/webp"/><img src="img/@2x/hit-2.png" loading="lazy" alt=""/>
-											</noscript>
-										</picture>
-										<!-- /picture--></a><a class="catalogInnerItem__title" href="#">Название товара<br> на две-три<br> строчки</a>
-										<p class="d-none d-md-block">Краткое описание на строку</p>
-										<div class="catalogInnerItem__row row justify-content-between">
-											<div class="col-auto order-sm-last"><a class="catalogInnerItem__id" href="#">ID: 0000</a>
-											</div>
-											<div class="col-auto">
-												<div class="catalogInnerItem__price">Цена ₽
-												</div>
-											</div>
-										</div>
-										<div class="catalogInnerItem__buttonRow row justify-content-between">
-											<div class="col-md-5 d-none d-md-block text-center">
-												<div class="catalogInnerItem__inputs">
-													<input class="form-control" type="number" min="1" max="5" value="1"/>
-													<div class="catalogInnerItem__inputBtn">
-														<div class="catalogInnerItem__plus-btn"><img src="img/chevron-down.svg" alt=""/>
-														</div>
-														<div class="catalogInnerItem__minus-btn"><img src="img/chevron-down.svg" alt=""/>
-														</div>
-													</div>
-												</div>
-												<div class="catalogInnerItem__amount-txt">шт.
-												</div>
-											</div>
-											<div class="catalogInnerItem__col col-md-7">
-												<div class="catalogInnerItem__buttons"><a class="catalogInnerItem__btn link-modal" href="#">Купить</a>
-													<button class="catalogInnerItem__compare" type="button">
-														<svg class="icon icon-comp ">
-															<use xlink:href="img/svg/sprite.svg#comp"></use>
-														</svg>
-													</button>
-												</div><a class="catalogInnerItem__oneClick" href="#">Купить в 1 клик</a>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-6 col-lg-4">
-									<div class="catalogInnerItem">
-										<div class="catalogInnerItem__availability absent">Нет в наличии
-										</div><a class="catalogInnerItem__imgWrap" href="#">
-										<!-- picture-->
-										<picture> 
-											<noscript class="loading-lazy">
-												<source srcset="img/@2x/webp/hit-2.webp" loading="lazy" type="image/webp"/><img src="img/@2x/hit-2.png" loading="lazy" alt=""/>
-											</noscript>
-										</picture>
-										<!-- /picture--></a><a class="catalogInnerItem__title" href="#">Название товара<br> на две-три<br> строчки</a>
-										<p class="d-none d-md-block">Краткое описание на строку</p>
-										<div class="catalogInnerItem__row row justify-content-between">
-											<div class="col-auto order-sm-last"><a class="catalogInnerItem__id" href="#">ID: 0000</a>
-											</div>
-											<div class="col-auto">
-												<div class="catalogInnerItem__price">Цена ₽
-												</div>
-											</div>
-										</div>
-										<div class="catalogInnerItem__buttonRow row justify-content-between">
-											<div class="col-md-5 d-none d-md-block text-center">
-												<div class="catalogInnerItem__inputs">
-													<input class="form-control" type="number" min="1" max="5" value="1"/>
-													<div class="catalogInnerItem__inputBtn">
-														<div class="catalogInnerItem__plus-btn"><img src="img/chevron-down.svg" alt=""/>
-														</div>
-														<div class="catalogInnerItem__minus-btn"><img src="img/chevron-down.svg" alt=""/>
-														</div>
-													</div>
-												</div>
-												<div class="catalogInnerItem__amount-txt">шт.
-												</div>
-											</div>
-											<div class="catalogInnerItem__col col-md-7">
-												<div class="catalogInnerItem__buttons"><a class="catalogInnerItem__btn link-modal" href="#">Купить</a>
-													<button class="catalogInnerItem__compare" type="button">
-														<svg class="icon icon-comp ">
-															<use xlink:href="img/svg/sprite.svg#comp"></use>
-														</svg>
-													</button>
-												</div><a class="catalogInnerItem__oneClick" href="#">Купить в 1 клик</a>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-6 col-lg-4">
-									<div class="catalogInnerItem">
-										<div class="catalogInnerItem__availability absent">Нет в наличии
-										</div><a class="catalogInnerItem__imgWrap" href="#">
-										<!-- picture-->
-										<picture> 
-											<noscript class="loading-lazy">
-												<source srcset="img/@2x/webp/hit-2.webp" loading="lazy" type="image/webp"/><img src="img/@2x/hit-2.png" loading="lazy" alt=""/>
-											</noscript>
-										</picture>
-										<!-- /picture--></a><a class="catalogInnerItem__title" href="#">Название товара<br> на две-три<br> строчки</a>
-										<p class="d-none d-md-block">Краткое описание на строку</p>
-										<div class="catalogInnerItem__row row justify-content-between">
-											<div class="col-auto order-sm-last"><a class="catalogInnerItem__id" href="#">ID: 0000</a>
-											</div>
-											<div class="col-auto">
-												<div class="catalogInnerItem__price">Цена ₽
-												</div>
-											</div>
-										</div>
-										<div class="catalogInnerItem__buttonRow row justify-content-between">
-											<div class="col-md-5 d-none d-md-block text-center">
-												<div class="catalogInnerItem__inputs">
-													<input class="form-control" type="number" min="1" max="5" value="1"/>
-													<div class="catalogInnerItem__inputBtn">
-														<div class="catalogInnerItem__plus-btn"><img src="img/chevron-down.svg" alt=""/>
-														</div>
-														<div class="catalogInnerItem__minus-btn"><img src="img/chevron-down.svg" alt=""/>
-														</div>
-													</div>
-												</div>
-												<div class="catalogInnerItem__amount-txt">шт.
-												</div>
-											</div>
-											<div class="catalogInnerItem__col col-md-7">
-												<div class="catalogInnerItem__buttons"><a class="catalogInnerItem__btn link-modal" href="#">Купить</a>
-													<button class="catalogInnerItem__compare" type="button">
-														<svg class="icon icon-comp ">
-															<use xlink:href="img/svg/sprite.svg#comp"></use>
-														</svg>
-													</button>
-												</div><a class="catalogInnerItem__oneClick" href="#">Купить в 1 клик</a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="sCatalogInner__loadMore"> 
-								<svg class="icon icon-load ">
-									<use xlink:href="img/svg/sprite.svg#load"></use>
-								</svg><span>Показать ещё</span>
-							</div>
-							<div class="pagination-wrapper">
-								<ul class="page-numbers">
-											<li><span class="prev page-numbers muted"><img src="img/svg/prev.svg" alt=""/></span>
-											</li>
-											<li><span class="page-numbers current"> 1</span>
-											</li>
-											<li><a class="page-numbers" href="#">2</a>
-											</li>
-											<li><a class="page-numbers" href="#">3</a>
-											</li>
-											<li><a class="page-numbers" href="#">4</a>
-											</li>
-											<li><span class="page-numbers">...</span>
-											</li>
-											<li><a class="page-numbers" href="#">10</a>
-											</li>
-											<li><a class="next page-numbers" href="#"><img src="img/svg/next.svg" alt=""/></a>
-											</li>
-								</ul>
-							</div>
-							<div class="sCatalogInner__seo">
-								<h3>Заголовок</h3>
-								<p>Какой-то Seo-текст <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-								<h4>Подзаголовок </h4>
-								<p>Какой-то Seo-текст <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-							</div>
-						</div>
-						<!-- end sCatalogInner-->
-					</div>
-				</div>
+				</section>
+				<!-- end sBasket-->
 			</div>
 			<footer class="footer block-with-lazy">
 				<div class="container">

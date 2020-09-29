@@ -10,6 +10,11 @@ mixin modal()
 			+input("Ваше Имя")(required)  
 			+e.BUTTON.btn.btn(type="submit"  ) 
 			+polite()
+
+	+b.modal-win(id="modal-processed" class=" " style="display: none" )
+		+icon('check')
+		.h4.text-primary Заказ оформлен
+		p Lorem ipsum dolor sit amet
 	// #modal-call
 	
 	// end modals

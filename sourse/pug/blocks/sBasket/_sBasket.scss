@@ -1,0 +1,230 @@
+// start .sBasket
+.sBasket {
+	padding-top: 5px;
+	position: relative;
+
+
+	&__added-to-cart {
+		@include media-breakpoint-up(sm) {
+			position: absolute;
+			right: 0;
+			top: -55px;
+		}
+		padding: 9px 20px;
+		color: $primary;
+		background: #FFFFFF;
+		box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.13);
+		border-radius: 2px;
+		@include mt;
+		margin-bottom: rem(20);
+		display: flex;
+		align-items: center;
+		.icon {
+			flex-shrink: 0;
+			font-size: rem(12);
+			margin-right: rem(10);
+		}
+	}
+
+	.section-title {
+		padding-bottom: calc(var(--sTPB) * 2);
+	}
+
+	&__title {
+		color: $body-color;
+		@include media-breakpoint-down(md) {
+			margin-bottom: rem(15);
+		}
+	}
+
+	&__name {
+		color: rgba($color: #444, $alpha: 0.6);
+		margin-bottom: rem(10);
+		font-weight: 600;
+	}
+
+	&__product {
+		display: flex;
+		align-items: center;
+		@include media-breakpoint-down(md) {
+			flex-direction: column;
+			justify-content: center;
+		}
+	}
+
+	&__price {
+		@include media-breakpoint-down(md) {
+			text-align: center;
+		}
+	}
+
+	&__imgWrap {
+		flex-shrink: 0;
+		display: block;
+		@include media-breakpoint-up(md) {
+			margin-right: rem(24);
+		}
+		@include media-breakpoint-down(md) {
+			margin-bottom: rem(15);
+		}
+		picture {
+			width: 117px;
+			height: 117px;
+			position: relative;
+			overflow: hidden;
+			img {
+				max-height: 100%;
+				@include a-cent;
+			}
+		}
+	}
+
+	&__item {
+		margin-bottom: rem(10);
+		padding-top: rem(20);
+		padding-bottom: rem(20);
+		border: 1px solid #C4C4C4;
+	}
+
+	&__inputs {
+		position: relative;
+		height: 34px;
+		width: 96px;
+		@include media-breakpoint-down(md) {
+			margin-left: auto;
+			margin-right: auto;
+		}
+		@include media-breakpoint-down(sm) {
+			margin-top: rem(10);
+			margin-bottom: rem(10);
+		}
+	}
+
+	&__plus-btn, &__minus-btn {
+		cursor: pointer;
+		position: absolute;
+		top: 0;
+
+		height: 100%;
+		z-index: 1;
+		//background-color: rgba(red, .05);
+
+		@include mt();
+		&.muted{
+			opacity: .5;
+		}
+
+		width: 33px;
+		&:before,
+		&:after{
+			position: absolute;
+			background-color: $body-color;
+			top: 50%;
+			left: 50%;
+			transform: translateX(-50%) translateY(-50%);
+		}
+		&:before{
+			content: '';
+			width: 13px;
+			height: 3px;
+		}
+		&:after{
+			height: 13px;
+			width: 3px;
+		}
+	}
+
+	&__minus-btn {
+		left: 0;
+	}
+
+	&__plus-btn {
+		right: 0;
+		&:after{
+			content: '';
+		}
+	}
+
+	.form-control {
+		text-align: center;
+	}
+
+	&__delete {
+		border: none;
+		background: #fff;
+		display: flex;
+		align-items: center;
+		@include media-breakpoint-down(md) {
+			justify-content: center;
+			margin-top: rem(20);
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.icon {
+			font-size: rem(15);
+			margin-right: rem(10);
+		}
+	}
+
+	&__clear {
+		text-align: center;
+		border-radius: 2px;
+		border: 2px solid $primary;
+		background-color: #fff;
+		// display: flex;
+		// justify-content: center;
+		padding: 5px 20px;
+		font-size: $small;
+		color: $primary;
+		font-weight: 600;
+		@include media-breakpoint-down(sm) {
+			margin-bottom: rem(20);
+			width: 100%;
+		}
+	}
+
+	&__arrange {
+		@extend .btn;
+		@extend .btn-primary;
+		font-size: $small;
+		@include media-breakpoint-up(sm) {
+			margin-left: rem(20);
+		}
+		@include media-breakpoint-down(sm) {
+			width: 100%;
+		}
+	}
+
+	&__total {
+		text-align: right;
+		padding-top: rem(10);
+		margin-bottom: rem(20);
+	}
+
+	&__totalPrice {
+		font-size: rem(24);
+		display: inline;
+		font-weight: 600;
+	}
+
+	&__buttons {
+		@include media-breakpoint-up(sm) {
+			display: flex;
+			justify-content: flex-end;
+		}
+	}
+
+
+
+
+
+
+
+
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) { }
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(sm) {}
+
+} // end.sBasket
