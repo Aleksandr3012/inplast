@@ -1,0 +1,67 @@
+mixin sArticle()
+	// start sArticle
+	+b.SECTION.sArticle.section#sArticle&attributes(attributes)
+		.container
+			+breadcrumb('Главная', 'Новости')
+
+			
+			+e.row.row
+				.col-lg-5
+					+e.imgWrap
+						+pic('virus.png','','')
+				.col
+					+e.tag Из последних новостей
+					.section-title
+						h3 Режим работы в условиях пандемии
+						+e.date 16.04.2020
+					p Дорогие коллеги!<br>Мы продолжаем работать – звонки и заявки принимаются в штатном режиме.<br>В сложившихся условиях в первую очередь выполняем социально значимые заказы по обеспечению строительства:
+					ul
+						li больниц и медицинских лабораторий,
+						li объектов Министерства обороты,
+						li производств непрерывного цикла.
+					+e.btn(href="#") Подробнее...
+			+e.items
+				mixin item(data)
+					+b.newsItem--horizontally
+						.row
+							+e.col.col
+								+pic(data.img,'','')
+							.col-md
+								+e.textCol
+									+e.title= data.title
+									+e.date= data.date
+									+e.details(href="#") Подробнее
+										img(src="img/arrow-r.svg", alt="")
+				+item({
+					img: 'newsImg-1.png',
+					title: 'Новые акции на воздуховоды, вентиляционные решетки, противопожарные клапаны и крепеж',
+					date: '10.03.2020'
+				})
+				+item({
+					img: 'newsImg-2.png',
+					title: 'С 8 марта!',
+					date: '06.03.2020'
+				})
+				+item({
+					img: 'newsImg-3.png',
+					title: '16-я Международная выставка «МИР КЛИМАТА»',
+					date: '01.04.2020'
+				})
+				+item({
+					img: 'newsImg-4',
+					title: 'С 23 февраля!',
+					date: '21.02.2020'
+				})
+				+item({
+					img: 'newsImg-5',
+					title: 'Гарантия лучшей цены!',
+					date: '12.02.2020'
+				})
+				+item({
+					img: 'newsImg-6',
+					title: 'С наступающим 2020 годом!',
+					date: '09.12.2019'
+				})
+
+
+	// end sArticle

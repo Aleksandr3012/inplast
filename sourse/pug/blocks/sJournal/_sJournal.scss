@@ -1,0 +1,100 @@
+// start .sJournal
+.sJournal {
+	position: relative;
+	overflow: hidden;
+	padding-bottom: calc(var(--sPB) * 3.5);
+	&::before {
+		content: '';
+		position: absolute;
+		z-index: 10;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 185px;
+		background: linear-gradient(180deg, rgba(255, 255, 255, 0) -51.63%, #FFFFFF 28.73%);
+	}
+
+	&__item {
+		box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.09);
+		height: calc(100% - #{rem(30)});
+		margin-bottom: rem(30);
+	}
+
+	&__picCol {
+		padding-left: 0;
+		picture {
+			@include block(259,225);
+			height: 100%;
+			img {
+				@include a-cent;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+
+	.row {
+		@include roww(20px);
+	}
+
+	&__textCol {
+		display: flex;
+		flex-direction: column;
+		padding-top: rem(24);
+		padding-bottom: rem(20);
+		@include media-breakpoint-down(md) {
+			padding-left: rem(30) !important;
+			padding-right: rem(30) !important;
+		}
+	}
+
+	&__title {
+		font-weight: bold;
+		@extend .h6;
+		letter-spacing: rem(-0.7);
+	}
+
+	&__date {
+		color: rgba($color: $body-color, $alpha: 0.5);
+		font-size: $small;
+		margin-bottom: rem(10);
+	}
+
+	p {
+		line-height: 1.4;
+		margin-bottom: 1.5rem;
+	}
+
+	&__btn {
+		@extend .btn;
+		@extend .btn-primary;
+		margin-top: auto;
+	}
+
+	&__btnWrap {
+		text-align: center;
+		margin-top: rem(-223);
+	}
+
+
+	&__load {
+		position: relative;
+		z-index: 15;
+		@extend .btn;
+		@extend .btn-outline-primary;
+		background-color: #fff;
+		font-size: rem(22);
+		font-weight: 600;
+		padding-left: rem(40);
+		padding-right: rem(40);
+	}
+
+
+
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) { }
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(sm) {}
+
+} // end.sJournal
