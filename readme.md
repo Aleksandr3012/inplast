@@ -9,3 +9,4 @@
 1. <https://Aleksandr3012.github.io/inplast/public/06-catalog-list-sm.html>
 1. <https://Aleksandr3012.github.io/inplast/public/07-basket.html>
 1. <https://Aleksandr3012.github.io/inplast/public/08-news.html>
+1. <https://Aleksandr3012.github.io/inplast/public/09-journal.html>
